@@ -1,0 +1,1215 @@
+HF token OK, user=jub-aer type=fineGrained
+dataset repo has 175 files; first 60:
+.gitattributes
+.gitignore
+README.md
+franka_custom/data/folding/foldjacketsleeve_v0/run_0001/episode.h5
+franka_custom/data/folding/foldjacketsleeve_v0/run_0001/trajectory.hdf5
+franka_custom/data/folding/foldjacketsleeve_v1/run_0001/episode.h5
+franka_custom/data/folding/foldjacketsleeve_v1/run_0001/trajectory.hdf5
+franka_custom/data/pick/liftcup_v0/run_0001/episode.h5
+franka_custom/data/pick/liftcup_v0/run_0001/trajectory.hdf5
+franka_custom/data/pick/pickandplaceredcube_v0/run_0001/episode.h5
+franka_custom/data/pick/pickandplaceredcube_v0/run_0001/trajectory.hdf5
+franka_custom/data/pick/pickcube_v0/run_0001/episode.h5
+franka_custom/data/pick/pickcube_v0/run_0001/trajectory.hdf5
+franka_custom/data/pick/pickpen_v0/run_0001/episode.h5
+franka_custom/data/pick/pickpen_v0/run_0001/trajectory.hdf5
+franka_custom/data/pick/pickupcup_v0/run_0001/episode.h5
+franka_custom/data/pick/pickupcup_v0/run_0001/trajectory.hdf5
+franka_custom/data/pick/reachcup_v0/run_0001/episode.h5
+franka_custom/data/pick/reachcup_v0/run_0001/trajectory.hdf5
+franka_custom/data/pick/reachliftcup_v0/run_0001/episode.h5
+franka_custom/data/pick/reachliftcup_v0/run_0001/trajectory.hdf5
+franka_custom/data/pick/reachliftcup_v1/run_0001/episode.h5
+franka_custom/data/pick/reachliftcup_v1/run_0001/trajectory.hdf5
+franka_custom/data/pick/v0/run_0001/episode.h5
+franka_custom/data/pick/v0/run_0001/trajectory.hdf5
+franka_custom/data/push/brownboxpush_v0/run_0001/episode.h5
+franka_custom/data/push/brownboxpush_v0/run_0001/trajectory.hdf5
+franka_custom/data/push/push_various_objects/blue_bowl/episode.h5
+franka_custom/data/push/push_various_objects/blue_bowl/trajectory.hdf5
+franka_custom/data/push/push_various_objects/blue_box/episode.h5
+franka_custom/data/push/push_various_objects/blue_box/trajectory.hdf5
+franka_custom/data/push/push_various_objects/cap/episode.h5
+franka_custom/data/push/push_various_objects/cap/trajectory.hdf5
+franka_custom/data/push/push_various_objects/pengiun_plush/episode.h5
+franka_custom/data/push/push_various_objects/pengiun_plush/trajectory.hdf5
+franka_custom/hf_data/train-00000-of-00001.parquet
+metaworld/data/train-00000-of-00126.parquet
+metaworld/data/train-00001-of-00126.parquet
+metaworld/data/train-00002-of-00126.parquet
+metaworld/data/train-00003-of-00126.parquet
+metaworld/data/train-00004-of-00126.parquet
+metaworld/data/train-00005-of-00126.parquet
+metaworld/data/train-00006-of-00126.parquet
+metaworld/data/train-00007-of-00126.parquet
+metaworld/data/train-00008-of-00126.parquet
+metaworld/data/train-00009-of-00126.parquet
+metaworld/data/train-00010-of-00126.parquet
+metaworld/data/train-00011-of-00126.parquet
+metaworld/data/train-00012-of-00126.parquet
+metaworld/data/train-00013-of-00126.parquet
+metaworld/data/train-00014-of-00126.parquet
+metaworld/data/train-00015-of-00126.parquet
+metaworld/data/train-00016-of-00126.parquet
+metaworld/data/train-00017-of-00126.parquet
+metaworld/data/train-00018-of-00126.parquet
+metaworld/data/train-00019-of-00126.parquet
+metaworld/data/train-00020-of-00126.parquet
+metaworld/data/train-00021-of-00126.parquet
+metaworld/data/train-00022-of-00126.parquet
+metaworld/data/train-00023-of-00126.parquet
+
+wall-like files (2):
+wall/hf_data/train-00000-of-00001.parquet
+wall/wall_single.zip
+
+=== extract ===
+extracted wall_single.zip:
+/results/jepawm_dset/wall
+/results/jepawm_dset/wall/hf_data
+/results/jepawm_dset/wall/hf_data/train-00000-of-00001.parquet
+/results/jepawm_dset/wall/wall_single
+/results/jepawm_dset/wall/wall_single/.gitattributes
+/results/jepawm_dset/wall/wall_single/.huggingface
+/results/jepawm_dset/wall/wall_single/.huggingface/.gitignore
+/results/jepawm_dset/wall/wall_single/.huggingface/download
+/results/jepawm_dset/wall/wall_single/actions.pth
+/results/jepawm_dset/wall/wall_single/door_locations.pth
+/results/jepawm_dset/wall/wall_single/obses
+/results/jepawm_dset/wall/wall_single/obses/episode_000.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_001.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_002.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_003.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_004.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_005.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_006.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_007.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_008.pth
+57G	/results/jepawm_dset/wall
+
+
+=== tree of JEPAWM_DSET ===
+/results/jepawm_dset
+/results/jepawm_dset/.cache
+/results/jepawm_dset/wall
+/results/jepawm_dset/wall/hf_data
+/results/jepawm_dset/wall/hf_data/train-00000-of-00001.parquet
+/results/jepawm_dset/wall/wall_single
+/results/jepawm_dset/wall/wall_single/.gitattributes
+/results/jepawm_dset/wall/wall_single/.huggingface
+/results/jepawm_dset/wall/wall_single/.huggingface/.gitignore
+/results/jepawm_dset/wall/wall_single/.huggingface/download
+/results/jepawm_dset/wall/wall_single/actions.pth
+/results/jepawm_dset/wall/wall_single/door_locations.pth
+/results/jepawm_dset/wall/wall_single/obses
+/results/jepawm_dset/wall/wall_single/obses/episode_000.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_001.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_002.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_003.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_004.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_005.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_006.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_007.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_008.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_009.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_010.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_011.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_012.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_013.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_014.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_015.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_016.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_017.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_018.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_019.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_020.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_021.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_022.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_023.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_024.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_025.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_026.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_027.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_028.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_029.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_030.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_031.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_032.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_033.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_034.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_035.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_036.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_037.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_038.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_039.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_040.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_041.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_042.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_043.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_044.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_045.pth
+/results/jepawm_dset/wall/wall_single/obses/episode_046.pth
+57G	/results/jepawm_dset
+
+
+=== where the repo looks for the Wall data ===
+        "state_dim": 7,
+        "action_mean": [-0.008700000122189522, 0.006800000090152025],
+        "action_std": [0.20190000534057617, 0.20020000636577606],
+        "proprio_mean": [236.61549377441406, 264.5674133300781, -2.9303202629089355, 2.543079137802124],
+        "proprio_std": [101.12020111083984, 87.01119995117188, 74.8455581665039, 74.14009094238281],
+        "state_mean": [236.61549377441406, 264.5674133300781, 255.13070678710938, 266.3721008300781, 1.958400011062622, -2.9303202629089355, 2.543079137802124],
+        "state_std": [101.12020111083984, 87.01119995117188, 52.70539855957031, 57.497100830078125, 1.7555999755859375, 74.8455581665039, 74.14009094238281],
+    },
+    "pointmaze": {
+        "action_dim": 2,
+        "proprio_dim": 4,
+        "state_dim": 4,
+        "action_mean": [7.821338658686727e-05, 0.0006003659800626338],
+        "action_std": [0.5769129991531372, 0.577587902545929],
+        "proprio_mean": [1.8130563497543335, 1.9377127885818481, -0.0039275349117815495, -0.019777977839112282],
+        "proprio_std": [1.0055010318756104, 0.9630089402198792, 1.6802769899368286, 1.9319307804107666],
+        "state_mean": [1.8130563497543335, 1.9377127885818481, -0.0039275349117815495, -0.019777977839112282],
+        "state_std": [1.0055010318756104, 0.9630089402198792, 1.6802769899368286, 1.9319307804107666],
+    },
+    "wall": {
+        "action_dim": 2,
+        "proprio_dim": 2,
+        "state_dim": 2,
+        "action_mean": [-0.005564616061747074, 0.013197818771004677],
+        "action_std": [0.752332866191864, 0.7466897964477539],
+        "proprio_mean": [31.89451026916504, 31.81402015686035],
+        "proprio_std": [17.663522720336914, 17.27516746520996],
+        "state_mean": [31.894489288330078, 31.81402587890625],
+        "state_std": [17.663522720336914, 17.27516746520996],
+    },
+    # Real robot environments (normalize_action=False, so mean=0, std=1)
+    "droid": {
+        "action_dim": 7,  # 3 pos + 3 euler + 1 gripper
+        "proprio_dim": 7,
+        "state_dim": 7,
+        "action_mean": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+        "action_std": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+        "proprio_mean": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+        "proprio_std": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+        "state_mean": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+        "state_std": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+    },
+    "robocasa": {
+        "action_dim": 7,  # Same format as DROID
+        "proprio_dim": 7,
+        "state_dim": 7,
+        "action_mean": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+        "action_std": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+        "proprio_mean": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+        "proprio_std": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+        "state_mean": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+14:def get_dataset_paths(datasets: list[str]):
+15-    paths = []
+16-    for d in datasets:
+17-        try:
+18-            path = dataset_paths().get(d)
+19-        except Exception:
+20-            raise Exception(f"Unknown dataset: {d}")
+21-        paths.append(path)
+22-    logger.info(f"Datapaths {paths}")
+23-    return paths
+
+
+=== grep Wall dataset class / paths ===
+app/plan_common/datasets/__init__.py:59:    "wall": {
+app/plan_common/datasets/utils.py:22:from .wall_dset import load_wall_slice_train_val
+app/plan_common/datasets/utils.py:184:        elif all("wall" in p for p in data_paths):
+app/plan_common/datasets/utils.py:185:            datasets, traj_dsets = load_wall_slice_train_val(
+app/plan_common/datasets/wall_dset.py:23:class WallDataset(TrajDataset):
+app/plan_common/datasets/wall_dset.py:26:        data_path: str = "/data/datasets/wall_single",
+app/plan_common/datasets/wall_dset.py:36:        log.info("📂 Loading Wall dataset...")
+app/plan_common/datasets/wall_dset.py:43:        self.wall_locations = torch.load(self.data_path / f"wall_locations.pth")
+app/plan_common/datasets/wall_dset.py:56:        self.wall_locations = self.wall_locations[:n]
+app/plan_common/datasets/wall_dset.py:63:            self.wall_locations = self.wall_locations[:num_keep]
+app/plan_common/datasets/wall_dset.py:64:            log.info(f"Slicing Wall dataset from {n} to {num_keep} samples ({dset_fraction*100:.1f}%)")
+app/plan_common/datasets/wall_dset.py:106:        wall_location = self.wall_locations[idx, frames]
+app/plan_common/datasets/wall_dset.py:112:        return obs, act, state, None, {"fix_door_location": door_location[0], "fix_wall_location": wall_location[0]}
+app/plan_common/datasets/wall_dset.py:121:def load_wall_slice_train_val(
+app/plan_common/datasets/wall_dset.py:124:    data_path="/data/datasets/wall_single",
+app/plan_common/datasets/wall_dset.py:139:        dset = WallDataset(
+app/plan_common/datasets/wall_dset.py:158:        dset_train = WallDataset(
+app/plan_common/datasets/wall_dset.py:165:        dset_val = WallDataset(
+
+
+##### FILE evals/utils.py #####
+# Copyright (c) Facebook, Inc. and its affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
+"""
+Common utilities for evaluation scripts.
+"""
+import logging
+import os
+
+import imageio
+import matplotlib.pyplot as plt
+import numpy as np
+
+from app.plan_common.datasets.preprocessor import Preprocessor
+from app.plan_common.datasets.transforms import make_inverse_transforms, make_transforms
+from app.plan_common.datasets.utils import init_data
+from src.datasets.utils.utils import get_dataset_paths
+
+logger = logging.getLogger(__name__)
+
+
+def make_datasets(cfgs_data, cfgs_data_aug, world_size=1, rank=0, filter_first_episodes=20):
+    """
+    Initialize dataset and preprocessor for evaluation.
+
+    This is a shared utility function used by both simu_env_planning and unroll_decode evaluations.
+
+    Args:
+        cfgs_data: Data configuration dictionary with nested structure:
+            - datasets: List of dataset names
+            - img_size: Image size
+            - validation: Validation config with val_datasets, etc.
+            - loader: DataLoader config
+            - custom: Custom dataset parameters
+            - droid: DROID-specific parameters
+        cfgs_data_aug: Data augmentation configuration with normalize, etc.
+        world_size: Number of distributed processes
+        rank: Current process rank
+        filter_first_episodes: Number of episodes to filter to (for faster loading)
+
+    Returns:
+        tuple: (dset, data_preprocessor) where dset is the validation trajectory dataset
+            and data_preprocessor is a Preprocessor instance
+    """
+    img_size = cfgs_data["img_size"]
+
+    transform = make_transforms(
+        img_size=img_size,
+        normalize=cfgs_data_aug["normalize"],
+        random_horizontal_flip=False,
+        random_resize_aspect_ratio=(1.0, 1.0),
+        random_resize_scale=(1.0, 1.0),
+        reprob=0.0,
+        auto_augment=False,
+        motion_shift=False,
+    )
+    inverse_transform = make_inverse_transforms(
+        img_size=img_size,
+        **cfgs_data_aug,
+    )
+    logger.info(f"{inverse_transform.std=}, {inverse_transform.mean=}")
+
+    # Extract nested structures (matching train.py structure)
+    cfgs_validation = cfgs_data.get("validation", {})
+    cfgs_loader = cfgs_data.get("loader", {})
+    cfgs_custom = cfgs_data.get("custom", {})
+    cfgs_droid = cfgs_data.get("droid", {})
+
+    datasets = cfgs_data.get("datasets", [])
+    dataset_paths = get_dataset_paths(datasets)
+    val_datasets = cfgs_validation.get("val_datasets", [])
+    val_dataset_paths = get_dataset_paths(val_datasets) if val_datasets else None
+
+    # Prepare data kwargs from config, flattening nested structures and filtering out non-init_data fields
+    excluded_keys = [
+        "datasets",
+        "val_datasets",
+        "img_size",
+        # subfields of cfgs_data
+        "validation",
+        "loader",
+        "custom",
+        "droid",
+    ]
+    data_kwargs = {k: v for k, v in cfgs_data.items() if k not in excluded_keys}
+
+    data_kwargs.update(cfgs_validation)
+    data_kwargs.update(cfgs_loader)
+    data_kwargs.update(cfgs_custom)
+    data_kwargs.update(cfgs_droid)
+
+    data_kwargs.update(
+        {
+            "data_paths": dataset_paths,
+            "val_data_paths": val_dataset_paths,
+            "transform": transform,
+            "world_size": world_size,
+            "rank": rank,
+            "num_workers": 0,
+            "filter_first_episodes": filter_first_episodes,
+            # robocasa
+            "output_rcasa_state": True,
+            "output_rcasa_info": True,
+        }
+    )
+
+    (
+        dataset,
+        val_dataset,
+        traj_dataset,
+        val_traj_dataset,
+        unsupervised_loader,
+        val_unsupervised_loader,
+        unsupervised_sampler,
+        viz_val_data_loader,
+    ) = init_data(**data_kwargs)
+
+    dset = val_traj_dataset
+    data_preprocessor = Preprocessor(
+        action_mean=dset.action_mean,
+        action_std=dset.action_std,
+        state_mean=dset.state_mean,
+        state_std=dset.state_std,
+        proprio_mean=dset.proprio_mean,
+        proprio_std=dset.proprio_std,
+        transform=transform,
+        inverse_transform=inverse_transform,
+    )
+    return dset, data_preprocessor
+
+
+def prepare_obs(obs_type, td):
+    """Prepare observation based on observation type."""
+    if obs_type == "rgb_state":
+        return td
+    elif obs_type == "state":
+        return td["proprio"]
+    elif obs_type == "rgb":
+        return td["visual"]
+    else:
+        raise ValueError(f"Unknown observation type: {obs_type}")
+
+
+def save_image(img_array, path):
+    """Save image array to PDF file."""
+    img_normalized = img_array / 255.0
+    plt.figure(figsize=(10, 10))
+    plt.imshow(img_normalized)
+    plt.axis("off")
+    plt.savefig(path, bbox_inches="tight", pad_inches=0, format="pdf")
+    plt.close()
+    logger.info(f"Saved image to {path}")
+
+
+def save_video(frames, path, fps=10):
+    """Save video frames to GIF."""
+    frames = np.transpose(frames, (0, 2, 3, 1))
+    if frames.dtype != np.uint8:
+        frames = frames.astype(np.uint8)
+    imageio.mimsave(path, frames, fps=fps, loop=0)
+    logger.info(f"Saved GIF to {path}")
+
+
+def log_media_local(media_dict, folder, step=0):
+    """Log media files locally."""
+    for key, value in media_dict.items():
+        subfolder = os.path.join(folder, "/".join(key.split("/")))
+        os.makedirs(subfolder, exist_ok=True)
+        if key.endswith("_rollouts") or key.endswith("_noisy_actions"):
+            image_path = os.path.join(subfolder, f"{step}.pdf")
+            save_image(value, image_path)
+        elif key.endswith("_rollout"):
+            video_path = os.path.join(subfolder, f"{step}.gif")
+            save_video(value, video_path)
+
+
+##### FILE evals/simu_env_planning/planning/gc_agent.py #####
+# Copyright (c) Facebook, Inc. and its affiliates.
+# All rights reserved.
+#
+# The below code is inspired from TD-MPC2 https://github.com/nicklashansen/tdmpc2
+# licensed under the MIT License
+
+import torch
+
+from evals.simu_env_planning.planning.planning.objectives import (
+    ReprTargetCosMPCObjective,
+    ReprTargetDistL1MPCObjective,
+    ReprTargetDistMPCObjective,
+)
+from evals.simu_env_planning.planning.planning.planner import (
+    AdamPlanner,
+    CEMPlanner,
+    GradientDescentPlanner,
+    MPPIPlanner,
+    NevergradPlanner,
+)
+from src.utils.logging import get_logger
+
+logger = get_logger(__name__)
+
+
+class GC_Agent:
+    """A modification of TDMPC2 that
+    allows for pre-training offline in self-supervised manner.
+    Allows for not using the reward information during pre-training.
+    """
+
+    def __init__(self, cfg, model, dset=None, preprocessor=None):
+        self.cfg = cfg
+        self.device = torch.device("cuda", index=0)
+        logger.info("🏗️  Initializing GC_Agent with WorldModel")
+        self.model = model
+        self.dset = dset
+        if hasattr(self.dset, "frames_per_clip") and cfg.task_specification.goal_source == "dset":
+            if self.dset.frames_per_clip < cfg.frameskip * cfg.task_specification.goal_H + 1:
+                self.dset.frames_per_clip = cfg.frameskip * cfg.task_specification.goal_H + 1
+        self.preprocessor = preprocessor
+        self.local_generator = torch.Generator(device="cpu")
+        self.local_gpu_generator = torch.Generator(device="cuda:0")
+        self.local_generator.manual_seed(cfg.local_seed)
+        self.local_gpu_generator.manual_seed(cfg.local_seed)
+
+        self.model.eval()
+        self.goal_state = None
+        self._prev_losses = None
+        # --------
+        if self.cfg.planner.planner_name == "nevergrad":
+            self.planner = NevergradPlanner(
+                unroll=self.model.unroll,
+                action_dim=self.model.action_dim,
+                decode_unroll=self.model.decode_unroll,
+                **self.cfg.planner,
+            )
+        elif self.cfg.planner.planner_name == "cem":
+            self.planner = CEMPlanner(
+                unroll=self.model.unroll,
+                action_dim=self.model.action_dim,
+                action_masks=None,
+                local_generator=self.local_gpu_generator,
+                decode_unroll=self.model.decode_unroll,
+                **self.cfg.planner,
+            )
+        elif self.cfg.planner.planner_name == "mppi":
+            self.planner = MPPIPlanner(
+                unroll=self.model.unroll,
+                action_dim=self.model.action_dim,
+                action_masks=None,
+                local_generator=self.local_gpu_generator,
+                decode_unroll=self.model.decode_unroll,
+                **self.cfg.planner,
+            )
+        elif self.cfg.planner.planner_name == "gd":
+            self.planner = GradientDescentPlanner(
+                unroll=self.model.unroll,
+                action_dim=self.model.action_dim,
+                action_masks=None,
+                local_generator=self.local_gpu_generator,
+                decode_unroll=self.model.decode_unroll,
+                **self.cfg.planner,
+            )
+        elif self.cfg.planner.planner_name == "adam":
+            self.planner = AdamPlanner(
+                unroll=self.model.unroll,
+                action_dim=self.model.action_dim,
+                action_masks=None,
+                local_generator=self.local_gpu_generator,
+                decode_unroll=self.model.decode_unroll,
+                **self.cfg.planner,
+            )
+        else:
+            raise ValueError(f"Unknown planner: {self.cfg.planner}")
+
+    @torch.no_grad()
+    def set_goal(self, goal_state):
+        """
+        goal_state:
+        - rgb : [T, C, H, W] if not cfg.task_specification.obs_concat_channels with T >= tubelet_size_enc
+        """
+        assert goal_state is not None, "Goal state must be set first for gc agent."
+        self.goal_state = goal_state.unsqueeze(0)
+        self.goal_state_enc = self.model.encode(self.goal_state, act=False).detach()
+        if self.cfg.planner.planning_objective.objective_type == "L2":
+            # Careful: unsqueeze applies to TensorDicts
+            self.objective = ReprTargetDistMPCObjective(
+                self.cfg, target_enc=self.goal_state_enc, **self.cfg.planner.planning_objective
+            )
+        elif self.cfg.planner.planning_objective.objective_type == "L1":
+            self.objective = ReprTargetDistL1MPCObjective(
+                self.cfg, target_enc=self.goal_state_enc, **self.cfg.planner.planning_objective
+            )
+        elif self.cfg.planner.planning_objective.objective_type == "repr_sim":
+            self.objective = ReprTargetCosMPCObjective(
+                self.cfg, target_enc=self.goal_state_enc, **self.cfg.planner.planning_objective
+            )
+        else:
+            raise ValueError(f"Unknown objective type: {self.cfg.planner.planning_objective.objective_type}")
+
+        if self.planner is not None:
+            self.planner.set_objective(self.objective)
+
+    def plan(
+        self,
+        z,
+        steps_left=None,
+    ):
+        """
+        args:
+            z: initial context state
+            steps_left: number of steps left in the episode, used to adjust planning horizon.
+        Stored variables:
+            self.prev_elite_losses_mean: mean loss of the elite action sequence from the previous planning optimizer iteration.
+            self.prev_elite_losses_std: std of the loss of the elite action sequence from the previous planning optimizer iteration.
+        Returns:
+            a: action to take, shape (1, action_dim)
+        """
+        planning_result = self.planner.plan(
+            z,
+            steps_left=steps_left,
+        )
+        self._prev_losses = planning_result.losses
+        self._prev_elite_losses_mean = planning_result.prev_elite_losses_mean
+        self._prev_elite_losses_std = planning_result.prev_elite_losses_std
+        self._prev_pred_frames_over_iterations = planning_result.pred_frames_over_iterations
+        self._predicted_best_encs_over_iterations = planning_result.predicted_best_encs_over_iterations
+        return planning_result.actions
+
+    def act(
+        self,
+        obs,
+        steps_left=None,
+    ):
+        """
+        Select an action by planning in the latent space of the world model.
+
+        Args:
+                obs (torch.Tensor): Observation from the environment.
+                t0 (bool): Whether this is the first observation in the episode.
+                eval_mode (bool): Whether to use the mean of the action distribution.
+                task (int): Task index (only used for multi-task experiments).
+
+        Make sure the models's encode() and unroll() function match: they interact only here:
+        unroll() is used in self.plan()
+
+        Returns:
+                torch.Tensor: Action to take in the environment.
+        """
+        if self.cfg.task_specification.obs == "rgb":
+            obs = obs.to(self.device, non_blocking=True).unsqueeze(0)
+        elif self.cfg.task_specification.obs == "rgb_state":
+            obs = obs.to(self.device, non_blocking=True).unsqueeze(0)
+        z = self.model.encode(obs, act=True)
+        a = self.plan(
+            z,
+            steps_left=steps_left,
+        )
+        return a.cpu()
+
+
+##### FILE evals/simu_env_planning/envs/init.py #####
+# Copyright (c) Facebook, Inc. and its affiliates.
+# All rights reserved.
+# The below code is inspired from TD-MPC2 https://github.com/nicklashansen/tdmpc2
+# licensed under the MIT License
+
+import logging
+import warnings
+from copy import deepcopy
+
+import gym
+
+logger = logging.getLogger(__name__)
+
+from evals.simu_env_planning.envs.wrappers.multitask import MultitaskWrapper
+from evals.simu_env_planning.envs.wrappers.pixels import PixelWrapper
+from evals.simu_env_planning.envs.wrappers.tensor import TensorWrapper
+
+# Lazy imports for environments with heavy dependencies (mujoco-py, robocasa, etc.)
+_lazy_env_cache = {}
+
+_LAZY_ENV_CONFIG = {
+    "maze": ("evals.simu_env_planning.envs.pointmaze_gym_wrap", "MuJoCo 2.1"),
+    "robocasa": ("evals.simu_env_planning.envs.robocasa", "RoboCasa"),
+    "metaworld": ("evals.simu_env_planning.envs.metaworld", "Metaworld"),
+}
+
+
+def _lazy_make_env(env_key, cfg):
+    """Lazily import and call make_env for environments with optional dependencies."""
+    if env_key not in _lazy_env_cache:
+        module_path, install_name = _LAZY_ENV_CONFIG[env_key]
+        try:
+            import importlib
+
+            _lazy_env_cache[env_key] = importlib.import_module(module_path).make_env
+        except Exception as e:
+            raise ImportError(f"Missing dependencies for {install_name}. See README.md. Error: {e}") from e
+    return _lazy_env_cache[env_key](cfg)
+
+
+# These environments have minimal dependencies and can be imported eagerly
+from evals.simu_env_planning.envs.droid_dset_dummy_env import make_env as make_droid_dset_dummy_env
+from evals.simu_env_planning.envs.pusht_gym_wrap import make_env as make_pusht_env
+from evals.simu_env_planning.envs.wall_gym_wrap import make_env as make_wall_env
+
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+
+
+def make_multitask_env(cfg):
+    """
+    Make a multi-task environment. Only used for Metaworld.
+    """
+    logger.info(f"Creating multi-task environment with tasks: {cfg.tasks}")
+    envs = []
+    for task in cfg.tasks:
+        _cfg = deepcopy(cfg)
+        _cfg.task = task
+        _cfg.task_specification.multitask = False
+        env = make_env(_cfg)
+        if env is None:
+            raise ValueError("Unknown task:", task)
+        envs.append(env)
+    env = MultitaskWrapper(cfg, envs)
+    cfg.obs_shapes = env._obs_dims
+    cfg.action_dims = env._action_dims
+    cfg.episode_lengths = env._episode_lengths
+    return env
+
+
+def make_env(cfg):
+    """
+    Flexible interface to build environments.
+    """
+    gym.logger.set_level(40)
+    if cfg.task_specification.goal_source in ["dset", "random_action"]:
+        if cfg.task_specification.task == "droid-base":
+            cfg.task_specification.max_episode_steps = cfg.planner.horizon
+        elif cfg.task_specification.task.startswith("robocasa"):
+            pass
+        else:  # pusht
+            cfg.task_specification.max_episode_steps = cfg.frameskip * cfg.task_specification.goal_H
+            cfg.task_specification.goal_max_episode_steps = cfg.frameskip * cfg.task_specification.goal_H
+    elif cfg.task_specification.goal_source == "random_state":
+        # TODO: Hardcoded for now, improve
+        cfg.task_specification.max_episode_steps = cfg.frameskip * cfg.task_specification.goal_H
+    else:
+        if cfg.task_specification.get("max_episode_steps", None) is None:
+            cfg.task_specification.max_episode_steps = 100
+
+    if cfg.task_specification.multitask:
+        env = make_multitask_env(cfg)
+
+    else:
+        env = None
+        if cfg.task_specification.task.startswith("mw-"):
+            env = _lazy_make_env("metaworld", cfg)
+        elif cfg.task_specification.task.startswith("pusht-"):
+            env = make_pusht_env(cfg)
+        elif cfg.task_specification.task.startswith("wall-"):
+            env = make_wall_env(cfg)
+        elif cfg.task_specification.task.startswith("maze-"):
+            env = _lazy_make_env("maze", cfg)
+        elif cfg.task_specification.task.startswith("robocasa-"):
+            env = _lazy_make_env("robocasa", cfg)
+        elif cfg.task_specification.task.startswith("droid-"):
+            env = make_droid_dset_dummy_env(cfg)
+
+        env = TensorWrapper(env)
+        if cfg.task_specification.get("obs", "state") in ["rgb", "rgb_state"]:
+            env = PixelWrapper(cfg, env)
+    try:  # Dict
+        cfg.obs_shape = {k: v.shape for k, v in env.observation_space.spaces.items()}
+    except:  # Box
+        cfg.obs_shape = {cfg.task_specification.get("obs", "state"): env.observation_space.shape}
+    if cfg.task_specification.get("obs", "state") == "rgb_state":
+        cfg.obs_shape = {"state": [4], "rgb": cfg.obs_shape["rgb_state"]}
+
+    cfg.action_dim = env.action_space.shape[0]
+    cfg.episode_length = env.max_episode_steps
+    cfg.meta.seed_steps = max(1000, 5 * cfg.episode_length)
+    return env
+
+
+##### FILE evals/simu_env_planning/envs/wall_env/envs/wall.py #####
+# Copyright (c) Facebook, Inc. and its affiliates.
+# Inspired from https://github.com/gaoyuezhou/dino_wm
+# Licensed under the MIT License
+
+import math
+import random
+from typing import Optional
+
+import gym
+import numpy as np
+import torch
+
+from ..data.wall import WallDatasetConfig
+from ..data.wall_utils import generate_wall_layouts
+from .utils import check_wall_intersect
+
+
+class DotWall(gym.Env):
+    def __init__(
+        self,
+        rng: Optional[np.random.Generator] = None,
+        wall_config: Optional[WallDatasetConfig] = None,
+        fix_wall: bool = True,
+        cross_wall: bool = False,
+        level: str = "normal",
+        fix_wall_location: Optional[int] = None,
+        fix_door_location: Optional[int] = None,
+        device="cpu",
+    ):
+        super().__init__()
+        self.wall_config = wall_config
+        self.cross_wall = cross_wall
+        self.level = level
+        self.img_size = wall_config.img_size
+        self.device = device
+        self.dot_std = wall_config.dot_std
+        self.padding = self.dot_std * 2
+        self.border_padding = wall_config.border_wall_loc - 1 + self.padding
+        self.rng = rng or np.random.default_rng()
+        if wall_config is not None:
+            layouts, other_layouts = generate_wall_layouts(wall_config)
+            self.layouts = layouts
+        else:
+            self.fix_wall = fix_wall
+            self.fix_wall_location = fix_wall_location
+            self.fix_door_location = fix_door_location
+        self.wall_x, self.hole_y = self._generate_wall()
+        self.left_wall_x = self.wall_x - self.wall_config.wall_width // 2
+        self.right_wall_x = self.wall_x + self.wall_config.wall_width // 2
+
+        self.reset_to_state = None
+        self.action_space = gym.spaces.Box(low=-1.0, high=1.0, shape=(2,), dtype=np.float32)
+
+    def channels_to_img(self, wall_img, dot_img):
+        h, w = wall_img.shape
+        rgb_image = torch.ones((3, h, w), dtype=torch.uint8).to(self.device) * 255
+
+        wall_mask = wall_img == 1
+        rgb_image[:, wall_mask] = torch.tensor([0, 0, 0], dtype=torch.uint8).to(self.device).unsqueeze(1)
+
+        no_wall_mask = wall_img == 0  # Mask where there are no walls
+        red_intensity = (dot_img * 255).to(torch.uint8)
+
+        rgb_image[1, no_wall_mask] = 255 - red_intensity[no_wall_mask]  # Green channel reduced
+        rgb_image[2, no_wall_mask] = 255 - red_intensity[no_wall_mask]  # Blue channel reduced
+        return rgb_image
+
+    def reset(self, location=None, **kwargs):
+        if location is None:  # always None
+            location = self.reset_to_state  # self.reset_to_state should not be None
+        self.wall_img = self._render_walls(self.wall_x, self.hole_y)
+        if location is None:
+            # self._generate_start_and_target()
+            dot_position = self.generate_random_state()[0]
+            self.dot_position = torch.tensor(dot_position).to(self.device)
+        else:
+            self.dot_position = location.squeeze() if len(location.shape) == 2 else location
+            self.dot_position = location.to(self.device)
+            # self.dot_position = location.squeeze() if location.dim() == 2 else location
+        self.dot_img = self._render_dot(self.dot_position)
+        self.observation = (self.wall_img + self.dot_img) / 2
+        self.position_history = [self.dot_position]
+        state = self.dot_position
+        visual = self.channels_to_img(self.wall_img, self.dot_img)
+        observation = {"visual": visual.float(), "proprio": state.float()}
+        return observation, state
+
+    def step(self, action: torch.Tensor):
+        self.dot_position = self._calculate_next_position(action)
+        self.position_history.append(self.dot_position)
+        self.dot_img = self._render_dot(self.dot_position)
+        self.observation = (self.wall_img + self.dot_img) / 2
+        visual = self.channels_to_img(self.wall_img, self.dot_img)
+        observation = {"visual": visual.float(), "proprio": self.dot_position.float()}
+        info = {}
+        info["state"] = self.dot_position
+        info["pos_agent"] = self.dot_position
+        return observation, 0, False, info  # observation, reward, done, info
+
+    def _calculate_next_position(self, action):
+        next_dot_position = self._generate_transition(self.dot_position, action)
+        next_dot_position = next_dot_position.squeeze()
+
+        intersect, intersect_w_noise = check_wall_intersect(
+            self.dot_position,
+            next_dot_position,
+            self.wall_x,
+            self.hole_y,
+            wall_width=self.wall_config.wall_width,
+            door_space=self.wall_config.door_space,
+            border_wall_loc=self.wall_config.border_wall_loc,
+            img_size=self.wall_config.img_size,
+        )
+        if intersect is not None:
+            next_dot_position = intersect_w_noise
+        return next_dot_position
+
+    def _generate_transition(self, location, action):
+        next_location = location + action * 2  # [..., :-1] * action[..., -1]
+        return next_location
+
+    def _generate_wall(self):
+        layout_codes = list(self.layouts.keys())
+        weights = [1] * len(layout_codes)
+        code = random.choices(layout_codes, weights=weights, k=1)[0]
+
+        wall_loc = self.layouts[code]["wall_pos"]
+        door_loc = self.layouts[code]["door_pos"]
+
+        wall_loc = torch.tensor(wall_loc, device=self.device)
+        door_loc = torch.tensor(door_loc, device=self.device)
+
+        return wall_loc, door_loc
+
+    def generate_random_state(self, seed=None):
+        seed = random.randint(0, 2**32 - 1) if seed is None else seed
+        rs = np.random.RandomState(seed)
+        start_min_x = self.border_padding
+        start_max_x = self.left_wall_x.item() - self.padding
+        target_min_x = self.right_wall_x.item() + self.padding
+        target_max_x = self.img_size - 1 - self.border_padding
+        min_y, max_y = (
+            self.border_padding,
+            self.img_size - 1 - self.border_padding,
+        )
+        start_x = rs.uniform(low=start_min_x, high=start_max_x)
+        target_x = rs.uniform(low=target_min_x, high=target_max_x)
+
+        start_y = rs.uniform(low=min_y, high=max_y)
+        target_y = rs.uniform(low=min_y, high=max_y)
+
+        if rs.uniform(low=0, high=1) < 0.5:  # inverse travel direction 50% of time
+            start_x, target_x = target_x, start_x
+        return np.array([start_x, start_y]), np.array([target_x, target_y])
+        # return np.array([start_x, start_y])
+
+    def _generate_start_and_target(self):
+        # We leave 2 * self.dot_std margin when generating state, and don't let the
+        # dot approach the border.
+        n_steps = self.wall_config.n_steps
+        if self.cross_wall:
+            if self.level == "easy":
+                # we make sure start and goal are within (n_steps/2) steps from door
+
+                avg_dist_n_steps = n_steps * self.wall_config.action_step_mean
+
+                assert (
+                    self.wall_config.wall_padding - self.wall_config.wall_width // 2 - self.wall_config.border_wall_loc
+                    >= math.ceil(avg_dist_n_steps * 3 / 4)
+                )
+
+                start_min_x = self.left_wall_x - math.ceil(avg_dist_n_steps * 3 / 4)
+                start_max_x = self.left_wall_x - math.ceil(avg_dist_n_steps * 1 / 4)
+                target_min_x = self.right_wall_x + math.ceil(avg_dist_n_steps * 1 / 4)
+                target_max_x = self.right_wall_x + math.ceil(avg_dist_n_steps * 3 / 4)
+                min_y = max(
+                    self.hole_y - math.ceil(avg_dist_n_steps * 3 / 4),
+                    self.border_padding,
+                )
+                max_y = min(
+                    self.hole_y + math.ceil(avg_dist_n_steps * 3 / 4),
+                    self.img_size - 1 - self.border_padding,
+                )
+            else:
+                start_min_x = self.border_padding
+                start_max_x = self.left_wall_x - self.padding
+                target_min_x = self.right_wall_x + self.padding
+                target_max_x = self.img_size - 1 - self.border_padding
+                min_y, max_y = (
+                    self.border_padding,
+                    self.img_size - 1 - self.border_padding,
+                )
+
+            start_x = start_min_x + random.random() * (start_max_x - start_min_x)
+            target_x = target_min_x + random.random() * (target_max_x - target_min_x)
+
+            start_y = torch.tensor(min_y + random.random() * (max_y - min_y), device=self.device)
+            target_y = torch.tensor(min_y + random.random() * (max_y - min_y), device=self.device)
+
+            if random.random() < 0.5:  # inverse travel direction 50% of time
+                start_x, target_x = target_x, start_x
+
+            self.dot_position = torch.stack([start_x, start_y])
+            self.target_position = torch.stack([target_x, target_y])
+        else:
+            raise NotImplementedError
+            effective_range = (self.img_size - 1) - 2 * self.padding
+            location = (
+                torch.from_numpy(self.rng.random(size=(4,)) * effective_range + self.padding).to(self.device).float()
+            )
+            if self.level == "easy":
+                # make the target location to be within a certain distance from start
+                min_dist_from_start = math.ceil(n_steps * 2 / 3)
+                max_dist_from_start = math.ceil(n_steps * 3 / 2)
+                # generate random angle
+                angle = (torch.rand(1) * 2 * torch.pi).to(location.device)
+                # generate a random distance c within the range
+                dist = (torch.rand(1) * (max_dist_from_start - min_dist_from_start) + min_dist_from_start).to(
+                    location.device
+                )
+                # set new x and y for goal
+                location[2] = location[0] + dist * torch.cos(angle)
+                location[3] = location[1] + dist * torch.sin(angle)
+                location = torch.clamp(location, min=self.padding, max=self.img_size - 1 - self.padding)
+
+            self.dot_position = location[:2]
+            self.target_position = location[2:]
+
+    def _render_walls(self, wall_loc, hole_loc):
+        # Generates an image of the wall with the door and specified wall thickness.
+        x = torch.arange(0, self.img_size, device=self.device)
+        y = torch.arange(0, self.img_size, device=self.device)
+        grid_x, grid_y = torch.meshgrid(x, y, indexing="xy")
+
+        # Calculate the range for the wall based on the wall_width
+        half_width = self.wall_config.wall_width // 2
+
+        # Create the wall mask centered at wall_loc with the given wall_width
+        wall_mask = (grid_x >= (wall_loc - half_width)) & (grid_x <= (wall_loc + half_width))
+
+        # Door logic remains the same
+        door_mask = (hole_loc - self.wall_config.door_space <= grid_y) & (
+            grid_y <= hole_loc + self.wall_config.door_space
+        )
+
+        # Combine the wall and door masks
+        res = wall_mask & ~door_mask
+
+        # Convert boolean mask to float
+        res = res.float()
+
+        # Set border walls
+        border_wall_loc = self.wall_config.border_wall_loc
+        res[:, border_wall_loc - 1] = 1
+        res[:, -border_wall_loc] = 1
+        res[border_wall_loc - 1, :] = 1
+        res[-border_wall_loc, :] = 1
+
+        return res
+
+    def _render_dot(self, location):
+        x = torch.linspace(0, self.img_size - 1, steps=self.img_size, device=self.device)
+        y = torch.linspace(0, self.img_size - 1, steps=self.img_size, device=self.device)
+        xx, yy = torch.meshgrid(x, y, indexing="xy")
+        c = torch.stack([xx, yy], dim=-1)
+        img = torch.exp(-(c - location).norm(dim=-1).pow(2) / (2 * self.dot_std * self.dot_std)) / (
+            2 * math.pi * self.dot_std * self.dot_std
+        )
+
+        max_value = img.max()
+        img = img / max_value
+        return img
+
+    def _render_dot_and_wall(self, location):
+        dot_img = self._render_dot(location)
+        return torch.stack([dot_img, self.wall_img * dot_img.max()], dim=0)
+
+    def render(self, **kwargs):
+        visual_obs = self.channels_to_img(self.wall_img, self.dot_img)
+        return visual_obs  # [C, H, W]
+
+    def set_init_state(self, init_state):
+        self.reset_to_state = torch.tensor(init_state)
+        dot_location = init_state[-2:] if init_state is not None else None
+
+    def seed(self, seed):
+        self.rng = np.random.default_rng(seed)
+
+
+##### FILE app/plan_common/datasets/wall_dset.py #####
+# Copyright (c) Facebook, Inc. and its affiliates.
+# Inspired from https://github.com/gaoyuezhou/dino_wm
+# Licensed under the MIT License
+
+from pathlib import Path
+from typing import Callable, Optional
+
+import torch
+
+from src.utils.logging import get_logger
+
+from .traj_dset import TrajDataset, TrajSlicerDataset, get_train_val_sliced
+
+log = get_logger(__name__)
+
+# precomputed dataset stats
+ACTION_MEAN = torch.tensor([0.0006, 0.0015])
+ACTION_STD = torch.tensor([0.4395, 0.4684])
+STATE_MEAN = torch.tensor([0.7518, 0.9239, -3.9702e-05, 3.1550e-04])
+STATE_STD = torch.tensor([1.0964, 1.2390, 1.3819, 1.5407])
+
+
+class WallDataset(TrajDataset):
+    def __init__(
+        self,
+        data_path: str = "/data/datasets/wall_single",
+        n_rollout: Optional[int] = None,
+        transform: Optional[Callable] = None,
+        normalize_action: bool = False,
+        action_scale=1.0,
+        dset_fraction: float = 1.0,
+    ):
+        self.data_path = Path(data_path)
+        self.transform = transform
+        self.normalize_action = normalize_action
+        log.info("📂 Loading Wall dataset...")
+        states = torch.load(self.data_path / f"states.pth")
+        self.states = states
+        self.proprios = self.states.clone()
+        self.actions = torch.load(self.data_path / f"actions.pth")
+        self.actions = self.actions / action_scale
+        self.door_locations = torch.load(self.data_path / f"door_locations.pth")
+        self.wall_locations = torch.load(self.data_path / f"wall_locations.pth")
+
+        self.n_rollout = n_rollout
+        if self.n_rollout:
+            n = self.n_rollout
+        else:
+            n = len(self.states)
+            log.info(f"✅ Loaded {n} rollouts")
+
+        self.states = self.states[:n]
+        self.actions = self.actions[:n]
+        self.proprios = self.proprios[:n]
+        self.door_locations = self.door_locations[:n]
+        self.wall_locations = self.wall_locations[:n]
+        if dset_fraction < 1.0:
+            num_keep = max(1, int(n * dset_fraction))
+            self.states = self.states[:num_keep]
+            self.actions = self.actions[:num_keep]
+            self.proprios = self.proprios[:num_keep]
+            self.door_locations = self.door_locations[:num_keep]
+            self.wall_locations = self.wall_locations[:num_keep]
+            log.info(f"Slicing Wall dataset from {n} to {num_keep} samples ({dset_fraction*100:.1f}%)")
+            n = num_keep
+
+        self.action_dim = self.actions.shape[-1]
+        self.state_dim = self.states.shape[-1]
+        self.proprio_dim = self.proprios.shape[-1]
+        self.traj_len = self.actions.shape[1]
+        if normalize_action:
+            self.action_mean = self.actions.mean(dim=(0, 1))
+            self.action_std = self.actions.std(dim=(0, 1))
+            self.state_mean = self.states.mean(dim=(0, 1))
+            self.state_std = self.states.std(dim=(0, 1))
+            self.proprio_mean = self.proprios.mean(dim=(0, 1))
+            self.proprio_std = self.proprios.std(dim=(0, 1))
+        else:
+            self.action_mean = torch.zeros(self.action_dim)
+            self.action_std = torch.ones(self.action_dim)
+            self.state_mean = torch.zeros(self.state_dim)
+            self.state_std = torch.ones(self.state_dim)
+            self.proprio_mean = torch.zeros(self.proprio_dim)
+            self.proprio_std = torch.ones(self.proprio_dim)
+
+        self.actions = (self.actions - self.action_mean) / self.action_std
+        self.proprios = (self.proprios - self.proprio_mean) / self.proprio_std
+
+    def get_seq_length(self, idx):
+        return self.traj_len
+
+    def get_all_actions(self):
+        result = []
+        for i in range(len(self.states)):
+            T = self.get_seq_length(i)
+            result.append(self.actions[i, :T, :])
+        return torch.cat(result, dim=0)
+
+    def get_frames(self, idx, frames):
+        obs_dir = self.data_path / f"obses"
+        image = torch.load(obs_dir / f"episode_{idx:03d}.pth")
+        act = self.actions[idx, frames]
+        state = self.states[idx, frames]
+        proprio = self.proprios[idx, frames]
+        door_location = self.door_locations[idx, frames]
+        wall_location = self.wall_locations[idx, frames]
+
+        image = image[frames] / 255
+        if self.transform:
+            image = self.transform(image)
+        obs = {"visual": image, "proprio": proprio}
+        return obs, act, state, None, {"fix_door_location": door_location[0], "fix_wall_location": wall_location[0]}
+
+    def __getitem__(self, idx, **kwargs):
+        return self.get_frames(idx, range(self.get_seq_length(idx)))
+
+    def __len__(self):
+        return self.states.shape[0] if not self.n_rollout else self.n_rollout
+
+
+def load_wall_slice_train_val(
+    transform,
+    n_rollout=50,
+    data_path="/data/datasets/wall_single",
+    normalize_action=False,
+    split_ratio=0.8,
+    split_mode="random",
+    num_hist=0,
+    num_pred=0,
+    num_frames_val=None,
+    frameskip=1,
+    action_skip=1,
+    traj_subset=True,
+    random_seed=42,
+    process_actions="concat",
+    dset_fraction: float = 1.0,
+):
+    if split_mode == "random":
+        dset = WallDataset(
+            n_rollout=n_rollout,
+            transform=transform,
+            data_path=data_path,
+            normalize_action=normalize_action,
+            dset_fraction=dset_fraction,
+        )
+        dset_train, dset_val, train_slices, val_slices = get_train_val_sliced(
+            traj_dataset=dset,
+            train_fraction=split_ratio,
+            num_frames=num_hist + num_pred,
+            frameskip=frameskip,
+            action_skip=action_skip,
+            traj_subset=traj_subset,
+            random_seed=random_seed,
+            num_frames_val=num_frames_val,
+            process_actions=process_actions,
+        )
+    elif split_mode == "folder":
+        dset_train = WallDataset(
+            n_rollout=n_rollout,
+            transform=transform,
+            data_path=data_path + "/train",
+            normalize_action=normalize_action,
+            dset_fraction=dset_fraction,
+        )
+        dset_val = WallDataset(
+            n_rollout=n_rollout,
+            transform=transform,
+            data_path=data_path + "/val",
+            normalize_action=normalize_action,
+            dset_fraction=dset_fraction,
+        )
+        num_frames = num_hist + num_pred
+        train_slices = TrajSlicerDataset(
+            dset_train,
+            num_frames,
+            frameskip,
+            action_skip,
+            generator=torch.Generator().manual_seed(random_seed),
+            process_actions=process_actions,
+        )
+        val_slices = TrajSlicerDataset(
+            dset_val,
+            num_frames_val if num_frames_val else num_frames,
+            frameskip,
+            action_skip,
+            generator=torch.Generator().manual_seed(random_seed),
+            process_actions=process_actions,
+        )
+
+    datasets = {}
+    datasets["train"] = train_slices
+    datasets["valid"] = val_slices
+    traj_dset = {}
+    traj_dset["train"] = dset_train
+    traj_dset["valid"] = dset_val
+    return datasets, traj_dset

@@ -1,0 +1,159 @@
+=== pip install torch stack ===
+
+[notice] A new release of pip is available: 25.1.1 -> 26.3
+[notice] To update, run: pip install --upgrade pip
+
+=== try repo requirements / editable install ===
+  DEPRECATION: Building 'antlr4-python3-runtime' using the legacy setup.py bdist_wheel mechanism, which will be removed in a future version. pip 25.3 will enforce this behaviour change. A possible replacement is to use the standardized build interface by setting the `--use-pep517` option, (possibly combined with `--no-build-isolation`), or adding a `pyproject.toml` file to the source tree of 'antlr4-python3-runtime'. Discussion can be found at https://github.com/pypa/pip/issues/6334
+
+[notice] A new release of pip is available: 25.1.1 -> 26.3
+[notice] To update, run: pip install --upgrade pip
+
+=== import check ===
+INFO:matplotlib.font_manager:generated new fontManager
+import ok
+
+=== torch.hub load wall models ===
+██▊ | 2.98G/3.39G [02:06<00:16, 25.9MB/s]
+ 88%|████████▊ | 2.99G/3.39G [02:07<00:16, 26.3MB/s]
+ 88%|████████▊ | 2.99G/3.39G [02:07<00:15, 26.7MB/s]
+ 88%|████████▊ | 2.99G/3.39G [02:07<00:15, 26.9MB/s]
+ 88%|████████▊ | 3.00G/3.39G [02:07<00:15, 27.2MB/s]
+ 89%|████████▊ | 3.00G/3.39G [02:07<00:14, 28.7MB/s]
+ 89%|████████▊ | 3.00G/3.39G [02:07<00:15, 26.4MB/s]
+ 89%|████████▉ | 3.01G/3.39G [02:07<00:16, 25.4MB/s]
+ 89%|████████▉ | 3.01G/3.39G [02:08<00:16, 24.9MB/s]
+ 89%|████████▉ | 3.01G/3.39G [02:08<00:15, 25.6MB/s]
+ 89%|████████▉ | 3.02G/3.39G [02:08<00:15, 26.0MB/s]
+ 89%|████████▉ | 3.02G/3.39G [02:08<00:14, 26.5MB/s]
+ 89%|████████▉ | 3.03G/3.39G [02:08<00:14, 26.8MB/s]
+ 89%|████████▉ | 3.03G/3.39G [02:08<00:14, 27.1MB/s]
+ 90%|████████▉ | 3.03G/3.39G [02:08<00:14, 27.0MB/s]
+ 90%|████████▉ | 3.04G/3.39G [02:09<00:13, 27.2MB/s]
+ 90%|████████▉ | 3.04G/3.39G [02:09<00:13, 27.1MB/s]
+ 90%|████████▉ | 3.04G/3.39G [02:09<00:12, 29.0MB/s]
+ 90%|████████▉ | 3.05G/3.39G [02:09<00:13, 27.1MB/s]
+ 90%|█████████ | 3.05G/3.39G [02:09<00:14, 25.2MB/s]
+ 90%|█████████ | 3.05G/3.39G [02:09<00:14, 25.1MB/s]
+ 90%|█████████ | 3.06G/3.39G [02:09<00:14, 24.7MB/s]
+ 90%|█████████ | 3.06G/3.39G [02:10<00:13, 25.4MB/s]
+ 90%|█████████ | 3.06G/3.39G [02:10<00:13, 26.0MB/s]
+ 91%|█████████ | 3.07G/3.39G [02:10<00:12, 26.5MB/s]
+ 91%|█████████ | 3.07G/3.39G [02:10<00:12, 26.9MB/s]
+ 91%|█████████ | 3.08G/3.39G [02:10<00:12, 27.6MB/s]
+ 91%|█████████ | 3.08G/3.39G [02:10<00:13, 25.3MB/s]
+ 91%|█████████ | 3.08G/3.39G [02:10<00:13, 24.9MB/s]
+ 91%|█████████ | 3.08G/3.39G [02:11<00:12, 25.8MB/s]
+ 91%|█████████ | 3.09G/3.39G [02:11<00:12, 26.2MB/s]
+ 91%|█████████▏| 3.09G/3.39G [02:11<00:11, 26.8MB/s]
+ 91%|█████████▏| 3.10G/3.39G [02:11<00:11, 27.1MB/s]
+ 91%|█████████▏| 3.10G/3.39G [02:11<00:11, 27.0MB/s]
+ 92%|█████████▏| 3.10G/3.39G [02:11<00:11, 27.3MB/s]
+ 92%|█████████▏| 3.11G/3.39G [02:11<00:11, 27.2MB/s]
+ 92%|█████████▏| 3.11G/3.39G [02:11<00:10, 29.3MB/s]
+ 92%|█████████▏| 3.11G/3.39G [02:12<00:11, 26.8MB/s]
+ 92%|█████████▏| 3.12G/3.39G [02:12<00:11, 24.9MB/s]
+ 92%|█████████▏| 3.12G/3.39G [02:12<00:11, 25.2MB/s]
+ 92%|█████████▏| 3.12G/3.39G [02:12<00:10, 26.0MB/s]
+ 92%|█████████▏| 3.13G/3.39G [02:12<00:09, 28.2MB/s]
+ 92%|█████████▏| 3.13G/3.39G [02:12<00:10, 26.1MB/s]
+ 92%|█████████▏| 3.13G/3.39G [02:12<00:11, 24.4MB/s]
+ 93%|█████████▎| 3.14G/3.39G [02:13<00:10, 24.9MB/s]
+ 93%|█████████▎| 3.14G/3.39G [02:13<00:11, 23.2MB/s]
+ 93%|█████████▎| 3.14G/3.39G [02:13<00:10, 24.3MB/s]
+ 93%|█████████▎| 3.15G/3.39G [02:13<00:10, 25.2MB/s]
+ 93%|█████████▎| 3.15G/3.39G [02:13<00:09, 26.8MB/s]
+ 93%|█████████▎| 3.15G/3.39G [02:13<00:09, 27.0MB/s]
+ 93%|█████████▎| 3.16G/3.39G [02:13<00:10, 24.4MB/s]
+ 93%|█████████▎| 3.16G/3.39G [02:14<00:09, 25.6MB/s]
+ 93%|█████████▎| 3.16G/3.39G [02:14<00:09, 26.3MB/s]
+ 93%|█████████▎| 3.17G/3.39G [02:14<00:08, 26.8MB/s]
+ 94%|█████████▎| 3.17G/3.39G [02:14<00:09, 25.8MB/s]
+ 94%|█████████▎| 3.18G/3.39G [02:14<00:08, 26.4MB/s]
+ 94%|█████████▍| 3.18G/3.39G [02:14<00:08, 26.7MB/s]
+ 94%|█████████▍| 3.18G/3.39G [02:15<00:08, 27.0MB/s]
+ 94%|█████████▍| 3.19G/3.39G [02:15<00:07, 27.3MB/s]
+ 94%|█████████▍| 3.19G/3.39G [02:15<00:08, 25.9MB/s]
+ 94%|█████████▍| 3.19G/3.39G [02:15<00:08, 23.8MB/s]
+ 94%|█████████▍| 3.20G/3.39G [02:15<00:08, 25.0MB/s]
+ 94%|█████████▍| 3.20G/3.39G [02:15<00:08, 24.3MB/s]
+ 95%|█████████▍| 3.20G/3.39G [02:15<00:07, 25.1MB/s]
+ 95%|█████████▍| 3.21G/3.39G [02:16<00:07, 25.9MB/s]
+ 95%|█████████▍| 3.21G/3.39G [02:16<00:07, 26.2MB/s]
+ 95%|█████████▍| 3.21G/3.39G [02:16<00:07, 26.6MB/s]
+ 95%|█████████▍| 3.22G/3.39G [02:16<00:06, 26.9MB/s]
+ 95%|█████████▌| 3.22G/3.39G [02:16<00:06, 27.0MB/s]
+ 95%|█████████▌| 3.22G/3.39G [02:16<00:06, 27.3MB/s]
+ 95%|█████████▌| 3.23G/3.39G [02:16<00:06, 27.6MB/s]
+ 95%|█████████▌| 3.23G/3.39G [02:16<00:06, 26.4MB/s]
+ 95%|█████████▌| 3.23G/3.39G [02:17<00:06, 25.8MB/s]
+ 96%|█████████▌| 3.24G/3.39G [02:17<00:06, 25.5MB/s]
+ 96%|█████████▌| 3.24G/3.39G [02:17<00:06, 26.2MB/s]
+ 96%|█████████▌| 3.24G/3.39G [02:17<00:05, 26.1MB/s]
+ 96%|█████████▌| 3.25G/3.39G [02:17<00:05, 26.5MB/s]
+ 96%|█████████▌| 3.25G/3.39G [02:17<00:05, 27.0MB/s]
+ 96%|█████████▌| 3.26G/3.39G [02:17<00:05, 27.0MB/s]
+ 96%|█████████▌| 3.26G/3.39G [02:18<00:05, 25.2MB/s]
+ 96%|█████████▌| 3.26G/3.39G [02:18<00:05, 25.3MB/s]
+ 96%|█████████▋| 3.27G/3.39G [02:18<00:05, 26.0MB/s]
+ 96%|█████████▋| 3.27G/3.39G [02:18<00:04, 26.2MB/s]
+ 97%|█████████▋| 3.27G/3.39G [02:18<00:04, 26.7MB/s]
+ 97%|█████████▋| 3.28G/3.39G [02:18<00:04, 27.1MB/s]
+ 97%|█████████▋| 3.28G/3.39G [02:19<00:04, 27.1MB/s]
+ 97%|█████████▋| 3.28G/3.39G [02:19<00:04, 27.3MB/s]
+ 97%|█████████▋| 3.29G/3.39G [02:19<00:03, 27.2MB/s]
+ 97%|█████████▋| 3.29G/3.39G [02:19<00:03, 26.5MB/s]
+ 97%|█████████▋| 3.29G/3.39G [02:19<00:04, 24.7MB/s]
+ 97%|█████████▋| 3.30G/3.39G [02:19<00:03, 25.5MB/s]
+ 97%|█████████▋| 3.30G/3.39G [02:19<00:03, 24.9MB/s]
+ 98%|█████████▊| 3.30G/3.39G [02:20<00:03, 25.7MB/s]
+ 98%|█████████▊| 3.31G/3.39G [02:20<00:03, 26.0MB/s]
+ 98%|█████████▊| 3.31G/3.39G [02:20<00:03, 26.5MB/s]
+ 98%|█████████▊| 3.31G/3.39G [02:20<00:02, 28.8MB/s]
+ 98%|█████████▊| 3.32G/3.39G [02:20<00:02, 26.7MB/s]
+ 98%|█████████▊| 3.32G/3.39G [02:20<00:02, 24.7MB/s]
+ 98%|█████████▊| 3.32G/3.39G [02:20<00:03, 22.9MB/s]
+ 98%|█████████▊| 3.33G/3.39G [02:20<00:02, 24.0MB/s]
+ 98%|█████████▊| 3.33G/3.39G [02:21<00:02, 27.5MB/s]
+ 98%|█████████▊| 3.33G/3.39G [02:21<00:02, 25.1MB/s]
+ 98%|█████████▊| 3.34G/3.39G [02:21<00:02, 23.8MB/s]
+ 99%|█████████▊| 3.34G/3.39G [02:21<00:02, 25.1MB/s]
+ 99%|█████████▊| 3.34G/3.39G [02:21<00:01, 25.6MB/s]
+ 99%|█████████▉| 3.35G/3.39G [02:21<00:01, 26.3MB/s]
+ 99%|█████████▉| 3.35G/3.39G [02:21<00:01, 26.8MB/s]
+ 99%|█████████▉| 3.35G/3.39G [02:22<00:01, 26.5MB/s]
+ 99%|█████████▉| 3.36G/3.39G [02:22<00:01, 24.2MB/s]
+ 99%|█████████▉| 3.36G/3.39G [02:22<00:01, 25.0MB/s]
+ 99%|█████████▉| 3.36G/3.39G [02:22<00:01, 25.9MB/s]
+ 99%|█████████▉| 3.37G/3.39G [02:22<00:00, 26.3MB/s]
+ 99%|█████████▉| 3.37G/3.39G [02:22<00:00, 25.9MB/s]
+100%|█████████▉| 3.37G/3.39G [02:22<00:00, 26.3MB/s]
+100%|█████████▉| 3.38G/3.39G [02:23<00:00, 26.7MB/s]
+100%|█████████▉| 3.38G/3.39G [02:23<00:00, 26.9MB/s]
+100%|█████████▉| 3.39G/3.39G [02:23<00:00, 27.1MB/s]
+100%|██████████| 3.39G/3.39G [02:23<00:00, 25.4MB/s]
+Traceback (most recent call last):
+  File "<stdin>", line 4, in <module>
+  File "/usr/local/lib/python3.10/site-packages/torch/hub.py", line 647, in load
+    model = _load_local(repo_or_dir, model, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/torch/hub.py", line 680, in _load_local
+    model = entry(*args, **kwargs)
+  File "/opt/jepa-wms/hubconf.py", line 302, in model_fn
+    return _load_model(model_name, pretrained=pretrained, device=device)
+  File "/opt/jepa-wms/hubconf.py", line 295, in _load_model
+    return _load_model_with_config(config_path, model_name=weight_key, device=device, pretrained=pretrained)
+  File "/opt/jepa-wms/hubconf.py", line 261, in _load_model_with_config
+    model = init_module(
+  File "/opt/jepa-wms/evals/simu_env_planning/eval.py", line 325, in init_module
+    model = importlib.import_module(f"{module_name}").init_module(
+  File "/opt/jepa-wms/app/vjepa_wm/modelcustom/simu_env_planning/vit_enc_preds.py", line 187, in init_module
+    head.load_checkpoint(head_path)
+  File "/opt/jepa-wms/app/plan_common/models/trainable_model.py", line 121, in load_checkpoint
+    checkpoint = torch.load(path, map_location=torch.device("cpu"))
+  File "/usr/local/lib/python3.10/site-packages/torch/serialization.py", line 1479, in load
+    with _open_file_like(f, "rb") as opened_file:
+  File "/usr/local/lib/python3.10/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/usr/local/lib/python3.10/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '${JEPAWM_LOGS}/wall/step2_wall_state_head_dinovits_r224/jepa-latest_state_head.pth.tar'

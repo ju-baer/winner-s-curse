@@ -1,0 +1,2771 @@
+COMMIT: 13cf1d9c7e476f53c17714d2e0f1dc239a883ce0
+=== TREE (depth 3, dirs) ===
+.
+./app
+./app/plan_common
+./app/plan_common/datasets
+./app/plan_common/models
+./app/plan_common/plot
+./app/vjepa_wm
+./app/vjepa_wm/modelcustom
+./assets
+./configs
+./configs/evals
+./configs/evals/simu_env_planning
+./configs/online_plan_evals
+./configs/online_plan_evals/droid
+./configs/online_plan_evals/mw
+./configs/online_plan_evals/mz
+./configs/online_plan_evals/pt
+./configs/online_plan_evals/rcasa_custom
+./configs/online_plan_evals/wall
+./configs/vjepa_wm
+./configs/vjepa_wm/droid_final_sweep
+./configs/vjepa_wm/mw_final_sweep
+./configs/vjepa_wm/mz
+./configs/vjepa_wm/mz_sweep
+./configs/vjepa_wm/pt_sweep
+./configs/vjepa_wm/vm2m
+./configs/vjepa_wm/wall_sweep
+./evals
+./evals/simu_env_planning
+./evals/simu_env_planning/assets
+./evals/simu_env_planning/base_configs
+./evals/simu_env_planning/envs
+./evals/simu_env_planning/planning
+./evals/unroll_decode
+./src
+./src/datasets
+./src/datasets/utils
+./src/masks
+./src/models
+./src/models/utils
+./src/scripts
+./src/utils
+./tests
+./tests/datasets
+./tests/models
+
+=== CONFIGS (eval) ===
+configs/evals/simu_env_planning/droid/vj2ac_oss/droid_L2_cem_sourcedset_H3_nas3_maxnorm01_ctxt2_gH3_r256_alpha0_ep64_decode.yaml
+configs/evals/simu_env_planning/droid/vj2ac/droid_L2_cem_sourcedset_H3_nas3_maxnorm01_ctxt2_gH3_r256_alpha0_ep64_decode.yaml
+configs/evals/simu_env_planning/droid/dino-wm/droid_L2_cem_sourcedset_H3_nas3_maxnorm01_ctxt2_gH3_r224_alpha0_ep64_decode.yaml
+configs/evals/simu_env_planning/droid/jepa-wm/droid_L2_cem_sourcedset_H3_nas3_maxnorm01_ctxt2_gH3_r256_alpha0_ep64_decode.yaml
+configs/evals/simu_env_planning/rcasa_custom/jepa-wm/place_L2_cem_sourcedset_H3_nas1_maxnorm005_scaleact_repeat5_fskip5_max60_ctxt2.yaml
+configs/evals/simu_env_planning/rcasa_custom/dino-wm/reach_L2_cem_sourcedset_H3_nas1_maxnorm005_scaleact_repeat5_fskip5_max60_ctxt2_r224_alpha0_ep32_decode.yaml
+configs/evals/simu_env_planning/rcasa_custom/vj2ac/reach_L2_cem_sourcedset_H3_nas1_maxnorm005_scaleact_repeat5_fskip5_max60_ctxt2_r256_alpha0_ep32_decode.yaml
+configs/evals/simu_env_planning/wall/dino-wm/wall_L2_cem_sourcerandstate_H6_nas6_ctxt2_r224_alpha0.1_ep96_decode.yaml
+configs/evals/simu_env_planning/wall/jepa-wm/wall_L2_cem_sourcerandstate_H6_nas6_ctxt2_r224_alpha0.1_ep96_decode.yaml
+configs/evals/simu_env_planning/mw/dino-wm/reach_L2_cem_sourcexp_H6_nas3_ctxt2_r224_alpha0.1_ep48_decode.yaml
+configs/evals/simu_env_planning/mw/jepa-wm/reach-wall_L2_cem_sourcexp_H6_nas3_ctxt2_r256_alpha0.1_ep48_decode.yaml
+configs/evals/simu_env_planning/mz/jepa-wm/mz_L2_cem_sourcerandstate_H6_nas6_ctxt2_r224_alpha0.1_ep96_decode.yaml
+configs/evals/simu_env_planning/mz/dino-wm/mz_L2_cem_sourcerandstate_H6_nas6_ctxt2_r224_alpha0.1_ep96_decode.yaml
+configs/evals/simu_env_planning/pt/dino-wm/pt_L2_cem_sourcedset_H6_nas6_ctxt2_r224_alpha0.1_ep96_decode.yaml
+configs/evals/simu_env_planning/pt/jepa-wm/pt_L2_cem_sourcedset_H6_nas6_ctxt2_r224_alpha0.1_ep96_decode.yaml
+configs/vjepa_wm/mz_sweep/mz_4f_fsk5_ask1_r224_pred_dino_wm_depth6_repro_1roll_save_2n.yaml
+configs/vjepa_wm/mz_sweep/mz_4f_fsk5_ask1_r224_vjtranoaug_predAdaLN_ftprop_depth6_repro_2roll_save_2n.yaml
+configs/vjepa_wm/mz_sweep/mz_4f_fsk5_ask1_frac0.1_r224_vjtranoaug_predAdaLN_ftprop_depth6_repro_2roll_save_2n.yaml
+configs/vjepa_wm/mz_sweep/mz_4f_fsk5_ask1_r224_pred_dino_wm_depth6_noprop_repro_1roll_save_2n.yaml
+configs/vjepa_wm/mz/step2_mz_state_head_dinovits_tra05_r224.yaml
+configs/vjepa_wm/vm2m/open_source_decs/step2_lpips_vm2m_vjepa2vitlopen_dup_256_vjtransf05_bs8.yaml
+configs/vjepa_wm/vm2m/open_source_decs/step2_lpips_vm2m_vits_vitldec_224_vjtrans.yaml
+configs/vjepa_wm/vm2m/open_source_decs/step2_lpips_vm2m_dv3_vits_256_vjtrans.yaml
+configs/vjepa_wm/vm2m/open_source_decs/step2_lpips_vm2m_vjepa2vitgopen_vgxf_vitldec_dup_256_vjtransf_norm_bs4_4n.yaml
+configs/vjepa_wm/vm2m/open_source_decs/step2_lpips_vm2m_dv3vitl_256_vjtra.yaml
+configs/vjepa_wm/vm2m/open_source_decs/step2_lpips_vm2m_dv3_vitl_256_vjtrans.yaml
+configs/vjepa_wm/vm2m/open_source_decs/step2_lpips_vm2m_vjepa1vitlopen_dup_256_vjtransf05_bs8.yaml
+configs/vjepa_wm/vm2m/open_source_decs/step2_lpips_vm2m_vits_vitldec_224_vjtrans05.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r256_vj2vitldup_pred_dino_wm_depth6_noprop_repro_1roll.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r224_pred_dino_wm_depth6_noprop_repro_1roll_hist2.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r224_pred_dino_wm_dinovitb_depth6_noprop_repro_1roll_save.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r256_dv3vitl_pred_dino_wm_depth6_noprop_repro_1roll_save.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r224_pred_AdaLN_ftprop_depth6_repro_2roll_save.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r224_pred_dino_wm_depth6_repro_1roll_save.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r224_pred_dino_wm_depth3_noprop_repro_1roll.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r224_pred_AdaLN_noprop_depth6_repro_1roll.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r224_pred_dino_wm_depth6_noprop_repro_1roll_hist1.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r224_pred_dino_wm_depth6_noprop_repro_1roll_hist7.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r224_pred_dino_wm_depth6_noprop_repro_2roll.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r256_vj1vitldup_pred_dino_wm_depth6_noprop_repro_1roll.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r224_pred_dino_wm_depth12_noprop_repro_1roll.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r224_pred_AdaLN0_noprop_depth6_repro_1roll.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r224_pred_dino_wm_depth6_noprop_repro_1roll_save_seed1.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_frac0.1_r224_pred_AdaLN_ftprop_depth6_repro_2roll_save.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r224_pred_dino_wm_depth6_noprop_repro_6roll_hist7.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r224_predvj2acftcond_noprop_depth6_repro_1roll.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r224_pred_dino_wm_depth6_noprop_repro_3roll.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r224_pred_dino_wm_depth6_noprop_repro_1roll_hist9.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r224_pred_dino_wm_depth9_noprop_repro_1roll.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r224_pred_dino_wm_depth6_noprop_repro_1roll_hist5.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r224_pred_dino_wm_dinovitl_depth6_noprop_repro_1roll_save.yaml
+configs/vjepa_wm/mw_final_sweep/mw_4f_fsk5_ask1_r224_predvj2ac_noprop_depth6_repro_1roll.yaml
+configs/vjepa_wm/droid_final_sweep/droid_4f_fps4_r224_pred_dino_wm_depth6_noprop_repro_1roll_4fpcs_2n.yaml
+configs/vjepa_wm/droid_final_sweep/droid_vitgopen.yaml
+configs/vjepa_wm/droid_final_sweep/droid_4fpcs_fps4_r256_dv3vitl_asp1_pred_AdaLN_depth12_noprop_repro_2roll_4n.yaml
+configs/vjepa_wm/droid_final_sweep/droid_8fpcs_fps4_r256_vj2acvitgL1_repro_2roll_noprop_4n_asp1_wsd.yaml
+configs/vjepa_wm/droid_final_sweep/droid_4fpcs_fps4_frac0.1_r256_dv3vitl_asp1_pred_Ada
+=== grep: checkpoints / model zoo / hub ===
+README.md:11:  <a href="https://huggingface.co/datasets/facebook/jepa-wms" target="_blank" style="margin: 2px;"><img alt="HuggingFace Dataset" src="https://img.shields.io/badge/🤗%20Dataset-facebook/jepa--wms-ffc107" style="display: inline-block; vertical-align: middle;"/></a>
+README.md:12:  <a href="https://huggingface.co/facebook/jepa-wms" target="_blank" style="margin: 2px;"><img alt="HuggingFace Models" src="https://img.shields.io/badge/🤗%20Models-facebook/jepa--wms-ffc107" style="display: inline-block; vertical-align: middle;"/></a>
+README.md:44:> **Download options**: Models are available on [🤗 Hugging Face Hub](https://huggingface.co/facebook/jepa-wms) (recommended) or via direct download from fbaipublicfiles.
+README.md:50:| DROID & RoboCasa | 256×256 | DINOv3 ViT-L/16 | 12 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/jepa_wm_droid.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/droid_jepa-wm_noprop.pth.tar) |
+README.md:51:| Metaworld | 224×224 | DINOv2 ViT-S/14 | 6 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/jepa_wm_metaworld.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/mw_jepa-wm.pth.tar) |
+README.md:52:| Push-T | 224×224 | DINOv2 ViT-S/14 | 6 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/jepa_wm_pusht.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/pt_jepa-wm.pth.tar) |
+README.md:53:| PointMaze | 224×224 | DINOv2 ViT-S/14 | 6 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/jepa_wm_pointmaze.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/mz_jepa-wm.pth.tar) |
+README.md:54:| Wall | 224×224 | DINOv2 ViT-S/14 | 6 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/jepa_wm_wall.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/wall_jepa-wm.pth.tar) |
+README.md:60:| DROID & RoboCasa  | 224×224 | DINOv2 ViT-S/14 | 6 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dino_wm_droid.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/droid_dino-wm_noprop.pth.tar) |
+README.md:61:| Metaworld | 224×224 | DINOv2 ViT-S/14 | 6 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dino_wm_metaworld.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/mw_dino-wm.pth.tar) |
+README.md:62:| Push-T | 224×224 | DINOv2 ViT-S/14 | 6 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dino_wm_pusht.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/pt_dino-wm.pth.tar) |
+README.md:63:| PointMaze | 224×224 | DINOv2 ViT-S/14 | 6 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dino_wm_pointmaze.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/mz_dino-wm.pth.tar) |
+README.md:64:| Wall | 224×224 | DINOv2 ViT-S/14 | 6 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dino_wm_wall.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/wall_dino-wm.pth.tar) |
+README.md:70:| DROID & RoboCasa | 256×256 | V-JEPA-2 ViT-G/16 | 24 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/vjepa2_ac_droid.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/droid_vj2ac_noprop.pth.tar) |
+README.md:78:| dinov2_vits_224 (05norm) | DINOv2 ViT-S/14 | 224×224 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dinov2_vits_224.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/vm2m_lpips_dv2vits_vitldec_224_05norm.pth.tar) |
+README.md:79:| dinov2_vits_224_INet | DINOv2 ViT-S/14 | 224×224 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dinov2_vits_224_INet.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/vm2m_lpips_dv2vits_vitldec_224_INet.pth.tar) |
+README.md:80:| dinov3_vitl_256_INet | DINOv3 ViT-L/16 | 256×256 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dinov3_vitl_256_INet.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/vm2m_lpips_dv3vitl_256_INet.pth.tar) |
+README.md:81:| vjepa2_vitg_256_INet | V-JEPA-2 ViT-G/16 | 256×256 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/vjepa2_vitg_256_INet.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/vm2m_lpips_vj2vitgnorm_vitldec_dup_256_INet.pth.tar) |
+README.md:86:<summary><b>🔌 Loading Models with PyTorch Hub</b></summary>
+README.md:92:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'jepa_wm_droid')
+README.md:93:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'jepa_wm_metaworld')
+README.md:94:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'jepa_wm_pusht')
+README.md:95:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'jepa_wm_pointmaze')
+README.md:96:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'jepa_wm_wall')
+README.md:99:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'dino_wm_droid')
+README.md:100:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'dino_wm_metaworld')
+README.md:101:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'dino_wm_pusht')
+README.md:102:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'dino_wm_pointmaze')
+README.md:103:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'dino_wm_wall')
+README.md:106:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'vjepa2_ac_droid')
+README.md:108:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'vjepa2_ac_oss')
+README.md:117:from huggingface_hub import hf_hub_download
+README.md:120:# Download a specific checkpoint
+README.md:121:checkpoint_path = hf_hub_download(
+README.md:123:    filename="jepa_wm_droid.pth.tar"
+README.md:126:# Load the checkpoint
+README.md:127:checkpoint = torch.load(checkpoint_path, map_location="cpu")
+README.md:129:# Or use directly with torch.hub (automatically tries HF Hub first)
+README.md:130:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'jepa_wm_droid')
+README.md:134:- `jepa_wm_droid.pth.tar`, `jepa_wm_metaworld.pth.tar`, `jepa_wm_pusht.pth.tar`, `jepa_wm_pointmaze.pth.ta
+=== grep: planner entry points ===
+grep: evals/simu_env_planning/planning/planner.py: No such file or directory
+grep: evals/simu_env_planning/planning/objectives.py: No such file or directory
+
+=== grep: env step / success / eval_episodes ===
+evals/simu_env_planning/envs/init.py:81:            cfg.task_specification.max_episode_steps = cfg.frameskip * cfg.task_specification.goal_H
+evals/simu_env_planning/envs/init.py:82:            cfg.task_specification.goal_max_episode_steps = cfg.frameskip * cfg.task_specification.goal_H
+evals/simu_env_planning/envs/init.py:85:        cfg.task_specification.max_episode_steps = cfg.frameskip * cfg.task_specification.goal_H
+evals/simu_env_planning/envs/wrappers/multitask.py:74:    def step(self, action, debug=False):
+evals/simu_env_planning/envs/wrappers/pixels.py:84:    def step(self, action, debug=False):
+evals/simu_env_planning/envs/wrappers/pixels.py:106:    def step_multiple(self, actions):
+evals/simu_env_planning/envs/wrappers/pixels.py:121:    def rollout(self, seed, init_state, actions, env_info=None):
+evals/simu_env_planning/envs/wrappers/tensor.py:45:    def step(self, action):
+evals/simu_env_planning/envs/wrappers/tensor.py:48:        info["success"] = float(info["success"])
+evals/simu_env_planning/envs/wrappers/time_limit.py:50:    def steps_left(self):
+evals/simu_env_planning/envs/wrappers/time_limit.py:69:    def step(self, action):
+evals/simu_env_planning/envs/pusht_env/pusht_env.py:476:    def step(self, action):
+evals/simu_env_planning/envs/pusht_env/pusht_env.py:504:        reward = np.clip(coverage / self.success_threshold, 0, 1)
+evals/simu_env_planning/envs/pusht_env/pusht_env.py:505:        done = False  # coverage > self.success_threshold
+evals/simu_env_planning/envs/pusht_env/pusht_env.py:716:        self.success_threshold = 0.95  # 95% coverage.
+evals/simu_env_planning/envs/robocasa.py:96:        Extract proprioceptive state and success info from environment info dict.
+evals/simu_env_planning/envs/robocasa.py:105:            Tuple of (obs, info) where info contains proprio and success keys.
+evals/simu_env_planning/envs/robocasa.py:117:        # Need to call _check_success() to define env.obj_up_once
+evals/simu_env_planning/envs/robocasa.py:118:        # and other variables used in subtask_success()
+evals/simu_env_planning/envs/robocasa.py:119:        info["success"] = self.env._check_success()
+evals/simu_env_planning/envs/robocasa.py:121:            info = self.subtask_success(info)
+evals/simu_env_planning/envs/robocasa.py:124:    def subtask_success(self, info):
+evals/simu_env_planning/envs/robocasa.py:126:        Evaluate success for specific subtasks (reach, pick, place, or combinations).
+evals/simu_env_planning/envs/robocasa.py:132:            Updated info dictionary with success and metric fields.
+evals/simu_env_planning/envs/robocasa.py:145:            success = place
+evals/simu_env_planning/envs/robocasa.py:147:            success = reach and self.env.obj_up_once
+evals/simu_env_planning/envs/robocasa.py:149:            success = self.env.obj_up_once and place
+evals/simu_env_planning/envs/robocasa.py:151:            success = reach
+evals/simu_env_planning/envs/robocasa.py:153:            success = self.env.obj_up_once
+evals/simu_env_planning/envs/robocasa.py:155:            success = place
+evals/simu_env_planning/envs/robocasa.py:159:        info["success"] = success
+evals/simu_env_planning/envs/robocasa.py:177:    def step(self, action):
+evals/simu_env_planning/envs/robocasa.py:195:        if info["success"]:
+evals/simu_env_planning/envs/robocasa.py:196:            logger.info("RoboCasaWrapper: Task success detected in step()")
+evals/simu_env_planning/envs/wall_env/envs/wall.py:88:    def step(self, action: torch.Tensor):
+evals/simu_env_planning/envs/droid_dset_dummy_env.py:49:            "success": 1.0,
+evals/simu_env_planning/envs/droid_dset_dummy_env.py:61:    def step(self, action):
+evals/simu_env_planning/envs/pointmaze_env/waypoint_controller.py:75:        # compute waypoints by performing a rollout in the grid
+evals/simu_env_planning/envs/pointmaze_env/gridcraft/grid_env.py:110:    def step_stateless(self, s, a, verbose=False):
+evals/simu_env_planning/envs/pointmaze_env/gridcraft/grid_env.py:126:    def step(self, a, verbose=False):
+evals/simu_env_planning/envs/pointmaze_env/maze_model.py:211:    def step(self, action):
+evals/simu_env_planning/envs/pointmaze_gym_wrap.py:57:        success = np.linalg.norm(goal_state[:2] - cur_state[:2]) < 0.5
+evals/simu_env_planning/envs/pointmaze_gym_wrap.py:60:            "success": success,
+evals/simu_env_planning/envs/pointmaze_gym_wrap.py:80:    def step(self, action):
+evals/simu_env_planning/envs/wall_gym_wrap.py:61:        success = np.linalg.norm(goal_state[:2] - cur_state[:2]) < 4.5
+evals/simu_env_planning/envs/wall_gym_wrap.py:64:            "success": success,
+evals/simu_env_planning/envs/wall_gym_wrap.py:93:    def step(self, action):
+evals/simu_env_planning/envs/metaworld.py:85:        success = np.linalg.norm(goal_state - cur_state) < 0.3
+evals/simu_env_planning/envs/metaworld.py:88:            "success": success,
+evals/simu_env_planning/envs/metaworld.py:100:    def step(self, action):
+evals/simu_env_planning/envs/pusht_gym_wrap.py:62:        # if position difference is < 20, and angle difference < np.pi/9, then success
+evals/simu_env_planning/envs/pusht_gym_wrap.py:66:        success = pos_diff < 20 and angle_diff < np.pi / 9
+evals/simu_env_planning/envs/pusht_gym_wrap.py:69:            "success": success,
+evals/simu_env_planning/envs/pusht_gym_wrap.py:90:    def step(self, action):
+evals/simu_env_planning/planning/episode_plot_utils.py:33:    frameskip=1,
+evals/simu_env_planning/planning/episode_plot_utils.py:71:            ax.set_title(f"Episode step {step * frameskip * num_act_stepped}")
+evals/simu_env_planning/planning/episode_plot_utils.py:86:    frameskip=1,
+evals/simu_env_planning/planning/episode_plot_utils.py:177:        ax.set_title(f"Episode step {step * frameskip * num_act_stepped}")
+evals/simu_env_planning/planning/planning/planner.py:66:        decode_unroll: Callable = None,
+evals/simu_env_planning/planning/planning/planner.py:81:        self.decode_unroll = decode_unroll
+evals/simu_env_planning/planning/planning/planner.py:194:            if self.decode_each_iteration and self.decode_unroll is not None:
+evals/simu_env_planning/planning/planning/planner.py:195:                pred_frames = self.decode_unroll(predicted_best_encs)
+evals/simu_env_planning/planning/planning/planner.py:229:        decode_unroll: Callable = None,
+evals/simu_env_planning/planning/planning/planner.py:249:        self.decode_unroll = decode_unroll
+evals/simu_env_planning/planning/planning/planner.py:325:            if self.decode_each_iteration and self.decode_unroll is not None:
+evals/simu_env_planning/planning/planning/planner.py:326:                pred_frames = self.decode_unroll(
+evals/simu_env_planning/planning/planning/planner.py:363:        decode_unroll: Callable = None,
+evals/simu_env_planning/planning/planning/planner.py:381:        self.decode_unroll = decode_unroll
+evals/simu_env_planning/planning/planning/planner.py:451:            if self.decode_each_iteration and self.decode_unroll is not None:
+evals/simu_env_planning/planning/planning/planner.py:452:                pred_frames = self.decode_unroll(
+evals/simu_env_planning/planning/planning/planner.py:495:        decode_unroll: Callable = None,
+evals/simu_env_planning/planning/planning/planner.py:516:            decode_unroll: Function to decode latent predictions to frames
+evals/simu_env_planning/planning/planning/planner.py:533:        self.decode_unroll = decode_unroll
+evals/simu_env_planning/planning/planning/planner.py:632:                if self.decode_each_iteration and self.decode_unroll is not None:
+evals/simu_env_planning/planning/planning/planner.py:633:                    pred_frames = self.decode_unroll(predicted_best_encs)
+evals/simu_env_planning/planning/planning/planner.py:671:        decode_unroll: Callable = None,
+evals/simu_env_planning/planning/planning/planner.py:689:            decode_unroll=decode_unroll,
+evals/simu_env_planning/planning/utils.py:289:        combined_results[f"episode_success+{task}"] = 0
+evals/simu_env_planning/planning/utils.py:312:            task_episode_counts[task] == cfg.meta.eval_episodes
+evals/simu_env_planning/planning/utils.py:313:        ), f"Task {task} has {task_episode_counts[task]} episodes, expected {cfg.meta.eval_episodes}"
+evals/simu_env_planning/planning/utils.py:318:            combined_results[key] /= cfg.meta.eval_episodes
+evals/simu_env_planning/planning/utils.py:326:    total_episodes = cfg.meta.eval_episodes * len(cfg.tasks) episodes to perform.
+evals/simu_env_planning/planning/utils.py:334:        total_episodes = cfg.meta.eval_episodes * len(cfg.tasks)
+evals/simu_env_planning/planning/utils.py:350:            task_idx = episode_idx // cfg.meta.eval_episodes
+evals/simu_env_planning/planning/utils.py:351:            episode_num = episode_idx % cfg.meta.eval_episodes
+evals/simu_env_planning/planning/utils.py:370:        episodes_per_task = [list(range(cfg.meta.eval_episodes)) for _ in task_indices]
+evals/simu_env_planning/planning/plan_evaluator.py:110:                steps_left=max((env.steps_left() + 1) // self.cfg.frameskip, 1),
+evals/simu_env_planning/planning/plan_evaluator.py:126:                    "success": infos[-1]["success"],
+evals/simu_env_planning/planning/plan_evaluator.py:161:                plan_steps_left = max((env.steps_left() + 1) * self.agent.model.action_skip // self.cfg.frameskip, 1)
+evals/simu_env_planning/planning/plan_evaluator.py:195:                step_indices = np.arange(self.cfg.frameskip - 1, len(obses), self.cfg.frameskip)
+evals/simu_env_planning/planning/plan_evaluator.py:197:                # frames = [obses[0]] + obses[1:][::self.cfg.frameskip]
+evals/simu_env_planning/planning/plan_evaluator.py:213:            # Evaluate success
+evals/simu_env_planning/planning/plan_evaluator.py:218:                success = infos[-1]["success"]
+evals/simu_env_planning/planning/plan_evaluator.py:225:                success = eval_results["success"]
+evals/simu_env_planning/planning/plan_ev
+
+##### FILE README.md (28789 chars) #####
+<h1 align="center">
+    <p>🌍 <b>JEPA-WMs</b></p>
+</h1>
+
+<h2 align="center">
+    <p><i>What Drives Success in Physical Planning with <br> Joint-Embedding Predictive World Models?</i></p>
+</h2>
+
+<div align="center" style="line-height: 1;">
+  <a href="https://github.com/facebookresearch/jepa-wms" target="_blank" style="margin: 2px;"><img alt="Github" src="https://img.shields.io/badge/Github-facebookresearch/jepa--wms-black?logo=github" style="display: inline-block; vertical-align: middle;"/></a>
+  <a href="https://huggingface.co/datasets/facebook/jepa-wms" target="_blank" style="margin: 2px;"><img alt="HuggingFace Dataset" src="https://img.shields.io/badge/🤗%20Dataset-facebook/jepa--wms-ffc107" style="display: inline-block; vertical-align: middle;"/></a>
+  <a href="https://huggingface.co/facebook/jepa-wms" target="_blank" style="margin: 2px;"><img alt="HuggingFace Models" src="https://img.shields.io/badge/🤗%20Models-facebook/jepa--wms-ffc107" style="display: inline-block; vertical-align: middle;"/></a>
+  <a href="https://www.arxiv.org/abs/2512.24497" target="_blank" style="margin: 2px;"><img alt="ArXiv" src="https://img.shields.io/badge/arXiv-2512.24497-b5212f?logo=arxiv" style="display: inline-block; vertical-align: middle;"/></a>
+</div>
+
+<br>
+
+<p align="center">
+  <b><a href="https://ai.facebook.com/research/">Meta AI Research, FAIR</a></b>
+</p>
+
+<p align="center">
+  <a href="https://x.com/BasileTerv987">Basile Terver</a>,
+  Tsung-Yen Yang,
+  Jean Ponce,
+  Adrien Bardes,
+  Yann LeCun
+</p>
+
+<p align="center">
+  PyTorch implementation, data and pretrained models for <b>JEPA-WMs</b>.
+</p>
+
+<p align="center">
+  <img src="assets/train_plan_schema.png" alt="JEPA-WMs diagram" width="800">
+</p>
+
+---
+
+## 🎯 Pretrained Models
+
+We provide pretrained [JEPA-WMs](https://arxiv.org/abs/2512.24497), as well as [DINO-WM](https://arxiv.org/abs/2411.04983) and [V-JEPA-2-AC(fixed)](https://arxiv.org/abs/2506.09985) baseline models for various environments.
+
+> **Download options**: Models are available on [🤗 Hugging Face Hub](https://huggingface.co/facebook/jepa-wms) (recommended) or via direct download from fbaipublicfiles.
+
+### JEPA-WM Models
+
+| Environment | Resolution | Encoder | Pred. Depth | Weights |
+|-------------|------------|---------|-------------|---------|
+| DROID & RoboCasa | 256×256 | DINOv3 ViT-L/16 | 12 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/jepa_wm_droid.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/droid_jepa-wm_noprop.pth.tar) |
+| Metaworld | 224×224 | DINOv2 ViT-S/14 | 6 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/jepa_wm_metaworld.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/mw_jepa-wm.pth.tar) |
+| Push-T | 224×224 | DINOv2 ViT-S/14 | 6 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/jepa_wm_pusht.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/pt_jepa-wm.pth.tar) |
+| PointMaze | 224×224 | DINOv2 ViT-S/14 | 6 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/jepa_wm_pointmaze.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/mz_jepa-wm.pth.tar) |
+| Wall | 224×224 | DINOv2 ViT-S/14 | 6 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/jepa_wm_wall.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/wall_jepa-wm.pth.tar) |
+
+### DINO-WM Baseline Models
+
+| Environment | Resolution | Encoder | Pred. Depth | Weights |
+|-------------|------------|---------|-------------|---------|
+| DROID & RoboCasa  | 224×224 | DINOv2 ViT-S/14 | 6 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dino_wm_droid.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/droid_dino-wm_noprop.pth.tar) |
+| Metaworld | 224×224 | DINOv2 ViT-S/14 | 6 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dino_wm_metaworld.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/mw_dino-wm.pth.tar) |
+| Push-T | 224×224 | DINOv2 ViT-S/14 | 6 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dino_wm_pusht.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/pt_dino-wm.pth.tar) |
+| PointMaze | 224×224 | DINOv2 ViT-S/14 | 6 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dino_wm_pointmaze.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/mz_dino-wm.pth.tar) |
+| Wall | 224×224 | DINOv2 ViT-S/14 | 6 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dino_wm_wall.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/wall_dino-wm.pth.tar) |
+
+### V-JEPA-2-AC(fixed) Baseline Model
+
+| Environment | Resolution | Encoder | Pred. Depth | Weights |
+|-------------|------------|---------|-------------|---------|
+| DROID & RoboCasa | 256×256 | V-JEPA-2 ViT-G/16 | 24 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/vjepa2_ac_droid.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/droid_vj2ac_noprop.pth.tar) |
+
+### VM2M Decoder Heads (optional)
+
+Decoder heads enable visualization and rollout decoding. They are **not required** for training world models or running planning evaluations.
+
+| Decoder | Encoder | Resolution | Weights |
+|---------|---------|------------|---------|
+| dinov2_vits_224 (05norm) | DINOv2 ViT-S/14 | 224×224 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dinov2_vits_224.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/vm2m_lpips_dv2vits_vitldec_224_05norm.pth.tar) |
+| dinov2_vits_224_INet | DINOv2 ViT-S/14 | 224×224 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dinov2_vits_224_INet.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/vm2m_lpips_dv2vits_vitldec_224_INet.pth.tar) |
+| dinov3_vitl_256_INet | DINOv3 ViT-L/16 | 256×256 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dinov3_vitl_256_INet.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/vm2m_lpips_dv3vitl_256_INet.pth.tar) |
+| vjepa2_vitg_256_INet | V-JEPA-2 ViT-G/16 | 256×256 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/vjepa2_vitg_256_INet.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/vm2m_lpips_vj2vitgnorm_vitldec_dup_256_INet.pth.tar) |
+
+> **Decoder assignment:** DINO-WM uses `dinov2_vits_224` (05norm), JEPA-WM uses INet variants (`dinov2_vits_224_INet` for sim envs, `dinov3_vitl_256_INet` for real-robot), VJ2AC uses `vjepa2_vitg_256_INet`.
+
+<details>
+<summary><b>🔌 Loading Models with PyTorch Hub</b></summary>
+
+```python
+import torch
+
+# Load our best pretrained JEPA-WMs
+model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'jepa_wm_droid')
+model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'jepa_wm_metaworld')
+model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'jepa_wm_pusht')
+model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'jepa_wm_pointmaze')
+model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'jepa_wm_wall')
+
+# Load reproduced DINO-WM baseline models
+model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'dino_wm_droid')
+model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'dino_wm_metaworld')
+model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'dino_wm_pusht')
+model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'dino_wm_pointmaze')
+model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'dino_wm_wall')
+
+# Load fixed V-JEPA-2-AC baseline model
+model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'vjepa2_ac_droid')
+# Load V-JEPA-2-AC official ckpt from https://github.com/facebookresearch/vjepa2
+model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'vjepa2_ac_oss')
+```
+
+</details>
+
+<details>
+<summary><b>🤗 Loading Models with Hugging Face Hub</b></summary>
+
+```python
+from huggingface_hub import hf_hub_download
+import torch
+
+# Download a specific checkpoint
+checkpoint_path = hf_hub_download(
+    repo_id="facebook/jepa-wms",
+    filename="jepa_wm_droid.pth.tar"
+)
+
+# Load the checkpoint
+checkpoint = torch.load(checkpoint_path, map_location="cpu")
+
+# Or use directly with torch.hub (automatically tries HF Hub first)
+model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'jepa_wm_droid')
+```
+
+**Available model files on HF Hub:**
+- `jepa_wm_droid.pth.tar`, `jepa_wm_metaworld.pth.tar`, `jepa_wm_pusht.pth.tar`, `jepa_wm_pointmaze.pth.tar`, `jepa_wm_wall.pth.tar`
+- `dino_wm_droid.pth.tar`, `dino_wm_metaworld.pth.tar`, `dino_wm_pusht.pth.tar`, `dino_wm_pointmaze.pth.tar`, `dino_wm_wall.pth.tar`
+- `vjepa2_ac_droid.pth.tar`, `vjepa2_ac_oss.pth.tar`
+- Decoder heads: `dinov2_vits_224.pth.tar`, `dinov2_vits_224_INet.pth.tar`, `dinov3_vitl_256_INet.pth.tar`, `vjepa2_vitg_256_INet.pth.tar`
+
+</details>
+
+---
+
+## 🚀 Getting Started
+
+### Installation
+
+We use **conda** for system dependencies (FFmpeg) and **uv** for fast Python package management.
+
+```bash
+# 1. Install uv (if not already installed)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# 2. Create conda environment with FFmpeg
+conda create -n jepa-wms python=3.10 ffmpeg=7 -c conda-forge -y
+conda activate jepa-wms
+
+# 3. Clone and install
+git clone git@github.com:facebookresearch/jepa-wms.git
+cd jepa-wms
+uv pip install -e .
+# Optional: Install dev dependencies
+uv pip install -e ".[dev]"
+
+# 4. Verify installation
+python -c "import torchcodec; print('✓ torchcodec works')"
+```
+
+### ⚙️ Configuration
+
+Set these environment variables in your `~/.bashrc` or `~/.zshrc`:
+
+```bash
+export JEPAWM_DSET=/path/to/your/datasets
+export JEPAWM_LOGS=/desired_path/to/your/train_logs_and_planning_eval_logs
+export JEPAWM_HOME=/path/to/your/workspace # dir where you cloned this repo
+export JEPAWM_CKPT=/desired_path/to/your/saved_checkpoints # Optional
+export JEPAWM_OSSCKPT=/path/to/your/pretrained_opensource_encoders  # Optional
+```
+
+> **Note on config paths**: In training configs (`configs/vjepa_wm/`), the `folder` field (using `${JEPAWM_LOGS}`) stores train / validation logs and planning eval outputs, while `checkpoint_folder` (using `${JEPAWM_CKPT}`) stores saved model checkpoints. If `checkpoint_folder` is omitted, it defaults to `folder`.
+
+Then run:
+```bash
+source ~/.bashrc && cd $JEPAWM_HOME/jepa-wms && python setup_macros.py && conda activate jepa-wms
+```
+
+<details>
+<summary><b>📁 Repository structure under JEPAWM_HOME</b></summary>
+
+```
+$JEPAWM_HOME/
+├── jepa-wms/          # This repository
+├── dinov3/            # DINOv3 repository (optional)
+├── robocasa/          # RoboCasa repository (optional)
+└── robosuite/         # RoboSuite repository (optional)
+```
+
+</details>
+
+<details>
+<summary><b>🧠 Pretrained Encoders</b></summary>
+
+**DINOv2** is automatically downloaded via TorchHub when first used. Other encoders require manual setup.
+
+| Encoder | TorchHub | Manual Download Required |
+|---------|----------|-------------------------|
+| **DINOv2** | ✅ `facebookresearch/dinov2` | No |
+| **DINOv3** | ❌ Requires local repo | Yes |
+| **V-JEPA v2** | ⚠️ Manual preferred | Yes (recommended) |
+| **V-JEPA v1** | ❌ Not available | Yes |
+
+> **Why manual download for V-JEPA v2?** We centralize all model architectures around our own `src/models/` for clarity. TorchHub loading can cause import conflicts since both repos share similar file structures.
+
+Organize checkpoints in `$JEPAWM_OSSCKPT`:
+
+```
+$JEPAWM_OSSCKPT/
+├── vjepa1_opensource/     # V-JEPA v1 checkpoints
+│   └── vitl16.pth.tar
+├── vjepa2_opensource/     # V-JEPA v2 checkpoints
+│   ├── vjepa2_vit_large.pth
+│   └── vjepa2_vit_giant.pth
+└── dinov3/                # DINOv3 checkpoints
+    ├── dinov3_vits16_pretrain_lvd1689m.pth
+    └── dinov3_vitl16_pretrain_lvd1689m-<hashkey>.pth
+```
+
+Download from:
+- **V-JEPA v1**: [facebookresearch/jepa](https://github.com/facebookresearch/jepa) → [ViT-L/16](https://dl.fbaipublicfiles.com/jepa/vitl16/vitl16.pth.tar)
+- **V-JEPA v2**: [facebookresearch/vjepa2](https://github.com/facebookresearch/vjepa2) → [ViT-L/16](https://dl.fbaipublicfiles.com/vjepa2/vitl.pt) or [ViT-G/16](https://dl.fbaipublicfiles.com/vjepa2/vitg.pt)
+- **DINOv3**: [facebookresearch/dinov3](https://github.com/facebookresearch/dinov3) → Download weights and clone repo to `$JEPAWM_HOME/dinov3/`
+
+</details>
+
+<details>
+<summary><b>🤖 MuJoCo 2.1 for PointMaze</b></summary>
+
+Only required for PointMaze (uses `d4rl` → `mujoco-py`). Other environments use the modern `mujoco` package.
+
+```bash
+# Download MuJoCo 2.1.0
+mkdir -p ~/.mujoco && cd ~/.mujoco
+wget https://mujoco.org/download/mujoco210-linux-x86_64.tar.gz
+tar -xzvf mujoco210-linux-x86_64.tar.gz
+
+# Add to ~/.bashrc
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.mujoco/mujoco210/bin
+source ~/.bashrc  # or ~/.zshrc
+
+# Verify installation
+python -c "import mujoco_py; print('mujoco-py works!')"
+```
+
+</details>
+
+<details>
+<summary><b>🏠 RoboCasa install (optional)</b></summary>
+
+Required for RoboCasa/RoboSuite environments:
+
+```bash
+# Install RoboSuite
+git clone https://github.com/Basile-Terv/robosuite.git && cd robosuite
+uv pip install -e . && cd ..
+
+# Install RoboCasa
+git clone https://github.com/Basile-Terv/robocasa.git && cd robocasa
+uv pip install -e .
+python robocasa/scripts/download_kitchen_assets.py   # Caution: Assets to be downloaded are around 20GB.
+python robocasa/scripts/setup_macros.py && cd ..
+```
+
+</details>
+
+---
+
+## 📦 Downloading Data
+
+All datasets are available on 🤗 HuggingFace: [facebook/jepa-wms](https://huggingface.co/datasets/facebook/jepa-wms)
+
+```bash
+# Download all datasets
+python src/scripts/download_data.py
+
+# Download specific dataset(s)
+python src/scripts/download_data.py --dataset pusht pointmaze wall
+
+# List available datasets
+python src/scripts/download_data.py --list
+```
+
+| Dataset | Description |
+|---------|-------------|
+| `pusht` | Push-T environment trajectories* |
+| `pointmaze` | PointMaze navigation trajectories* |
+| `wall` | Wall environment trajectories* |
+| `metaworld` | 42 Metaworld tasks (100 episodes each) |
+| `robocasa` | RoboCasa kitchen manipulation |
+| `franka` | Franka robot trajectories |
+
+> *\* The `pusht`, `pointmaze`, and `wall` datasets are sourced from the [DINO-WM project](https://github.com/apple/ml-dino-wm) without modification. We re-host them on our HuggingFace repository for convenience.*
+
+<details>
+<summary><b>🤖 DROID dataset (optional)</b></summary>
+
+DROID requires separate download via `gsutil`:
+
+Download the DROID dataset following the [instructions](https://droid-dataset.github.io/droid/the-droid-dataset). This requires `uv pip install gsutil`.
+We only use the left camera and not the SVO cam files hence you can run the second of the two below commands to obtain the raw dataset of full-HD resolution (720 x 1280) MP4 files.
+```bash
+# Raw DROID dataset in stereo HD, stored as MP4 videos (8.7TB)
+gsutil -m cp -r gs://gresearch/robotics/droid_raw <path_to_your_target_dir>
+# Raw DROID dataset, non-stereo HD video only (5.6TB, excluding stereo video & raw SVO cam files)
+gsutil -m rsync -r -x ".*SVO.*|.*stereo.*\.mp4$" "gs://gresearch/robotics/droid_raw" <path_to_your_target_dir>
+```
+
+After downloading, generate the paths CSV file required by the dataloader:
+```bash
+python src/scripts/generate_droid_paths.py \
+    --droid_root <path_to_your_target_dir>/droid_raw/1.0.1 \
+    --output_path $JEPAWM_DSET/DROID/droid_paths.csv \
+    --num_workers 16 \
+```
+
+This script scans the dataset directory structure in parallel and creates a CSV file listing all valid episode paths.
+
+</details>
+
+<details>
+<summary><b>📂 Dataset directory structure</b></summary>
+
+```
+$JEPAWM_DSET/
+├── pusht_noise/           # Push-T dataset
+├── point_maze/            # PointMaze dataset
+├── wall_single/           # Wall dataset
+├── Metaworld/             # Metaworld dataset
+│   └── data/
+│       └── train-00000-of-00001.parquet
+├── robocasa/              # RoboCasa dataset
+│   └── combine_all_im256.hdf5
+├── franka_custom/         # Franka custom dataset
+│   └── data/
+│       ├── folding/
+│       ├── pick/
+│       └── push/
+│           ├── brownboxpush_v0/
+│           │   └── run_0001/
+│           │       ├── episode.h5
+│           │       └── trajectory.hdf5
+│           └── push_various_objects/
+├── DROID/                 # DROID dataset
+│   └── droid_paths.csv
+├── kinetics400/           # Kinetics-400 dataset (optional)
+│   ├── k400_train_paths.csv
+│   └── k400_val_paths.csv
+├── kinetics710/           # Kinetics-710 dataset (optional)
+│   ├── k710_train_paths.csv
+│   └── k710_val_paths.csv
+├── ssv2/                  # Something-Something-v2 dataset (optional)
+│   ├── ssv2_train_paths.csv
+│   └── ssv2_val_paths.csv
+└── howto100m/             # HowTo100M dataset (optional)
+    └── howto100m_paths.csv
+```
+
+</details>
+
+---
+
+## 💡 Common Concepts
+
+### 🐛 The `--debug` Flag
+
+Use `--debug` with `app.main` or `evals.main` to run in **single-process mode** on the current node:
+
+```bash
+python -m app.main --fname <config.yaml> --debug
+```
+
+This is useful for:
+- **Interactive debugging** with `pdb` breakpoints
+- **Single-GPU runs** without distributed overhead
+
+> ⚠️ **Don't confuse** with `meta.quick_debug` in config files, which reduces dataset size and iterations for quick sanity checks.
+
+### 🔄 Automatic Evaluation During Training
+
+The training script automatically launches planning evaluations every `meta.eval_freq` epochs:
+
+1. **Config generation**: Merges your training settings with eval templates from `configs/online_plan_evals/`
+2. **Job submission**: Launches eval jobs for each generated config
+
+The `evals.separate` option controls how evals are executed:
+
+| Value | Behavior |
+|-------|----------|
+| `true` *(default)* | Submit as **separate SLURM jobs** via sbatch |
+| `false` | Run evals **on rank 0** of the training job |
+
+---
+
+## 🏋️ Training
+
+### Quick Start
+
+**Distributed training** (from login node):
+```bash
+python -m app.main_distributed --fname configs/vjepa_wm/<env>_sweep/<model>.yaml --account <account> --qos <qos> --time <time>
+```
+
+**Single-GPU training** (interactive session):
+```bash
+python -m app.main --fname configs/vjepa_wm/<env>_sweep/<model>.yaml --debug
+```
+
+<details>
+<summary><b>📋 Paper Configs</b></summary>
+
+| Model | Environment | Config Path |
+|-------|-------------|-------------|
+| **JEPA-WM** | Metaworld | `mw_final_sweep/mw_4f_fsk5_ask1_r224_pred_AdaLN_ftprop_depth6_repro_2roll_save.yaml` |
+| **JEPA-WM** | PointMaze | `mz_sweep/mz_4f_fsk5_ask1_r224_vjtranoaug_predAdaLN_ftprop_depth6_repro_2roll_save_2n.yaml` |
+| **JEPA-WM** | Push-T | `pt_sweep/pt_4f_fsk5_ask1_r224_vjtranoaug_predAdaLN_ftprop_depth6_repro_2roll_save.yaml` |
+| **JEPA-WM** | Wall | `wall_sweep/wall_4f_fsk5_ask1_r224_vjtranoaug_predAdaLN_ftprop_depth6_repro_2roll_save_2n.yaml` |
+| **JEPA-WM** | RoboCasa | `droid_final_sweep/droid_4fpcs_fps4_r256_dv3vitl_asp1_pred_AdaLN_depth12_noprop_repro_2roll_4n.yaml` |
+| **JEPA-WM** | DROID (offline) | `droid_final_sweep/droid_4fpcs_fps4_r256_dv3vitl_asp1_pred_AdaLN_depth12_noprop_repro_2roll_4n.yaml` |
+| **DINO-WM** | Any | `<env>_sweep/<env>_4f_fsk5_ask1_r224_pred_dino_wm_depth6_repro_1roll_save` |
+
+All configs under `configs/vjepa_wm/`.
+
+</details>
+
+<details>
+<summary><b>🎨 Training Decoder Heads (optional)</b></summary>
+
+Decoder heads enable visualization and light evals (rollout decoding via `val_rollout()` in the training loop). See [VM2M Decoder Heads](#vm2m-decoder-heads-optional) for pretrained weights.
+
+> **Note**: Decoder heads are **not required** for training world models or running planning evaluations. The training configs in `configs/vjepa_wm/*_sweep/` have `heads_cfg: null` by default.
+
+**Two training strategies:**
+- **Cross-environment** (recommended if datasets available): Train one decoder on VideoMix2M (HowTo100M + SSv2 + K400) — works across all environments. See configs in `configs/vjepa_wm/vm2m/open_source_decs/`.
+- **In-domain**: Train one decoder per encoder per environment on environment-specific data
+
+```bash
+# Cross-environment decoder (recommended)
+python -m app.main --fname configs/vjepa_wm/vm2m/open_source_decs/step2_lpips_vm2m_<enc>_<params>.yaml --debug
+
+# State head (environment-specific)
+python -m app.main --fname co
+
+##### FILE pyproject.toml (2769 chars) #####
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "JEPA-WMs"
+version = "1.0.0"
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+authors = [
+    {name = "Fundamental AI Research"}
+]
+keywords = ["machine learning", "world models", "jepa", "reinforcement learning"]
+
+dependencies = [
+    # Core ML framework
+    "torch>=2.7.0",
+    "torchvision==0.22.0",
+    "torchrl>=0.9.2",
+    "tensordict>=0.9.1",
+    "timm>=1.0.19",
+    # Data processing
+    "numpy",
+    "pandas",
+    "h5py",
+    "einops",
+    "datasets",  # HuggingFace datasets for loading parquet/arrow data
+    # Image and video processing
+    "opencv-python",
+    "pillow",
+    "decord>=0.6.0",
+    "imageio",
+    "imageio-ffmpeg",
+    "moviepy",
+    "mediapy",
+    "lpips>=0.1.4",
+    # see https://github.com/meta-pytorch/torchcodec?tab=readme-ov-file#installing-cpu-only-torchcodec
+    "torchcodec<=0.5",
+    # Scientific computing
+    "scipy",
+    "scikit-image",
+    # Visualization
+    "matplotlib",
+    "seaborn",
+    "plotly",
+    "termcolor",
+    # Configuration and logging
+    "hydra-core",
+    "hydra-submitit-launcher",
+    "omegaconf",
+    "wandb",
+    # Utilities
+    "tqdm",
+    "submitit",
+    "clusterscope",
+    "ruamel.yaml",
+    "nevergrad",
+    # Simulation environments
+    "gym==0.23.1",
+    "gymnasium>=1.2.0",
+    "pygame>=2.6.0",
+    "pymunk==6.8.0",
+    "shapely",
+    "pybullet",
+    "mujoco>=3.2.0",
+    "dm-control>=1.0.34",
+    "metaworld",
+    # PointMaze environment (requires both mujoco and mujoco-py)
+    "d4rl",
+    "cython<3.0", # Required for mujoco-py compatibility
+    "patchelf", # Required for mujoco-py compilation
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.4.0",
+    "black>=25.0.0",
+    "isort>=7.0.0",
+    "flake8>=7.0.0",
+    "ipykernel",
+    "jupyterlab",
+    "huggingface_hub>=0.20.0",
+]
+
+[tool.uv.sources]
+metaworld = { git = "https://github.com/Farama-Foundation/Metaworld.git", branch = "master" }
+d4rl = { git = "git+https://github.com/Farama-Foundation/D4RL.git", branch = "master" }
+
+# NOTE: robocasa and robosuite must be installed manually from source.
+# See README.md "Optional: Robocasa" section for details.
+# Repos: https://github.com/Basile-Terv/robosuite (robocasa-dev branch)
+#        https://github.com/Basile-Terv/robocasa
+
+[project.urls]
+Homepage = "https://github.com/facebookresearch/jepa-wms"
+Repository = "https://github.com/facebookresearch/jepa-wms"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*", "app*", "evals*"]
+
+[tool.isort]
+profile = "black"
+line_length = 119
+
+[tool.black]
+line-length = 119
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+
+##### FILE evals/simu_env_planning/README.md (5230 chars) #####
+# Simu_env_planning Evaluation
+
+> **See also**: [Main README](../../README.md) for training and general usage.
+
+## Overview
+
+Goal-conditioned trajectory optimization: we optimize over the action space to minimize the planning cost $C$:
+
+$$
+C(a, s_0, s_g) = \sum_{t=0}^H \| E_{\theta}(s_g) - P_{\theta}(\hat{z}_t, a_t) \|_2,
+$$
+
+where
+
+$$
+\hat{z}_0 = E_{\theta}(s_0)
+$$
+
+$$
+\hat{z}_{t+1} = P_{\theta}(\hat{z}_t, a_t), \quad t=0, \dots, H-1.
+$$
+
+An **evaluation episode** is a pair $(s_0, s_g)$ (task definition) with the agent's plan, resulting in **Success** or **Failure**.
+
+## Quick Start
+
+**Interactive (single GPU)**:
+```bash
+python -m evals.main --fname configs/dump_online_evals/vjepa_wm/dset_ng_L2.yaml --debug
+```
+
+**Distributed (from login node)**:
+```bash
+python -m evals.main_distributed --fname configs/dump_online_evals/vjepa_wm/dset_ng_L2.yaml --account <account> --qos lowest --time 120
+```
+
+## Goal Sources
+
+| Source | Description | Environments |
+|--------|-------------|--------------|
+| `dset` | Initial/goal states sampled from validation set | Push-T, RoboCasa, DROID |
+| `expert` | Expert policy provides goal trajectory | Metaworld |
+| `random_state` | 2D positions sampled via simulator | Maze, Wall |
+
+The `random_actions` variant steps Gaussian-sampled actions from the initial state.
+
+## Episode Metrics
+
+| Metric | Description |
+|--------|-------------|
+| **Success Rate** | % success across `cfg.meta.eval_episodes` episodes |
+| `ep_end_dist` | Distance to goal at episode end |
+| `reward` | Average cumulative reward (Metaworld, Maze, Push-T, Wall) |
+| `success_dist` | Arm reached target location (Metaworld only) |
+| `total_emb_l2` | L2 distance between agent/expert visual embeddings |
+| `total_lpips` | LPIPS between agent/expert visual decodings |
+
+**DROID offline only**: `end_distance_xyz`, `end_distance_orientation`, `end_distance_closure`
+
+## Optional Episode Plots
+
+Enable with `cfg.logging.optional_plots`. Generated via `evals/simu_env_planning/planning/episode_plot_utils.py`.
+
+### Basic Plots
+
+| State | Expert video | Agent success video |
+|-------|--------------|---------------------|
+| <img src="assets/rcasa_state.png" width="320" /> | <img src="assets/expert_video.gif" width="180" /> | <img src="assets/video_agent_goal_succ.gif" width="180" /> |
+
+- `state.pdf`: Initial and goal images $(s_0, s_g)$
+- `video_agent_goal_{success}.gif`: Episode GIF after stepping planned actions
+- `expert_video.gif`: Expert trajectory GIF (if `goal_source ∈ [dset, expert]`)
+
+### Analysis Plots
+
+| Planning costs | Actions comparison |
+|----------------|-------------------|
+| <img src="assets/rcasa_losses.png" width="450" /> | <img src="assets/droid_action_comp.png" width="400" /> |
+
+- `losses.pdf`: Planning cost $C$ throughout optimizer iterations per timestep
+- `action_comparison.pdf`: Agent vs expert action values per dimension
+
+| | Expert | Agent |
+|---|--------|-------|
+| Cartesian Distance | <img src="assets/rcasa_expert_distances.png" width="300" /> | <img src="assets/rcasa_agent_distances.png" width="300" /> |
+| Representation Distance | <img src="assets/rcasa_expert_repdist_vis.png" width="300" /> | <img src="assets/rcasa_agent_repdist_vis.png" width="300" /> |
+
+### Decoding Plots (if `cfg.planner.decode_each_iteration`)
+
+<table>
+<tr>
+<th>step0.gif</th>
+<th>step0_last_frames</th>
+<th>step0_gt</th>
+</tr>
+<tr>
+<td><img src="assets/step0.gif" width="200" /></td>
+<td><img src="assets/rcasa_step0_lastframes.png" width="250" /></td>
+<td><img src="assets/rcasa_step0_gt.png" width="250" /></td>
+</tr>
+<tr>
+<td></td>
+<td colspan="2">Stepping of only the first action out of the H=3 actions planned, both in the env and in the world model's "imagination".</td>
+</tr>
+</table>
+
+## Architecture
+
+### Distributed Episodes
+
+Episodes are parallelized across GPUs via `main_distributed_episodes_eval()` in `evals/simu_env_planning/eval.py`.
+
+### Planning Components
+
+| Component | Location |
+|-----------|----------|
+| Planners (CEM, NeverGrad) | `evals/simu_env_planning/planning/planner.py` |
+| Planning objectives | `evals/simu_env_planning/planning/objectives.py` |
+| Goal sources | `evals/simu_env_planning/planning/plan_evaluator.py:set_episode()` |
+
+### Model Wrapper
+
+Default wrapper: `app.vjepa_wm.modelcustom.simu_env_planning.vit_enc_preds.EncPredWM`
+
+Initializes the **world model** (encoder, predictor, optional modules).
+
+Required by `evals/simu_env_planning/eval.py`:
+- **data_preprocessor**: Normalizes/denormalizes actions and proprioception
+- **validation set**: Provides action/proprio dimensions, normalization stats, and task definition data (if `goal_source == dset`)
+
+## Eval Configs
+
+| Type | Location |
+|------|----------|
+| Full example configs | `configs/evals/simu_env_planning/` |
+| Config templates | `evals/simu_env_planning/base_configs/` |
+
+## Grid Evaluation
+
+Run evaluations across multiple hyperparameters:
+
+```bash
+python -m evals.simu_env_planning.run_eval_grid \
+    --env metaworld \
+    --config configs/dump_online_evals/vjepa_wm/dset_ng_L2.yaml
+```
+
+Generates configs for all combinations of variants, planners (`ng`/`cem`), objectives (`L1`/`L2`), and epochs.
+
+**Visualization notebook**: `app/plan_common/plot/logs_planning_joint.ipynb`
+
+
+##### FILE evals/simu_env_planning/planning/episode_plot_utils.py (14099 chars) #####
+# Copyright (c) Facebook, Inc. and its affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+#
+
+from typing import Callable, Optional
+
+import lpips as lpips_lib
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+import torch
+from tensordict import TensorDict
+
+matplotlib.use("Agg")
+
+from evals.utils import prepare_obs
+
+FIGSIZE_BASE = (4.0, 3.0)
+from src.utils.logging import get_logger
+
+log = get_logger(__name__)
+
+
+def plot_losses(
+    losses,
+    elite_losses_mean,
+    elite_losses_std,
+    work_dir,
+    frameskip=1,
+    num_act_stepped=1,
+):
+    """
+    Input:
+        losses: List[Tensor, size= (n_opt_steps, n_losses)]
+        elite_losses_mean: List[Tensor, size= (n_opt_steps, n_losses)]
+        elite_losses_std: List[Tensor, size= (n_opt_steps, n_losses)]
+    For now, n_losses = 1.
+    """
+    losses = torch.stack(losses, dim=0).detach().cpu().numpy()
+    elite_losses_mean = torch.stack(elite_losses_mean, dim=0).detach().cpu().numpy()
+    elite_losses_std = torch.stack(elite_losses_std, dim=0).detach().cpu().numpy()
+    n_timesteps, n_opt_steps, n_losses = losses.shape
+    sns.set_theme()
+    for i in range(n_losses):
+        total_plots = min(16, n_timesteps)
+        rows = 1
+        cols = int(np.ceil(total_plots / rows))
+        fig_width = FIGSIZE_BASE[0] * cols
+        fig_height = FIGSIZE_BASE[1] * rows
+        plt.figure(figsize=(fig_width, fig_height), dpi=300)
+        steps = np.linspace(0, n_timesteps - 1, total_plots, dtype=int)
+        for j, step in enumerate(steps):
+            ax = plt.subplot(rows, cols, j + 1)
+            if n_opt_steps > 1:
+                sns.lineplot(data=losses[step, :, i])
+                sns.lineplot(data=elite_losses_mean[step, :, i])
+                ax.fill_between(
+                    range(n_opt_steps),
+                    elite_losses_mean[step, :, i] - elite_losses_std[step, :, i],
+                    elite_losses_mean[step, :, i] + elite_losses_std[step, :, i],
+                    alpha=0.3,
+                )
+            else:
+                ax.bar(0, losses[step, 0, i])  # Plot a bar chart if only one opt step
+                ax.bar(0, elite_losses_mean[step, 0, i])
+                ax.errorbar(0, elite_losses_mean[step, 0, i], yerr=elite_losses_std[step, 0, i], fmt="none", capsize=5)
+            ax.set_title(f"Episode step {step * frameskip * num_act_stepped}")
+            ax.set_xlabel("Opt step")
+            if j == 0:
+                ax.set_ylabel("Traj cost")
+            ax.tick_params(axis="both")
+            ax.xaxis.set_major_locator(plt.MaxNLocator(integer=True))
+        plt.tight_layout()
+        plt.savefig(work_dir / f"losses_{i}.pdf", bbox_inches="tight")
+        plt.close()
+
+
+def plot_actions_comparison(
+    agent_actions,
+    expert_actions,
+    work_dir,
+    frameskip=1,
+    num_act_stepped=1,
+):
+    """
+    Plot the norm of planned actions from agent compared to expert actions.
+
+    Args:
+        agent_actions: List[Tensor] of agent actions from plan_evaluator.unroll_agent()
+                    Shape: (tau, A), length O
+        expert_actions: Tensor of expert actions from plan_evaluator.unroll_expert()
+                    Shape: (1, T, A)
+        T <= tau * O
+    """
+    n_opt_steps = len(agent_actions)
+    expert_timesteps, action_dim = expert_actions.shape[1], expert_actions.shape[2]
+    # Make a list out of expert actions to match agent actions format
+    expert_act = []
+    s = 0
+    for i in range(n_opt_steps):
+        expert_act.append(expert_actions[0, s : s + agent_actions[i].shape[0]].detach().cpu().numpy())
+        s += agent_actions[i].shape[0]
+
+    sns.set_theme()
+    total_plots = min(16, n_opt_steps)
+    rows = 1
+    cols = int(np.ceil(total_plots / rows))
+    legend_width = 3.0
+    fig_width = FIGSIZE_BASE[0] * cols + legend_width
+    legend_fraction = 1.0 / cols
+    # legend_fraction = legend_width / fig_width
+    fig_height = FIGSIZE_BASE[1] * rows
+    plt.figure(figsize=(fig_width, fig_height), dpi=300)
+
+    colors = plt.cm.tab10(np.linspace(0, 1, action_dim))
+
+    steps = np.linspace(0, n_opt_steps - 1, total_plots, dtype=int)
+
+    legend_handles = []
+    legend_labels = []
+
+    for j, step in enumerate(steps):
+        ax = plt.subplot(rows, cols, j + 1)
+
+        agent_shape = agent_actions[step].shape[0]
+        expert_shape = expert_act[step].shape[0]
+        if agent_shape == 1 and expert_shape == 1:
+            # Bar chart for single timestep
+            width = 0.35
+            x = np.arange(action_dim)
+            agent_vals = agent_actions[step][0].detach().cpu().numpy()
+            expert_vals = expert_act[step][0]
+            agent_bars = ax.bar(x - width / 2, agent_vals, width, color=colors, label="Agent")
+            expert_bars = ax.bar(
+                x + width / 2, expert_vals, width, color=colors, alpha=0.5, label="Expert", hatch="//"
+            )
+            if j == 0:
+                for dim in range(action_dim):
+                    legend_handles.append(agent_bars[dim])
+                    legend_labels.append(f"Agt {dim}")
+                    legend_handles.append(expert_bars[dim])
+                    legend_labels.append(f"Exp {dim}")
+            ax.set_xticks(x)
+            ax.set_xticklabels([f"Dim {dim}" for dim in range(action_dim)])
+        else:
+            for dim in range(action_dim):
+                agent_line = ax.plot(
+                    range(agent_actions[step].shape[0]),
+                    agent_actions[step][:, dim].detach().cpu().numpy(),
+                    linestyle="-",
+                    color=colors[dim],
+                    marker="o",
+                    markersize=2,
+                )[0]
+
+                expert_line = ax.plot(
+                    range(expert_act[step].shape[0]),
+                    expert_act[step][:, dim],
+                    linestyle="--",
+                    color=colors[dim],
+                    marker="o",
+                    markersize=2,
+                )[0]
+
+                # Only collect handles and labels from the first subplot for the legend
+                if j == 0:
+                    legend_handles.append(agent_line)
+                    legend_handles.append(expert_line)
+                    legend_labels.append(f"Agt {dim}")
+                    legend_labels.append(f"Exp {dim}")
+            ax.set_xlabel("Time")
+            ax.xaxis.set_major_locator(plt.MaxNLocator(integer=True))
+        ax.set_title(f"Episode step {step * frameskip * num_act_stepped}")
+        if j == 0:
+            ax.set_ylabel("Act value")
+        ax.tick_params(axis="both")
+
+    # Add a single legend to the first subplot
+    # Create separate handles for agent/expert linestyles
+    style_handles = []
+    style_labels = []
+    # Solid line for agent
+    style_handles.append(matplotlib.lines.Line2D([], [], color="black", linestyle="-"))
+    style_labels.append("Agent")
+    # Dashed line for expert
+    style_handles.append(matplotlib.lines.Line2D([], [], color="black", linestyle="--"))
+    style_labels.append("Expert")
+
+    # Create separate handles for dimension colors
+    dim_handles = []
+    dim_labels = []
+    for dim in range(action_dim):
+        dim_handles.append(matplotlib.lines.Line2D([], [], color=colors[dim]))
+        dim_labels.append(f"Dim {dim}")
+
+    left_pos = 1  # Position from left edge
+    bottom_pos = 0.95  # Position from bottom
+
+    fig = plt.gcf()
+
+    # Style legend (left)
+    first_legend = fig.legend(
+        style_handles, style_labels, loc="upper left", bbox_to_anchor=(left_pos, bottom_pos), title=None
+    )
+    fig.add_artist(first_legend)
+
+    # Get the width of the first legend for positioning the second one
+    first_legend_width = first_legend.get_window_extent().width / fig.dpi / fig_width
+    second_legend_pos = left_pos + first_legend_width
+
+    # Dimension legend (right)
+    second_legend = fig.legend(
+        dim_handles, dim_labels, loc="upper left", bbox_to_anchor=(second_legend_pos, bottom_pos), title=None
+    )
+
+    plt.tight_layout()
+    plt.savefig(work_dir / "action_comparison.pdf", bbox_inches="tight")
+    plt.close()
+    return expert_act
+
+
+def analyze_distances(
+    agent,
+    obses,
+    goal_obs,
+    plot_prefix,
+    objective: Optional[Callable] = None,
+):
+    """
+    Input:
+        obses: List[
+            TensorDict(
+                proprio: [tau Prop]
+                visual: [tau, c, h, w]
+            )
+        ] of length env.max_episode_steps + 1
+    """
+    coords = torch.stack([x["proprio"] for x in obses])  # B tau Prop
+    distances = (
+        torch.norm(coords[..., -1, :3] - goal_obs["proprio"][-1, :3].unsqueeze(0), dim=-1).detach().cpu().numpy()
+    )
+    if agent.cfg.logging.optional_plots:
+        sns.set_theme()
+        FIGSIZE = (4.0, 3.0)
+        plt.figure(figsize=FIGSIZE, dpi=300)
+        sns.lineplot(data=distances)
+        plt.xlabel("Timesteps")
+        plt.ylabel("Distance to goal")
+        plt.tight_layout()
+        plt.savefig(plot_prefix + "_distances.pdf", bbox_inches="tight")
+        plt.close()
+
+    # encode all states
+    # Careful: this use of torch.stack requires obses and goal_obs to be TensorDicts or Tensors
+    all_states = torch.stack(obses + [goal_obs]).to(agent.device)
+    # The encoder takes batch of single states, of dim [len_ep, tubelet_size_enc, C, H, W] so no temporal dependency
+    # We could encode the obses with temporal dependency but rather see them as a batch of images
+    all_encs = agent.model.encode(prepare_obs(agent.cfg.task_specification.obs, all_states), act=True)
+    # compute latent L2 distance of trajectory of the agent to the goal embedding
+    diffs = compute_embed_differences(all_encs).detach().cpu().numpy()
+    if agent.cfg.logging.optional_plots:
+        for key, value in diffs.items():
+            plt.figure(figsize=FIGSIZE, dpi=300)
+            sns.lineplot(data=value)
+            plt.xlabel("Timesteps")
+            plt.ylabel("Rep distance to goal")
+            plt.tight_layout()
+            plt.savefig(plot_prefix + f"_rep_distance_{key}.pdf", bbox_inches="tight")
+            plt.close()
+        if objective:
+            if isinstance(all_encs, TensorDict):
+                all_encs_excluded = TensorDict({key: value[:-1] for key, value in all_encs.items()})
+            else:
+                all_encs_excluded = all_encs[:-1]
+            all_objectives = objective(all_encs_excluded, None, keepdims=True).detach().cpu()
+            plt.figure(figsize=FIGSIZE, dpi=300)
+            sns.lineplot(data=all_objectives.squeeze(1))
+            plt.xlabel("Timesteps")
+            plt.ylabel("Objective values")
+            plt.tight_layout()
+            plt.savefig(plot_prefix + "_objectives.pdf", bbox_inches="tight")
+            plt.close()
+
+    return distances, diffs
+
+
+def compute_embed_differences(all_encs):
+    """
+    Input: all_encs:
+        visual: [T, 1, ..., D]
+        proprio: [T, 1, ..., P]
+    Output:
+
+    """
+    if isinstance(all_encs, TensorDict):
+        return TensorDict(
+            {
+                "visual": (all_encs["visual"][:-1] - all_encs["visual"][-1:])
+                .pow(2)
+                .mean(dim=tuple(range(1, all_encs["visual"].ndim))),
+                "proprio": (all_encs["proprio"][:-1] - all_encs["proprio"][-1:])
+                .pow(2)
+                .mean(dim=tuple(range(1, all_encs["proprio"].ndim))),
+            }
+        )
+    else:
+        return TensorDict({"visual": (all_encs[:-1] - all_encs[-1:]).pow(2).mean(dim=tuple(range(1, all_encs.ndim)))})
+
+
+def compare_unrolled_plan_expert(
+    agent,
+    unrolled_embeddings,
+    expert_embeddings,
+    pred_frames_over_iterations=None,
+    expert_frames=None,
+):
+    """
+    Compute LPIPS between decoded plan (latest planner itr) and expert frames for each for o in [1,O],
+        then averaged.
+        TODO: and optionally L2 for proprio decodings
+    Compute L2 distance between unrolled plan and expert embeddings, for both the visual and
+        optionally the proprio embeddings.
+    Input:
+        unrolled_embeddings: List[List[TensorDict or Tensor[tau, 1, 1, H, W, D]] of len planner.iterations]
+            of length O the number of calls to agent.act()
+        expert_embeddings: TensorDict or Tensor[T, 1, 1, H, W, D] of length T the episode length
+        pred_frames_over_iterations: List[List[ndarray[tau, H, W, C]] of len planner.iterations] of length O
+        expert_frames: Tensor[T, H, W, C]] of len T the episode length
+    T <= tau * O
+    """
+    lpips = lpips_lib.LPIPS(net="vgg").eval().to(agent.device)  # expects [0,1]
+    s, total_lpips, total_emb_l2 = 1, 0.0, 0.0
+    if agent.planner.decode_each_iteration:
+        for opt_step, pred_frames_list in enumerate(pred_frames_over_iterations):
+            curr_pred_frames = (
+                torch.tensor(pred_frames_list[-1], dtype=torch.float32)[s:].permute(0, 3, 1, 2) / 255.0
+            )  # T H W C -> T C H W
+            curr_expert_frames = (
+                expert_frames[s : s + len(curr_pred_frames)].to(dtype=torch.float32) / 255.0
+            )  # T C H W
+            s += len(curr_pred_frames)
+            total_lpips += lpips(curr_pred_frames.to(agent.device), curr_expert_frames.to(agent.device)).mean().item()
+
+    s = 1  # Reset counter for embeddings
+    if unrolled_embeddings is not None and expert_embeddings is not None:
+        for opt_step, embed_list in enumerate(unrolled_embeddings):
+            if isinstance(embed_list[-1], TensorDict):
+                curr_embed = embed_list[-1]["visual"][s:]  # Use the last iteration, skip first frame
+                curr_expert_embed = expert_embeddings["visual"][s : s + len(curr_embed)]
+            else:
+                curr_embed = embed_list[-1][s:]
+                curr_expert_embed = expert_embeddings[s : s + len(curr_embed)]
+            s += len(curr_embed)
+            total_emb_l2 += torch.nn.functional.mse_loss(
+                curr_embed.to(agent.device), curr_expert_embed.to(agent.device)
+            ).item()
+
+    return total_lpips, total_emb_l2
+
+
+##### FILE evals/simu_env_planning/planning/gc_agent.py (7376 chars) #####
+# Copyright (c) Facebook, Inc. and its affiliates.
+# All rights reserved.
+#
+# The below code is inspired from TD-MPC2 https://github.com/nicklashansen/tdmpc2
+# licensed under the MIT License
+
+import torch
+
+from evals.simu_env_planning.planning.planning.objectives import (
+    ReprTargetCosMPCObjective,
+    ReprTargetDistL1MPCObjective,
+    ReprTargetDistMPCObjective,
+)
+from evals.simu_env_planning.planning.planning.planner import (
+    AdamPlanner,
+    CEMPlanner,
+    GradientDescentPlanner,
+    MPPIPlanner,
+    NevergradPlanner,
+)
+from src.utils.logging import get_logger
+
+logger = get_logger(__name__)
+
+
+class GC_Agent:
+    """A modification of TDMPC2 that
+    allows for pre-training offline in self-supervised manner.
+    Allows for not using the reward information during pre-training.
+    """
+
+    def __init__(self, cfg, model, dset=None, preprocessor=None):
+        self.cfg = cfg
+        self.device = torch.device("cuda", index=0)
+        logger.info("🏗️  Initializing GC_Agent with WorldModel")
+        self.model = model
+        self.dset = dset
+        if hasattr(self.dset, "frames_per_clip") and cfg.task_specification.goal_source == "dset":
+            if self.dset.frames_per_clip < cfg.frameskip * cfg.task_specification.goal_H + 1:
+                self.dset.frames_per_clip = cfg.frameskip * cfg.task_specification.goal_H + 1
+        self.preprocessor = preprocessor
+        self.local_generator = torch.Generator(device="cpu")
+        self.local_gpu_generator = torch.Generator(device="cuda:0")
+        self.local_generator.manual_seed(cfg.local_seed)
+        self.local_gpu_generator.manual_seed(cfg.local_seed)
+
+        self.model.eval()
+        self.goal_state = None
+        self._prev_losses = None
+        # --------
+        if self.cfg.planner.planner_name == "nevergrad":
+            self.planner = NevergradPlanner(
+                unroll=self.model.unroll,
+                action_dim=self.model.action_dim,
+                decode_unroll=self.model.decode_unroll,
+                **self.cfg.planner,
+            )
+        elif self.cfg.planner.planner_name == "cem":
+            self.planner = CEMPlanner(
+                unroll=self.model.unroll,
+                action_dim=self.model.action_dim,
+                action_masks=None,
+                local_generator=self.local_gpu_generator,
+                decode_unroll=self.model.decode_unroll,
+                **self.cfg.planner,
+            )
+        elif self.cfg.planner.planner_name == "mppi":
+            self.planner = MPPIPlanner(
+                unroll=self.model.unroll,
+                action_dim=self.model.action_dim,
+                action_masks=None,
+                local_generator=self.local_gpu_generator,
+                decode_unroll=self.model.decode_unroll,
+                **self.cfg.planner,
+            )
+        elif self.cfg.planner.planner_name == "gd":
+            self.planner = GradientDescentPlanner(
+                unroll=self.model.unroll,
+                action_dim=self.model.action_dim,
+                action_masks=None,
+                local_generator=self.local_gpu_generator,
+                decode_unroll=self.model.decode_unroll,
+                **self.cfg.planner,
+            )
+        elif self.cfg.planner.planner_name == "adam":
+            self.planner = AdamPlanner(
+                unroll=self.model.unroll,
+                action_dim=self.model.action_dim,
+                action_masks=None,
+                local_generator=self.local_gpu_generator,
+                decode_unroll=self.model.decode_unroll,
+                **self.cfg.planner,
+            )
+        else:
+            raise ValueError(f"Unknown planner: {self.cfg.planner}")
+
+    @torch.no_grad()
+    def set_goal(self, goal_state):
+        """
+        goal_state:
+        - rgb : [T, C, H, W] if not cfg.task_specification.obs_concat_channels with T >= tubelet_size_enc
+        """
+        assert goal_state is not None, "Goal state must be set first for gc agent."
+        self.goal_state = goal_state.unsqueeze(0)
+        self.goal_state_enc = self.model.encode(self.goal_state, act=False).detach()
+        if self.cfg.planner.planning_objective.objective_type == "L2":
+            # Careful: unsqueeze applies to TensorDicts
+            self.objective = ReprTargetDistMPCObjective(
+                self.cfg, target_enc=self.goal_state_enc, **self.cfg.planner.planning_objective
+            )
+        elif self.cfg.planner.planning_objective.objective_type == "L1":
+            self.objective = ReprTargetDistL1MPCObjective(
+                self.cfg, target_enc=self.goal_state_enc, **self.cfg.planner.planning_objective
+            )
+        elif self.cfg.planner.planning_objective.objective_type == "repr_sim":
+            self.objective = ReprTargetCosMPCObjective(
+                self.cfg, target_enc=self.goal_state_enc, **self.cfg.planner.planning_objective
+            )
+        else:
+            raise ValueError(f"Unknown objective type: {self.cfg.planner.planning_objective.objective_type}")
+
+        if self.planner is not None:
+            self.planner.set_objective(self.objective)
+
+    def plan(
+        self,
+        z,
+        steps_left=None,
+    ):
+        """
+        args:
+            z: initial context state
+            steps_left: number of steps left in the episode, used to adjust planning horizon.
+        Stored variables:
+            self.prev_elite_losses_mean: mean loss of the elite action sequence from the previous planning optimizer iteration.
+            self.prev_elite_losses_std: std of the loss of the elite action sequence from the previous planning optimizer iteration.
+        Returns:
+            a: action to take, shape (1, action_dim)
+        """
+        planning_result = self.planner.plan(
+            z,
+            steps_left=steps_left,
+        )
+        self._prev_losses = planning_result.losses
+        self._prev_elite_losses_mean = planning_result.prev_elite_losses_mean
+        self._prev_elite_losses_std = planning_result.prev_elite_losses_std
+        self._prev_pred_frames_over_iterations = planning_result.pred_frames_over_iterations
+        self._predicted_best_encs_over_iterations = planning_result.predicted_best_encs_over_iterations
+        return planning_result.actions
+
+    def act(
+        self,
+        obs,
+        steps_left=None,
+    ):
+        """
+        Select an action by planning in the latent space of the world model.
+
+        Args:
+                obs (torch.Tensor): Observation from the environment.
+                t0 (bool): Whether this is the first observation in the episode.
+                eval_mode (bool): Whether to use the mean of the action distribution.
+                task (int): Task index (only used for multi-task experiments).
+
+        Make sure the models's encode() and unroll() function match: they interact only here:
+        unroll() is used in self.plan()
+
+        Returns:
+                torch.Tensor: Action to take in the environment.
+        """
+        if self.cfg.task_specification.obs == "rgb":
+            obs = obs.to(self.device, non_blocking=True).unsqueeze(0)
+        elif self.cfg.task_specification.obs == "rgb_state":
+            obs = obs.to(self.device, non_blocking=True).unsqueeze(0)
+        z = self.model.encode(obs, act=True)
+        a = self.plan(
+            z,
+            steps_left=steps_left,
+        )
+        return a.cpu()
+
+
+##### FILE evals/simu_env_planning/planning/plan_evaluator.py (29544 chars) #####
+# Copyright (c) Facebook, Inc. and its affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+#
+
+import os
+from time import time
+
+import numpy as np
+import torch
+from einops import rearrange
+from matplotlib import pyplot as plt
+from tensordict.tensordict import TensorDict
+from tqdm.auto import tqdm
+
+from evals.simu_env_planning.envs.init import make_env
+from evals.simu_env_planning.planning.episode_plot_utils import (
+    analyze_distances,
+    compare_unrolled_plan_expert,
+    plot_actions_comparison,
+    plot_losses,
+)
+from evals.simu_env_planning.planning.utils import (
+    make_td,
+    make_video,
+    make_video_pdf,
+    save_decoded_frames,
+    save_init_goal_frame,
+)
+from evals.utils import prepare_obs
+from src.utils.logging import get_logger
+
+log = get_logger(__name__)
+
+
+class PlanEvaluator:
+    def __init__(self, cfg, agent):
+        self.cfg = cfg
+        self.agent = agent
+
+    def get_goal_state_mw(self, env, task_idx=-1):
+        """a function to copy the environment and run the expert
+        policy to get the goal state.
+        It also saves the images along the way.
+        Cleaner variant where both envs get the same rand_vec thanks to set_task
+        Recall that each env.reset() modifies the rand_vec randonmly. So each iteration
+        of the loop in main() / call to eval() gives statistically independent environments.
+        """
+        from metaworld import _encode_task
+
+        from evals.simu_env_planning.envs.metaworld import task_name_to_policy
+
+        policy_cls = task_name_to_policy(self.cfg.tasks[task_idx])
+        # we need to unwrap the env and deepcopy it
+        unwrapped = env.proprio_env.unwrapped
+        env_cls = type(unwrapped)
+        rand_vec = unwrapped._last_rand_vec
+        task_data = _encode_task(
+            "mw-reach",  # any task works, metaworld only looks at env_cls
+            {
+                "rand_vec": rand_vec,
+                "env_cls": env_cls.__bases__[0],
+                "partially_observable": False,
+            },
+        )
+        log.info("Creating expert env ...")
+        # env_expert is a MultitaskWrapper if env is
+        env_expert = make_env(env.cfg)
+        # make sure the env_expert is set to the right task before set_task
+        obs, info = env_expert.reset(task_idx=task_idx)
+        # set_task is the only way to freeze the rand_vec
+        env_expert.set_task(task_data)
+        env.set_task(task_data)
+        # Now need a second reset with the right rand_vec
+        obs, info = env_expert.reset(task_idx=task_idx)
+        obs = make_td(obs, info)
+        policy = policy_cls()
+
+        def actor(info, steps_left):
+            # need to convert to tensor because the env expects a tensor
+            # return torch.tensor(env_expert.action_space.sample())
+            return torch.tensor(np.expand_dims(policy.get_action(info["state"]), axis=0))
+
+        return self.unroll_expert(env_expert, obs, info, actor)
+
+    def unroll_expert(self, env, obs, info, actor):
+        """
+        Returns:
+        List of Tensordicts with length the episode length, each td has 2 fields: visual and proprio
+        """
+        done = False
+        ep_reward = 0
+        td = obs
+        ep_obs_proprio_td_list = [td]
+        infos_list = []
+        actions = []
+        pbar = tqdm(
+            desc="executing expert",
+            total=env.max_steps(),
+            initial=env.elapsed_steps(),
+            position=0,
+            leave=True,
+            disable=env.cfg.logging.tqdm_silent,
+        )
+        while not done:
+            action = actor(
+                info,
+                steps_left=max((env.steps_left() + 1) // self.cfg.frameskip, 1),
+            )
+            actions.append(action.detach().cpu())
+            obses, rewards, dones, infos = env.step_multiple(action)
+            reward = sum(rewards)
+            done = dones[-1]
+
+            ep_reward += reward
+            for obs, info in zip(obses, infos):
+                td = make_td(obs, info)
+                ep_obs_proprio_td_list.append(td)
+                infos_list.append(info)
+            pbar.update(len(obses))
+            pbar.set_postfix(
+                {
+                    "near_object": infos[-1]["near_object"],
+                    "success": infos[-1]["success"],
+                }
+            )
+        pbar.close()
+        return ep_obs_proprio_td_list, ep_reward, actions, infos_list
+
+    def unroll_agent(self, env, obs, info, actor, preprocessor=None):
+        """
+        Returns:
+        List of Tensordicts with length the episode length, each td has 2 fields: visual and proprio
+        If "droid" in cfg.task_specification.task, the proprio and obs outputted by env.step_multiple() are dummy
+            so should not replan on them, hence done = True after first call to agent_actor.
+        """
+        done = False
+        ep_reward = 0
+        td = obs
+        ep_obs_proprio_td_list = [td]
+        infos_list = []
+        actions = []
+        pbar = tqdm(
+            desc="executing agent",
+            total=env.max_steps(),
+            initial=env.elapsed_steps(),
+            position=0,
+            leave=True,
+            disable=env.cfg.logging.tqdm_silent,
+        )
+        while not done:
+            plan_vis_path = (
+                f"{self.ep_plan_vis_dir}/step{env.elapsed_steps()}" if self.cfg.planner.decode_each_iteration else None
+            )
+            act_time_start = time()
+            # we always have action_skip 1 except for DROID -> robocasa
+            # For DROID -> robocasa, we can repeat act skip or not
+            if not self.cfg.planner.repeat_actskip:
+                plan_steps_left = max((env.steps_left() + 1) * self.agent.model.action_skip // self.cfg.frameskip, 1)
+            else:
+                plan_steps_left = max((env.steps_left() + 1), 1)
+            action = actor(
+                td,
+                steps_left=plan_steps_left,
+            )
+            act_time_end = time()
+            log.info(f"Action optim at step {env.elapsed_steps()} took {act_time_end - act_time_start:.2f} seconds")
+            if self.cfg.logging.optional_plots and self.prev_pred_frames_over_iterations[-1] is not None:
+                save_decoded_frames(
+                    self.prev_pred_frames_over_iterations[-1],
+                    self.prev_losses[-1],
+                    plan_vis_path=plan_vis_path,
+                )
+            action = rearrange(action.cpu(), "t (f d) -> (t f) d", d=env.action_dim)
+            if self.cfg.planner.repeat_actskip:
+                action = action.repeat_interleave(self.agent.model.action_skip, dim=0)
+            if preprocessor is not None:
+                action = preprocessor.denormalize_actions(action)
+            actions.append(action.detach().cpu())
+            # env.step_multiple() returns consequences of action
+            # but not initial obs, stored in ep_obs_proprio_td_list[-1]["visual"]
+            obses, rewards, dones, infos = env.step_multiple(action)
+            reward = sum(rewards)
+            done = dones[-1]
+
+            # Plot stepped actions of this slice only if needed
+            if (
+                self.cfg.planner.decode_each_iteration
+                and not "droid" in self.cfg.task_specification.task
+                and self.cfg.logging.optional_plots
+            ):
+                agent_gt_path = f"{plan_vis_path}_gt.pdf"
+                step_indices = np.arange(self.cfg.frameskip - 1, len(obses), self.cfg.frameskip)
+                frames = [ep_obs_proprio_td_list[-1]["visual"].to(torch.uint8)] + [obses[i] for i in step_indices]
+                # frames = [obses[0]] + obses[1:][::self.cfg.frameskip]
+                n_frames = len(frames)
+                fig, axes = plt.subplots(1, n_frames, figsize=(5 * n_frames, 5))
+                if n_frames == 1:
+                    axes = [axes]
+                for ax, frame in zip(axes, frames):
+                    if isinstance(frame, torch.Tensor):
+                        frame = frame.detach().cpu().numpy()
+                    frame = np.squeeze(frame, axis=0).transpose(1, 2, 0)
+                    ax.imshow(frame)
+                    ax.axis("off")
+                plt.tight_layout()
+                plt.savefig(agent_gt_path, format="pdf", bbox_inches="tight")
+                plt.close()
+                log.info(f"Last iteration frames saved to {agent_gt_path}")
+
+            # Evaluate success
+            if (
+                any(pref in self.cfg.task_specification.task for pref in ["mw", "robocasa"])
+                and self.cfg.task_specification.succ_def == "simu"
+            ):
+                success = infos[-1]["success"]
+                if str(self.cfg.task_specification).startswith("robocasa-"):
+                    state_dist = infos[-1]["hand_obj_dist"]
+                else:
+                    state_dist = np.linalg.norm(self.state_g - infos[-1]["state"])
+            else:
+                eval_results = env.eval_state(self.state_g, infos[-1]["state"])
+                success = eval_results["success"]
+                state_dist = eval_results["state_dist"]
+            if success and self.cfg.task_specification.done_at_succ:
+                done = True
+            ep_reward += reward
+            for obs, info in zip(obses, infos):
+                td = make_td(obs, info)
+                ep_obs_proprio_td_list.append(td)
+                infos_list.append(info)
+            pbar.update(len(obses))
+            pbar.set_postfix(
+                {
+                    "near_object": infos[-1]["near_object"],
+                    "obj_goal_dist": infos[-1].get("obj_goal_dist", -1.0),
+                    "success": success,
+                    "obj_lift": infos[-1].get("obj_lift", -1.0),
+                }
+            )
+            # Log robocasa-specific metrics only if they have meaningful values
+            obj_initial_height = infos[-1].get("obj_initial_height", -1.0)
+            obj_up_once = infos[-1].get("obj_up_once", -1.0)
+            if obj_initial_height != -1.0 or obj_up_once != -1.0:
+                log.info(
+                    f"📊 RoboCasa metrics: obj_initial_height={obj_initial_height:.2f}, obj_up_once={obj_up_once}"
+                )
+            # We cannot step actions so cannot replan in the DROID case
+            if "droid" in self.cfg.task_specification.task:
+                done = True
+
+        pbar.close()
+        return ep_obs_proprio_td_list, ep_reward, actions, infos_list, success, state_dist
+
+    def sample_traj_segment_from_dset(
+        self,
+        cfg,
+        agent,
+        traj_len,
+        droid=False,
+        goal_last=False,
+    ):
+        log.info(f"Sampling trajectory segment of length {traj_len} from dataset")
+        if droid:
+            # log.info(f"{agent.local_generator.get_state()[:100]=}")
+            ep_idx = torch.randint(low=0, high=len(agent.dset), size=(1,), generator=agent.local_generator).item()
+            obs, act, state, e_info = agent.dset[ep_idx]
+            # log.info(f"Sampled {ep_idx=}")
+            max_offset = obs["visual"].shape[0] - traj_len
+            offset = torch.randint(low=0, high=max_offset + 1, size=(1,), generator=agent.local_generator).item()
+            # log.info(f"Sampled {offset=}")
+            obs = {key: arr[offset : offset + traj_len] for key, arr in obs.items()}
+            state = state[offset : offset + traj_len]
+            act = act[offset : offset + cfg.frameskip * cfg.task_specification.goal_H]
+        else:
+            if cfg.task_specification.env.get(
+                "sample_subtask_slice", False
+            ) and cfg.task_specification.task.startswith("robocasa-"):
+                max_attempts = 100  # Add a limit to prevent infinite loops
+                attempt = 0
+                sampled_traj = False
+
+                while not sampled_traj and attempt < max_attempts:
+                    attempt += 1
+                    traj_id = torch.randint(
+                        low=0, high=len(agent.dset), size=(1,), generator=agent.local_generator
+                    ).item()
+                    try:
+                        obs, act, state, reward, e_info = agent.dset.__getitem__(
+                            traj_id, subtask=cfg.task_specification.env.subtask
+                        )
+                        sampled_traj = True
+                        log.info(
+                            f"Sampled subtask {cfg.task_specification.env.subtask} from traj {traj_id} (attempt {attempt})"
+                        )
+                    except Exception as e:
+                        log.info(
+                            f"Failed to sample subtask {cfg.task_specification.env.subtask} from traj {traj_id}: {e}"
+                        )
+                        # No need to raise here - just continue the loop
+
+                if not sampled_traj:
+                    raise RuntimeError(
+                        f"Failed to find a trajectory with subtask {cfg.task_specification.env.subtask} after {max_attempts} attempts"
+                    )
+            else:
+                # Check if any trajectory is long enough
+                valid_traj = [
+                    agent.dset.get_seq_length(i)
+                    for i in range(len(agent.dset))
+                    if agent.dset.get_seq_length(i) >= traj_len
+                ]
+                if len(valid_traj) == 0:
+                    raise ValueError("No trajectory in the dataset is long enough.")
+                max_offset = -1
+                while max_offset < 0:  # filter out traj that are not long enough
+                    traj_id = torch.randint(
+                        low=0, high=len(agent.dset), size=(1,), generator=agent.local_generator
+                    ).item()
+                    obs, act, state, reward, e_info = agent.dset[traj_id]
+                    max_offset = obs["visual"].shape[0] - traj_len
+                state = state.numpy()
+                if goal_last:
+                    offset = max_offset
+                else:
+                    offset = torch.randint(
+                        low=0, high=max_offset + 1, size=(1,), generator=agent.local_generator
+                    ).item()
+                log.info(f"Sampled traj: traj id: {traj_id}  Offset: {offset}")
+                obs = {key: arr[offset : offset + traj_len] for key, arr in obs.items()}
+                state = state[offset : offset + traj_len]
+                act = act[offset : offset + cfg.frameskip * cfg.task_specification.goal_H]
+        return obs, state, act, e_info
+
+    def set_episode(self, cfg, agent, env, ep_seed, task_idx=-1):
+        """
+        Sets up the initial and goal states for an evaluation episode,
+        and potentially the expert trajectory and actions.
+        """
+        if cfg.task_specification.goal_source == "expert":
+            # reset_warmup instead of env.reset seems to set the init_obs
+            # corresponding to the rand_vec
+            init_obs, info = env.reset_warmup(seed=ep_seed)
+            init_obs = make_td(init_obs, info)
+            if cfg.task_specification.task.startswith("mw-"):
+                expert_obses, ep_reward, expert_actions, expert_infos = self.get_goal_state_mw(
+                    env,
+                    task_idx=task_idx,
+                )
+            self.expert_actions = torch.stack(expert_actions).permute(1, 0, 2)  # [1, T, act_dim]
+            goal_obs = expert_obses[-1]  # obs: (t c h w), proprio (d)
+            expert_success = expert_infos[-1]["success"]
+            self.state_g = expert_infos[-1]["state"]
+        elif cfg.task_specification.goal_source == "random_state":
+            rand_init_state, rand_goal_state = env.sample_random_init_goal_states(ep_seed)
+            # the order is essential, env.prepare sets the state of the env to its state arg
+            goal_obs, goal_info = env.prepare(ep_seed, rand_goal_state)
+            goal_obs = make_td(goal_obs, goal_info)
+            init_obs, info = env.prepare(ep_seed, rand_init_state)
+            init_obs = make_td(init_obs, info)
+            expert_success = 1
+            self.state_g = goal_info["state"]
+            expert_obses = []
+        elif cfg.task_specification.goal_source in ["dset", "random_action"]:
+            # Sample a trajectory segment from the dataset, the goal and initial states are tensordicts
+            # with a time dimension of num_frames and num_proprios, with adjacent (in time) frames and proprios
+            # Because of env.reset_warmup() the num_frames initial frames and proprios are identical.
+            assert "mw" not in cfg.task_specification.task
+            # TODO: for metaworld, since we cannot prepare, we can sample_traj with full
+            # length, step only some GT actions to get init_state, set the goal to a state at distance 25
+            # from the dset, or by creating another env and stepping all actions to it.
+            # But we cannot retrieve the seed or rand_vec that allowed to start the sampled traj segment.
+            observations, states, actions, env_info = self.sample_traj_segment_from_dset(
+                cfg,
+                agent,
+                traj_len=cfg.frameskip * cfg.task_specification.goal_H + 1,
+                droid=("droid" in cfg.task_specification.task),
+                goal_last=cfg.task_specification.get("goal_last", False),
+            )
+            if cfg.task_specification.env.get("subtask") is not None and "place" in cfg.task_specification.env.subtask:
+                # CAREFUL: We directly modify the attribute of the wrapped RobocasaWrapper env
+                env.env.env.env.goal_obj_pos = env_info["meta_data_info"]["current_obj_pos"][-1]
+            env.update_env(env_info)
+
+            init_state = states[0]
+            init_state = np.array(init_state)
+            if "droid" in cfg.task_specification.task:
+                self.expert_actions = torch.tensor(actions).unsqueeze(0)
+                expert_obses = []
+                for i in range(len(observations["visual"])):
+                    expert_obses.append(
+                        TensorDict(
+                            {
+                                "visual": (
+                                    self.agent.preprocessor.inverse_transform(observations["visual"][i : i + 1]) * 255
+                                ).to(torch.uint8),
+                                "proprio": torch.as_tensor(observations["proprio"][i : i + 1], dtype=torch.float32),
+                            }
+                        )
+                    )
+                self.state_g = states[-1]
+            else:
+                if cfg.task_specification.get("replay_expert", True):
+                    if cfg.task_specification.goal_source == "random_action":
+                        actions = torch.randn_like(actions, generator=agent.local_generator)
+                    exec_actions = agent.preprocessor.denormalize_actions(actions)
+                    self.expert_actions = actions.detach().clone().unsqueeze(0)
+                    # replay actions in env to get expert_obses
+                    env.set_max_steps(cfg.task_specification.goal_max_episode_steps)
+                    env_roll_start_time = time()
+                    expert_obses, rollout_infos = env.rollout(
+                        ep_seed,
+                        init_state,
+                        exec_actions,
+                        env_info,
+                    )
+                    log.info(f"Env rollout took {time() - env_roll_start_time:.2f} seconds")
+                    expert_obses = [
+                        make_td(obs, rollout_info) for (obs, rollout_info) in zip(expert_obses, rollout_infos)
+                    ]
+                    self.state_g = rollout_infos[-1]["state"]
+                else:
+                    # expert obses are just the dset ones
+                    self.expert_actions = actions.detach().clone().unsqueeze(0)
+                    exp
+
+##### FILE evals/simu_env_planning/planning/utils.py (15040 chars) #####
+# Copyright (c) Facebook, Inc. and its affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+#
+
+import random
+from io import BytesIO
+
+import cv2
+import imageio
+import matplotlib.pyplot as plt
+import numpy as np
+import torch
+from PIL import Image
+from tensordict.tensordict import TensorDict
+
+from src.utils.logging import get_logger
+
+log = get_logger(__name__)
+
+FIGSIZE_BASE = (4.0, 3.0)
+
+
+def set_seed(seed):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+
+
+def make_td(obs, info):
+    return TensorDict(
+        {
+            "visual": obs,
+            "proprio": info["proprio"],
+        },
+        batch_size=[],
+    )
+
+
+###### Video, GIF and pdf saving utils ##########
+def make_video(images, fps, output_path, obs_concat_channels=True):
+    make_video_mp4(images, fps, output_path + ".mp4", obs_concat_channels=obs_concat_channels)
+    make_video_gif(images, fps, output_path + ".gif", obs_concat_channels=obs_concat_channels)
+
+
+def make_video_mp4(images, fps, output_path, obs_concat_channels=True):
+    """
+    Input:
+        images: List[tau C H W] of length T
+    """
+    writer = imageio.get_writer(output_path, fps=fps, codec="libx264")
+    for img in images:
+        img = (img[-3:] if obs_concat_channels else img[-1]).numpy() if isinstance(img, torch.Tensor) else img
+        img = img.transpose(1, 2, 0)
+        img = ((img - img.min()) / (img.max() - img.min()) * 255).astype(np.uint8)
+        # img: H W C
+        writer.append_data(img)
+
+    writer.close()
+    log.info(f"🎬 Video saved to {output_path}")
+
+
+def make_video_gif(images, fps, output_path, obs_concat_channels=True):
+    writer = imageio.get_writer(output_path, fps=fps, format="GIF", loop=10000)
+    for img in images:
+        img = (img[-3:] if obs_concat_channels else img[-1]).numpy() if isinstance(img, torch.Tensor) else img
+        img = img.transpose(1, 2, 0)
+        img = ((img - img.min()) / (img.max() - img.min()) * 255).astype(np.uint8)
+        writer.append_data(img)
+
+    writer.close()
+    log.info(f"🎞️  GIF saved to {output_path}")
+
+
+def make_video_pdf(images, output_path, obs_concat_channels=True):
+    """
+    Save video frames as a PDF with frames arranged horizontally
+
+    Args:
+        images: List of images [tau C H W] of length T
+        output_path: Path to save the PDF
+        obs_concat_channels: Whether the observation has concatenated channels
+    """
+    # Process images to consistent format
+    processed_images = []
+    for img in images:
+        if isinstance(img, torch.Tensor):
+            img = (img[-3:] if obs_concat_channels else img[-1]).detach().cpu().numpy()
+
+        # Convert to HWC format
+        img = img.transpose(1, 2, 0)
+        processed_images.append(img)
+
+    # Create a single horizontal image by concatenating all frames
+    concat_img = np.concatenate(processed_images, axis=1)
+
+    # Create a figure with exact dimensions (no margins)
+    fig = plt.figure(figsize=(concat_img.shape[1] / 300, concat_img.shape[0] / 300), dpi=300)
+    ax = plt.Axes(fig, [0, 0, 1, 1])
+    ax.set_axis_off()
+    fig.add_axes(ax)
+
+    # Display the concatenated image
+    ax.imshow(concat_img)
+
+    # Save without any padding
+    plt.savefig(output_path, format="pdf", bbox_inches="tight", pad_inches=0)
+    plt.close(fig)
+    log.info(f"📄 PDF saved to {output_path}")
+
+
+def save_init_goal_frame(init_obs, goal_obs, vis_work_dir=None, concat_channels=False):
+    obs_img = init_obs["visual"]
+    obs_img = obs_img[-3:] if concat_channels else obs_img[-1]
+    goal_state_img = goal_obs["visual"]
+    goal_state_img = goal_state_img[:3] if concat_channels else goal_state_img[0]
+    plt.figure(dpi=300, figsize=FIGSIZE_BASE)
+    plt.subplot(1, 2, 1)
+    plt.imshow(obs_img.permute(1, 2, 0))
+    plt.title("Init state")
+    plt.axis("off")
+    plt.subplot(1, 2, 2)
+    plt.imshow(goal_state_img.permute(1, 2, 0))
+    plt.title("Goal state")
+    plt.axis("off")
+    plt.tight_layout()
+    plt.savefig(vis_work_dir / f"state.pdf", bbox_inches="tight")
+    plt.close()
+
+
+def save_decoded_frames(pred_frames_over_iterations, costs, plan_vis_path, overlay=True):
+    """
+    costs: Tensor[float] of length iterations
+    pred_frames_over_iterations: List[(T, H, W, C)] of length iterations
+    """
+    if pred_frames_over_iterations is not None and plan_vis_path is not None:
+        frames = []
+        global_min_cost = costs.min()
+        global_max_cost = costs.max()
+        # Pre-calculate the normalized positions for all costs
+        all_normalized_costs = []
+        for i in range(len(costs)):
+            # For each iteration, normalize all costs seen so far
+            current_costs = costs[: i + 1]
+            if len(current_costs) > 1:
+                # Normalize using global min/max for consistent scaling
+                normalized = (current_costs - global_min_cost) / (global_max_cost - global_min_cost + 1e-10)
+                all_normalized_costs.append(normalized)
+            else:
+                all_normalized_costs.append(np.array([0.5]))  # Default for single value
+
+        for i, pred_frames in enumerate(pred_frames_over_iterations):
+            # pred_frames.shape: (T, H, W, C)
+            if overlay:
+                overlay_frames = []
+                for frame_idx, frame in enumerate(pred_frames):
+                    # Create a copy of the frame to draw on
+                    frame_with_overlay = frame.copy()
+
+                    # Get frame dimensions
+                    h, w = frame.shape[0], frame.shape[1]
+
+                    # Get normalized costs for this iteration
+                    current_costs = costs[: i + 1]
+                    if len(current_costs) > 1:
+                        normalized_costs = all_normalized_costs[i]
+                        # Map to pixel space (top is low cost, bottom is high cost)
+                        y_positions = (1 - normalized_costs) * (h - 20) + 10
+
+                        # Draw the white curve with anti-aliasing
+                        for j in range(len(y_positions) - 1):
+                            x1 = int(j * w / len(costs))  # Fixed x-scale based on total iterations
+                            x2 = int((j + 1) * w / len(costs))
+                            y1 = int(y_positions[j])
+                            y2 = int(y_positions[j + 1])
+                            cv2.line(frame_with_overlay, (x1, y1), (x2, y2), (200, 200, 200), 2, cv2.LINE_AA)
+
+                        # Add cost values at key points
+                        # Show initial cost value
+                        cost_text = f"{current_costs[0].item():.2f}"
+                        cv2.putText(
+                            frame_with_overlay,
+                            cost_text,
+                            (10, int(y_positions[0])),
+                            cv2.FONT_HERSHEY_SIMPLEX,
+                            0.4,
+                            (200, 200, 200),
+                            1,
+                        )
+
+                        # Show final cost value
+                        cost_text = f"{current_costs[-1].item():.2f}"
+                        cv2.putText(
+                            frame_with_overlay,
+                            cost_text,
+                            (int(x1) - 50, int(y_positions[-1])),
+                            cv2.FONT_HERSHEY_SIMPLEX,
+                            0.4,
+                            (200, 200, 200),
+                            1,
+                        )
+                        # Add min/max values
+                        cv2.putText(
+                            frame_with_overlay,
+                            f"Min: {global_min_cost:.2f}",
+                            (w - 120, 20),
+                            cv2.FONT_HERSHEY_SIMPLEX,
+                            0.4,
+                            (200, 200, 200),
+                            1,
+                        )
+                        cv2.putText(
+                            frame_with_overlay,
+                            f"Max: {global_max_cost:.2f}",
+                            (w - 120, 40),
+                            cv2.FONT_HERSHEY_SIMPLEX,
+                            0.4,
+                            (200, 200, 200),
+                            1,
+                        )
+
+                    # Add text showing the iteration number
+                    cv2.putText(
+                        frame_with_overlay, f"Iter {i+1}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (200, 200, 200), 2
+                    )
+
+                    overlay_frames.append(frame_with_overlay)
+                frames.extend(overlay_frames)
+            else:
+                plt.clf()
+                plt.figure(figsize=(10, 10))
+                plt.plot(costs[: i + 1])
+                plt.title(f"Iteration {i}")
+                plt.xlabel("Iteration")
+                plt.ylabel("Loss")
+                plt.xlim(0, len(costs))
+                plt.ylim(min(costs), max(costs))
+                buf = BytesIO()
+                plt.savefig(buf, format="png")
+                buf.seek(0)
+                img = Image.open(buf)
+                img = np.array(img)
+                img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+                img = cv2.resize(img, (256, 256))
+
+                combined_frames = []
+                for frame in pred_frames:
+                    frame = cv2.resize(frame, (256, 256))
+                    combined_frame = np.concatenate((img, frame), axis=1)
+                    combined_frames.append(combined_frame)
+                frames.extend(combined_frames)
+        # Save GIF
+        filename = f"{plan_vis_path}.gif"
+        duration = 0.1
+        imageio.mimsave(filename, frames, duration=duration, loop=0)
+        log.info(f"🎬 Plan decoding video saved to {plan_vis_path}")
+
+        # Save last iteration frames as PDF
+        last_pred_frames = pred_frames_over_iterations[-1]
+        pdf_filename = f"{plan_vis_path}_last_frames.pdf"
+        n_frames = len(last_pred_frames)
+        fig, axes = plt.subplots(1, n_frames, figsize=(5 * n_frames, 5))
+        if n_frames == 1:  # Handle case with single frame
+            axes = [axes]
+
+        for ax, frame in zip(axes, last_pred_frames):
+            ax.imshow(frame)
+            ax.axis("off")
+
+        plt.tight_layout()
+        plt.savefig(pdf_filename, format="pdf", bbox_inches="tight")
+        plt.close()
+        log.info(f"Last iteration frames saved to {pdf_filename}")
+
+
+##########################################################
+
+
+######### Distributed results aggregation utils ##########
+def aggregate_results(cfg, all_results):
+    combined_results = {}
+    task_episode_counts = {task: 0 for task in cfg.tasks}
+
+    for task in cfg.tasks:
+        combined_results[f"episode_reward+{task}"] = 0
+        combined_results[f"episode_success+{task}"] = 0
+        combined_results[f"ep_expert_succ+{task}"] = 0
+        combined_results[f"ep_succ_dist+{task}"] = 0
+        combined_results[f"ep_end_dist+{task}"] = 0
+        combined_results[f"ep_end_dist_xyz+{task}"] = 0
+        combined_results[f"ep_end_dist_orientation+{task}"] = 0
+        combined_results[f"ep_end_dist_closure+{task}"] = 0
+        combined_results[f"ep_time+{task}"] = 0
+        combined_results[f"ep_state_dist+{task}"] = 0
+        combined_results[f"ep_total_lpips+{task}"] = 0
+        combined_results[f"ep_total_emb_l2+{task}"] = 0
+
+    for results in all_results:
+        for key, value in results.items():
+            task = key.split("+")[1]
+            combined_results[key] += value[0]  # Sum up results from all GPUs
+            task_episode_counts[task] += value[1]  # Sum up episode counts
+
+    num_metrics_per_task = len(combined_results) // len(cfg.tasks)
+
+    for task in task_episode_counts:
+        task_episode_counts[task] /= num_metrics_per_task
+        assert (
+            task_episode_counts[task] == cfg.meta.eval_episodes
+        ), f"Task {task} has {task_episode_counts[task]} episodes, expected {cfg.meta.eval_episodes}"
+
+    for key in combined_results.keys():
+        task = key.split("+")[1]
+        if task_episode_counts[task] > 0:
+            combined_results[key] /= cfg.meta.eval_episodes
+
+    return combined_results
+
+
+def compute_task_distribution(cfg):
+    """
+    Each rank is given a (start_episode, end_episode) that are global indices among the
+    total_episodes = cfg.meta.eval_episodes * len(cfg.tasks) episodes to perform.
+    Returns:
+    - task_indices: List[int]
+    - episodes_per_task: List[List[int]] with length=len(task_indices): each sublist contains the global
+    episode indices for a specific task that the current rank is responsible for evaluating.
+    episodes_per_task[i] is the episodes indices list for task at position i in task_indices.
+    """
+    if cfg.distributed.distribute_multitask_eval:
+        total_episodes = cfg.meta.eval_episodes * len(cfg.tasks)
+        episodes_per_rank = total_episodes // cfg.world_size
+        extra_episodes = total_episodes % cfg.world_size
+        max_episodes_per_rank = episodes_per_rank + (1 if extra_episodes > 0 else 0)
+
+        # GPUs with a rank less than extra_episodes have
+        start_episode = cfg.rank * episodes_per_rank + min(cfg.rank, extra_episodes)
+        # GPUs with a rank less than extra_episodes will handle one additional episode
+        end_episode = start_episode + episodes_per_rank + (1 if cfg.rank < extra_episodes else 0)
+        log.info(f"📊 Rank {cfg.rank}: episodes [{start_episode}→{end_episode}] ({end_episode - start_episode} total)")
+        task_indices = []
+        episodes_per_task = []
+
+        # 0 <= start_episode, end_episode <= total_episodes
+        # rasterized order starting by task, then eps per task
+        for episode_idx in range(start_episode, end_episode):
+            task_idx = episode_idx // cfg.meta.eval_episodes
+            episode_num = episode_idx % cfg.meta.eval_episodes
+            # if not added ep for this task in task_indices
+            if not task_indices or task_indices[-1] != task_idx:
+                task_indices.append(task_idx)
+                episodes_per_task.append([])
+            episodes_per_task[-1].append(episode_num)
+
+        # For each GPU to perform same number of eval episodes, add dummy ones
+        current_total_episodes = end_episode - start_episode
+        if current_total_episodes < max_episodes_per_rank:
+            dup_eps_needed = max_episodes_per_rank - current_total_episodes
+            for _ in range(dup_eps_needed):
+                # Duplicate the last episode of the last task
+                if episodes_per_task:
+                    episodes_per_task[-1].append(episodes_per_task[-1][-1])
+
+        return task_indices, episodes_per_task
+    else:
+        task_indices = list(range(len(cfg.tasks)))
+        episodes_per_task = [list(range(cfg.meta.eval_episodes)) for _ in task_indices]
+        return task_indices, episodes_per_task
+
+
+#################################
+
+
+##### FILE app/vjepa_wm/modelcustom/simu_env_planning/vit_enc_preds.py (20214 chars) #####
+# Copyright (c) Facebook, Inc. and its affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+#
+
+import logging
+import sys
+from pathlib import Path
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from einops import rearrange
+from tensordict.tensordict import TensorDict
+
+from app.plan_common.datasets.droid_dset import compute_new_pose
+from app.plan_common.models.wm_heads import WorldModelPoseReadoutHead, WorldModelViTImageHead
+from app.vjepa_wm.utils import (
+    clean_state_dict,
+    fetch_checkpoint,
+    init_video_model,
+    load_checkpoint_state_dict,
+)
+from app.vjepa_wm.video_wm import VideoWM
+
+logging.basicConfig(stream=sys.stdout, level=logging.INFO)
+logger = logging.getLogger()
+
+
+def init_module(
+    folder,
+    checkpoint,
+    model_kwargs,
+    device,
+    action_dim,
+    proprio_dim,
+    preprocessor,
+    cfgs_data=None,
+    wrapper_kwargs=None,
+    **kwargs,
+):
+    """Initialize EncPredWM model with pretrained weights and decoders.
+    Args:
+        folder (str or Path): Directory containing checkpoint file (only used for local paths).
+        checkpoint (str): Checkpoint source - can be either:
+            - A filename to load from folder (e.g., "jepa-latest.pth.tar")
+            - A full URL to download from (e.g., "https://dl.fbaipublicfiles.com/jepa-wms/...")
+        model_kwargs (dict): Model configuration with encoder, predictor, heads, and data configs.
+        device (torch.device): Device to load model on.
+        action_dim (int): Action dimension from the dataset.
+        proprio_dim (int): Proprioception dimension from the dataset.
+        preprocessor: Preprocessor with transform, inverse_transform, normalize methods.
+        cfgs_data (dict): Data configuration with img_size, custom settings, etc.
+        wrapper_kwargs (dict): Additional kwargs for EncPredWM wrapper.
+        **kwargs: Additional arguments (unused).
+    Returns:
+        EncPredWM: Wrapped VideoWM model ready for encoding and prediction.
+    """
+    img_size = cfgs_data.get("img_size", 256)
+    frameskip = cfgs_data.get("custom").get("frameskip", 1)
+    action_skip = cfgs_data.get("custom").get("action_skip", 1)
+    state_skip = cfgs_data.get("custom").get("state_skip", 1)
+
+    # Extract nested configs
+    cfgs_heads = model_kwargs.get("heads_cfg", {})
+    heads_architectures = cfgs_heads.get("architectures", {})
+    pretrain_dec_path = cfgs_heads.get("pretrain_dec_path", None)
+    new_path_heads = cfgs_heads.get("new_path_heads", {})
+
+    cfgs_wm_encoding = model_kwargs.get("wm_encoding", {})
+
+    # Compute derived values
+    action_tokens = model_kwargs.get("action_encoder", {}).get("action_tokens", 1)
+    proprio_tokens = model_kwargs.get("proprio_encoder", {}).get("proprio_tokens", 1)
+    action_emb_dim = model_kwargs.get("action_encoder", {}).get("action_emb_dim", 0)
+    proprio_emb_dim = model_kwargs.get("proprio_encoder", {}).get("proprio_emb_dim", 0)
+    use_proprio = proprio_tokens > 0 or proprio_emb_dim > 0
+    use_action = action_tokens > 0 or action_emb_dim > 0
+    tubelet_size_enc = model_kwargs.get("tubelet_size_enc", 2)
+
+    # Compute model dimensions
+    if use_action:
+        model_action_dim = action_dim * tubelet_size_enc * frameskip // action_skip
+    else:
+        model_action_dim = None
+    if use_proprio:
+        model_proprio_dim = proprio_dim * tubelet_size_enc // state_skip
+    else:
+        model_proprio_dim = None
+
+    # Prepare model kwargs by flattening nested configs and filtering out non-init_video_model fields
+    excluded_keys = [
+        "rollout_cfg",
+        "heads_cfg",
+        "pretrained_path",
+        "visual_encoder",
+        "action_encoder",
+        "proprio_encoder",
+        "predictor",
+        "wm_encoding",
+        "attn",
+        "data",
+        "data_aug",
+    ]
+    init_model_kwargs = {k: v for k, v in model_kwargs.items() if k not in excluded_keys}
+    if "visual_encoder" in model_kwargs:
+        init_model_kwargs.update(model_kwargs["visual_encoder"])
+    if "action_encoder" in model_kwargs:
+        init_model_kwargs.update(model_kwargs["action_encoder"])
+    if "proprio_encoder" in model_kwargs:
+        init_model_kwargs.update(model_kwargs["proprio_encoder"])
+    if "predictor" in model_kwargs:
+        init_model_kwargs.update(model_kwargs["predictor"])
+    init_model_kwargs.update(
+        {
+            "device": device,
+            "img_size": img_size,
+            "action_dim": model_action_dim,
+            "proprio_dim": model_proprio_dim,
+            "cfgs_attn_pattern": model_kwargs.get("attn", None),
+            "use_proprio": use_proprio,
+            "use_action": use_action,
+            "use_activation_checkpointing": False,
+        }
+    )
+
+    predictor, encoder, action_encoder, proprio_encoder = init_video_model(**init_model_kwargs)
+
+    heads = {}
+    if pretrain_dec_path:
+        if "image_head" in heads_architectures:
+            image_head_type = heads_architectures["image_head"]["kind"]
+            if image_head_type is not None and image_head_type.lower() != "none":
+                if image_head_type == "vit":
+                    decoder = WorldModelViTImageHead(
+                        head_config=dict(heads_architectures["image_head"]["config"]),
+                        inverse_transform=preprocessor.inverse_transform,
+                        device=device,
+                    )
+                heads["image_head"] = decoder
+        if "state_head" in heads_architectures:
+            state_decoder = WorldModelPoseReadoutHead(
+                head_config=dict(heads_architectures["state_head"]["config"]), device=device
+            )
+            heads["state_head"] = state_decoder
+
+    is_url = isinstance(checkpoint, str) and checkpoint.startswith(("http://", "https://"))
+    if is_url:
+        checkpoint_source = checkpoint
+    else:
+        checkpoint_source = Path(folder) / checkpoint
+
+    checkpoint_data = fetch_checkpoint(checkpoint_source, device="cpu")
+
+    (
+        predictor,
+        action_encoder,
+        proprio_encoder,
+        _,
+        _,
+        _,
+    ) = load_checkpoint_state_dict(
+        checkpoint=checkpoint_data,
+        predictor=predictor,
+        action_encoder=action_encoder,
+        proprio_encoder=proprio_encoder,
+    )
+    del checkpoint_data
+
+    # Load heads from pretrain_dec_path (separate head checkpoint files or URLs)
+    if pretrain_dec_path:
+        for name, head in heads.items():
+            head_source = pretrain_dec_path.get(name)
+            if head_source is None:
+                continue
+
+            is_url = isinstance(head_source, str) and head_source.startswith(("http://", "https://"))
+            if new_path_heads.get(name, True):
+                if is_url:
+                    # For URLs, use the path directly (no suffix manipulation needed)
+                    head_path = head_source
+                else:
+                    # For local paths, construct the head-specific path
+                    head_path = head_source.removesuffix(".pth.tar") + "_" + name + ".pth.tar"
+                head.load_checkpoint(head_path)
+                logger.info(f"loaded pretrained head named {name}")
+            else:
+                head_checkpoint = torch.load(head_source, map_location=torch.device("cpu"))
+                epoch = head_checkpoint["epoch"]
+                pretrained_dict = clean_state_dict(head_checkpoint[name])
+                msg = head.model.load_state_dict(pretrained_dict, strict=False)
+                logger.info(f"loaded pretrained head named {name} from epoch {epoch} with msg: {msg}")
+                del head_checkpoint
+
+    if wrapper_kwargs is None:
+        wrapper_kwargs = {}
+    proprio_mode = wrapper_kwargs.get("proprio_mode", "predict_proprio")
+    proprio_loss = proprio_mode == "predict_proprio"
+
+    # Prepare VideoWM kwargs from config
+    wm_kwargs = {
+        "device": device,
+        # Model components
+        "encoder": encoder,
+        "predictor": predictor,
+        "action_encoder": action_encoder,
+        "proprio_encoder": proprio_encoder,
+        # Computed dimensions
+        "action_dim": model_action_dim,
+        "proprio_dim": model_proprio_dim,
+        "use_proprio": use_proprio,
+        "use_action": use_action,
+        # From model_kwargs (pass directly from config)
+        "action_tokens": action_tokens,
+        "proprio_tokens": proprio_tokens,
+        "grid_size": model_kwargs.get("grid_size", 14),
+        "tubelet_size_enc": tubelet_size_enc,
+        "action_conditioning": model_kwargs.get("action_conditioning", "token"),
+        "proprio_encoding": model_kwargs.get("proprio_encoding", "feature"),
+        "enc_type": model_kwargs.get("visual_encoder", {}).get("enc_type", "vjepa"),
+        "pred_type": model_kwargs.get("predictor", {}).get("pred_type", "dino_wm"),
+        "action_encoder_inpred": model_kwargs.get("action_encoder", {}).get("action_encoder_inpred", False),
+        "proprio_encoder_inpred": model_kwargs.get("proprio_encoder", {}).get("proprio_encoder_inpred", False),
+        **cfgs_wm_encoding,
+        # From cfgs_data
+        "action_skip": action_skip,
+        "frameskip": frameskip,
+        "img_size": img_size,
+        # Heads
+        "heads": heads,
+        # Loss config (proprio_loss derived from wrapper_kwargs.proprio_mode)
+        "cfgs_loss": {
+            "proprio_loss": proprio_loss,
+            "cos_loss_weight": 0.0,
+            "l1_loss_weight": 0.0,
+            "l2_loss_weight": 1.0,
+            "smooth_l1_loss_weight": 0.0,
+        },
+    }
+    model = VideoWM(**wm_kwargs)
+    model.eval()
+    model = EncPredWM(
+        model,
+        action_dim=model_action_dim,
+        preprocessor=preprocessor,
+        **wrapper_kwargs,
+    )
+    return model
+
+
+class EncPredWM(nn.Module):
+    """Wrapper around VideoWM for encoding, prediction unrolling, and decoding.
+    Provides interfaces for encoding raw observations into latent space, unrolling
+    predictions conditioned on actions, and decoding predictions back to visual/state space.
+    """
+
+    def __init__(
+        self,
+        model,
+        action_dim,
+        preprocessor,
+        ctxt_window=2,
+        proprio_mode="predict_proprio",
+    ):
+        """Args:
+        proprio_mode (str): Mode for proprio handling. Options:
+        - "predict_proprio": Use predictor to predict proprio features (default)
+        - "compute_new_pose": Use compute_new_pose() to compute proprio from actions
+        """
+        super().__init__()
+        self.model = model
+        self.heads = model.heads
+        self.device = self.model.device
+        self.action_dim = action_dim
+        self.tubelet_size_enc = self.model.tubelet_size_enc
+        self.encode_proprio = self.model.encode_proprio
+        self.encode_obs = self.model.encode_obs
+        self.preprocessor = preprocessor
+        self.grid_size = self.model.grid_size
+        self.action_skip = self.model.action_skip
+        self.normalize_reps = self.model.normalize_reps
+        self.enc_type = self.model.enc_type
+        # wrapper_kwargs
+        self.ctxt_window = ctxt_window
+        self.proprio_mode = proprio_mode
+
+    def unroll(self, z_ctxt, act_suffix=None, debug=False):
+        """Autoregressively predict latent features forward in time using actions.
+
+        Starts from context features and iteratively predicts next timestep using
+        action conditioning. Maintains a sliding window of ctxt_window frames for prediction.
+
+        Args:
+            z_ctxt (TensorDict or Tensor): Context latent features.
+                If TensorDict: keys "visual" [B, tau, V, H, W, D] and "proprio" [B, tau, proprio_tokens, D].
+                If Tensor: visual features only [B, tau, V, H, W, D].
+            act_suffix (Tensor): Action sequence [T, B, A] where A matches predictor's expected action dim.
+            debug (bool): Enable debug mode in forward_pred.
+
+        Returns:
+            TensorDict or Tensor: Predicted latent features [T+tau, B, V, H, W, D].
+                Returns same type as z_ctxt input.
+        """
+        T, B, A = act_suffix.shape
+        if isinstance(z_ctxt, TensorDict) or isinstance(z_ctxt, dict):
+            vid_feats_prefix = z_ctxt["visual"].expand(act_suffix.shape[1], *z_ctxt["visual"].shape[1:])
+            prop_feats_prefix = z_ctxt["proprio"].expand(act_suffix.shape[1], *z_ctxt["proprio"].shape[1:])
+        elif isinstance(z_ctxt, torch.Tensor):
+            vid_feats_prefix = z_ctxt.expand(act_suffix.shape[1], *z_ctxt.shape[1:])
+            prop_feats_prefix = None
+        vid_feats = vid_feats_prefix
+        prop_feats = prop_feats_prefix
+        # CAUSE OF THE BUG: act_suffix = rearrange(act_suffix, "t b (act_suffix tube) -> b (t tube) act_suffix", tube=self.tubelet_size_enc)
+        act_suffix = rearrange(act_suffix, "t b ... -> b t ...")
+        act_feats_suffix = self.model.encode_act(act_suffix)  # (b t a) or (b t 1 d) if action_encoder_inpred=False
+        for h in range(T):
+            new_act_feats = act_feats_suffix[:, h : h + 1]
+            if h == 0:
+                act_feats = new_act_feats
+            else:
+                act_feats = torch.cat([act_feats, new_act_feats], dim=1)
+            pred_video_features, _, pred_proprio_features = self.model.forward_pred(
+                vid_feats[:, -self.ctxt_window :],
+                act_feats[:, -self.ctxt_window :],
+                prop_feats[:, -self.ctxt_window :] if prop_feats is not None else None,
+                debug=debug,
+            )
+            next_vid_feat = pred_video_features[:, -1:]
+            # self.normalize_reps already done in self.model.forward_pred()
+            if prop_feats is not None:
+                if self.proprio_mode == "compute_new_pose":
+                    # Use compute_new_pose to compute proprio from actions
+                    # act_suffix has raw actions in shape [B, T, A]
+                    next_prop_feat = compute_new_pose(prop_feats[:, -1:], act_suffix[:, h : h + 1])
+                elif self.proprio_mode == "predict_proprio":
+                    # Use predictor to predict proprio
+                    next_prop_feat = pred_proprio_features[:, -1:]
+                else:
+                    raise ValueError(
+                        f"Invalid mode: {self.proprio_mode}. Must be 'predict_proprio' or 'compute_new_pose'"
+                    )
+            vid_feats = torch.cat([vid_feats, next_vid_feat], dim=1)
+            if prop_feats is not None:
+                prop_feats = torch.cat([prop_feats, next_prop_feat], dim=1)
+        if isinstance(z_ctxt, TensorDict):
+            vid_feats = rearrange(vid_feats, "b t ... -> t b ...")
+            prop_feats = rearrange(prop_feats, "b t ... -> t b ...")
+            return TensorDict({"visual": vid_feats, "proprio": prop_feats})
+        elif isinstance(z_ctxt, torch.Tensor):
+            vid_feats = rearrange(vid_feats, "b t ... -> t b ...")
+            return vid_feats
+
+    @torch.no_grad()
+    def encode(self, obs, act=True):
+        """Encode raw simulator observations into latent representations.
+
+        Handles preprocessing (normalization, transforms) and encoding in a single pass
+        to minimize CPU-GPU transfers. Supports both visual-only and multimodal inputs.
+
+        Args:
+            obs (TensorDict, dict, or Tensor): Raw observations from simulator.
+                If dict/TensorDict: keys "visual" [B, T, C, H, W] and "proprio" [B, T, P].
+                If Tensor: visual observations only [B, T, C, H, W].
+            act (bool): Unused legacy parameter.
+
+        Returns:
+            TensorDict or Tensor: Latent features [B, T, V, H, W, D].
+                Returns TensorDict with "visual" and "proprio" keys if input is dict, else Tensor.
+        """
+        if isinstance(obs, TensorDict) or isinstance(obs, dict):
+            visual = obs["visual"]
+            trans_proprio = self.preprocessor.normalize_proprios(obs["proprio"].cpu()).to(
+                self.model.device, dtype=torch.float32, non_blocking=True
+            )
+            proprio_emb = self.encode_proprio(trans_proprio)
+        elif isinstance(obs, torch.Tensor):
+            visual = obs
+        else:
+            raise ValueError("Input must be a dictionary with key 'visual' or a tensor")
+        b, t, c, h, w = visual.shape  # b t c h w
+        visual = visual.to(self.model.device, non_blocking=True, dtype=torch.float32)
+        trans_visual = visual / 255.0  # instead of calling preprocessor.preprocess_obs_visual()
+        # same transform as train time transform part of dataloader
+        trans_visual = self.preprocessor.transform(trans_visual)
+        if self.model.batchify_video:
+            trans_visual = rearrange(trans_visual, "b t ... -> (b t) ...")
+        if self.model.dup_image:
+            if not self.model.batchify_video:
+                trans_visual = trans_visual.repeat_interleave(2, dim=1)  # b t c h w -> b 2*t c h w
+            else:
+                trans_visual = trans_visual.unsqueeze(2).repeat(1, 1, 2, 1, 1)  # b c h w -> b c 2 h w
+                # vjepa expects (b c t h w), so no rearrange needed below
+        else:
+            # if we feed t=1 to a model expecting at least t=2, need to duplicate
+            # self.tubelet_size_enc==1 for self.enc_type == "dino"
+            if self.enc_type == "vjepa":
+                trans_visual = trans_visual.repeat(1, self.tubelet_size_enc, 1, 1, 1)  # b 1 c h w -> b t c h w
+        if self.enc_type == "dino":
+            visual_embs = self.model.encoder(trans_visual)
+            visual_embs = rearrange(
+                visual_embs, "(b t) (h w) d -> b t 1 h w d", b=b, h=self.grid_size, w=self.grid_size
+            )
+        elif self.enc_type == "vjepa":
+            if not self.model.batchify_video:
+                trans_visual = rearrange(trans_visual, "b t c h w -> b c t h w ")
+            visual_embs = self.model.encoder(trans_visual)
+            if self.model.batchify_video:
+                visual_embs = rearrange(
+                    visual_embs, "(b t) (h w) d -> b t 1 h w d", b=b, t=t, h=self.grid_size, w=self.grid_size
+                )
+            else:
+                visual_embs = rearrange(visual_embs, "b (t h w) d -> b t 1 h w d", h=self.grid_size, w=self.grid_size)
+        if self.normalize_reps:
+            visual_embs = F.layer_norm(visual_embs, (visual_embs.size(-1),))
+        if isinstance(obs, TensorDict) or isinstance(obs, dict):
+            return TensorDict({"visual": visual_embs, "proprio": proprio_emb}, device=visual_embs.device)
+        elif isinstance(obs, torch.Tensor):
+            return visual_embs
+
+    @torch.no_grad()
+    def decode_unroll(self, predicted_encs, batch=False):
+        """Decode predicted latent features back to visual observations.
+
+        Uses the image_head decoder to reconstruct RGB frames from latent predictions.
+
+        Args:
+            predicted_encs (TensorDict, dict, or Tensor): Predicted latent features.
+                If dict/TensorDict: key "visual" [T, B, V, H, W, D].
+                If Tensor: visual features [T, B, V, H, W, D].
+            batch (bool): If True, return batch dimension [B, T, H, W, 3], else [T, H, W, 3].
+
+        Returns:
+            ndarray: Decoded RGB frames as uint8 in [0, 255].
+                Shape [B, T, H, W, 3] if batch=True, else [T, H, W, 3].
+        """
+        if isinstance(predicted_encs, TensorDict) or isinstance(predicted_encs, dict):
+            visual_feat_preds = predicted_encs["visual"]
+            proprio_feat_preds = predicted_encs["proprio"]
+        elif isinstance(predicted_encs, torch.Tensor):
+            visual_feat_preds = predicted_encs
+        if "image_head" in self.model.heads:
+            visual_feat_preds = rearrange(visual_feat_preds, "t b v h w c -> b t v h w c ")
+            eval_image_samples = self.model.heads["image_head"].decode(visual_feat_preds)
+            if batch:
+                pred_frames = eval_image_sampl

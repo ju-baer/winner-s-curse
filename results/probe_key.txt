@@ -1,0 +1,623 @@
+m.pth.tar) |
+README.md:62:| Push-T | 224×224 | DINOv2 ViT-S/14 | 6 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dino_wm_pusht.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/pt_dino-wm.pth.tar) |
+README.md:63:| PointMaze | 224×224 | DINOv2 ViT-S/14 | 6 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dino_wm_pointmaze.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/mz_dino-wm.pth.tar) |
+README.md:64:| Wall | 224×224 | DINOv2 ViT-S/14 | 6 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dino_wm_wall.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/wall_dino-wm.pth.tar) |
+README.md:70:| DROID & RoboCasa | 256×256 | V-JEPA-2 ViT-G/16 | 24 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/vjepa2_ac_droid.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/droid_vj2ac_noprop.pth.tar) |
+README.md:78:| dinov2_vits_224 (05norm) | DINOv2 ViT-S/14 | 224×224 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dinov2_vits_224.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/vm2m_lpips_dv2vits_vitldec_224_05norm.pth.tar) |
+README.md:79:| dinov2_vits_224_INet | DINOv2 ViT-S/14 | 224×224 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dinov2_vits_224_INet.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/vm2m_lpips_dv2vits_vitldec_224_INet.pth.tar) |
+README.md:80:| dinov3_vitl_256_INet | DINOv3 ViT-L/16 | 256×256 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/dinov3_vitl_256_INet.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/vm2m_lpips_dv3vitl_256_INet.pth.tar) |
+README.md:81:| vjepa2_vitg_256_INet | V-JEPA-2 ViT-G/16 | 256×256 | [🤗 HF](https://huggingface.co/facebook/jepa-wms/blob/main/vjepa2_vitg_256_INet.pth.tar) / [direct](https://dl.fbaipublicfiles.com/jepa-wms/vm2m_lpips_vj2vitgnorm_vitldec_dup_256_INet.pth.tar) |
+README.md:86:<summary><b>🔌 Loading Models with PyTorch Hub</b></summary>
+README.md:92:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'jepa_wm_droid')
+README.md:93:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'jepa_wm_metaworld')
+README.md:94:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'jepa_wm_pusht')
+README.md:95:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'jepa_wm_pointmaze')
+README.md:96:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'jepa_wm_wall')
+README.md:99:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'dino_wm_droid')
+README.md:100:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'dino_wm_metaworld')
+README.md:101:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'dino_wm_pusht')
+README.md:102:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'dino_wm_pointmaze')
+README.md:103:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'dino_wm_wall')
+README.md:106:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'vjepa2_ac_droid')
+README.md:108:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'vjepa2_ac_oss')
+README.md:117:from huggingface_hub import hf_hub_download
+README.md:120:# Download a specific checkpoint
+README.md:121:checkpoint_path = hf_hub_download(
+README.md:123:    filename="jepa_wm_droid.pth.tar"
+README.md:126:# Load the checkpoint
+README.md:127:checkpoint = torch.load(checkpoint_path, map_location="cpu")
+README.md:129:# Or use directly with torch.hub (automatically tries HF Hub first)
+README.md:130:model, preprocessor = torch.hub.load('facebookresearch/jepa-wms', 'jepa_wm_droid')
+README.md:134:- `jepa_wm_droid.pth.tar`, `jepa_wm_metaworld.pth.tar`, `jepa_wm_pusht.pth.tar`, `jepa_wm_pointmaze.pth.ta
+=== grep: planner entry points ===
+grep: evals/simu_env_planning/planning/planner.py: No such file or directory
+grep: evals/simu_env_planning/planning/objectives.py: No such file or directory
+
+=== grep: env step / success / eval_episodes ===
+evals/simu_env_planning/envs/init.py:81:            cfg.task_specification.max_episode_steps = cfg.frameskip * cfg.task_specification.goal_H
+evals/simu_env_planning/envs/init.py:82:            cfg.task_specification.goal_max_episode_steps = cfg.frameskip * cfg.task_specification.goal_H
+evals/simu_env_planning/envs/init.py:85:        cfg.task_specification.max_episode_steps = cfg.frameskip * cfg.task_specification.goal_H
+evals/simu_env_planning/envs/wrappers/multitask.py:74:    def step(self, action, debug=False):
+evals/simu_env_planning/envs/wrappers/pixels.py:84:    def step(self, action, debug=False):
+evals/simu_env_planning/envs/wrappers/pixels.py:106:    def step_multiple(self, actions):
+evals/simu_env_planning/envs/wrappers/pixels.py:121:    def rollout(self, seed, init_state, actions, env_info=None):
+evals/simu_env_planning/envs/wrappers/tensor.py:45:    def step(self, action):
+evals/simu_env_planning/envs/wrappers/tensor.py:48:        info["success"] = float(info["success"])
+evals/simu_env_planning/envs/wrappers/time_limit.py:50:    def steps_left(self):
+evals/simu_env_planning/envs/wrappers/time_limit.py:69:    def step(self, action):
+evals/simu_env_planning/envs/pusht_env/pusht_env.py:476:    def step(self, action):
+evals/simu_env_planning/envs/pusht_env/pusht_env.py:504:        reward = np.clip(coverage / self.success_threshold, 0, 1)
+evals/simu_env_planning/envs/pusht_env/pusht_env.py:505:        done = False  # coverage > self.success_threshold
+evals/simu_env_planning/envs/pusht_env/pusht_env.py:716:        self.success_threshold = 0.95  # 95% coverage.
+evals/simu_env_planning/envs/robocasa.py:96:        Extract proprioceptive state and success info from environment info dict.
+evals/simu_env_planning/envs/robocasa.py:105:            Tuple of (obs, info) where info contains proprio and success keys.
+evals/simu_env_planning/envs/robocasa.py:117:        # Need to call _check_success() to define env.obj_up_once
+evals/simu_env_planning/envs/robocasa.py:118:        # and other variables used in subtask_success()
+evals/simu_env_planning/envs/robocasa.py:119:        info["success"] = self.env._check_success()
+evals/simu_env_planning/envs/robocasa.py:121:            info = self.subtask_success(info)
+evals/simu_env_planning/envs/robocasa.py:124:    def subtask_success(self, info):
+evals/simu_env_planning/envs/robocasa.py:126:        Evaluate success for specific subtasks (reach, pick, place, or combinations).
+evals/simu_env_planning/envs/robocasa.py:132:            Updated info dictionary with success and metric fields.
+evals/simu_env_planning/envs/robocasa.py:145:            success = place
+evals/simu_env_planning/envs/robocasa.py:147:            success = reach and self.env.obj_up_once
+evals/simu_env_planning/envs/robocasa.py:149:            success = self.env.obj_up_once and place
+evals/simu_env_planning/envs/robocasa.py:151:            success = reach
+evals/simu_env_planning/envs/robocasa.py:153:            success = self.env.obj_up_once
+evals/simu_env_planning/envs/robocasa.py:155:            success = place
+evals/simu_env_planning/envs/robocasa.py:159:        info["success"] = success
+evals/simu_env_planning/envs/robocasa.py:177:    def step(self, action):
+evals/simu_env_planning/envs/robocasa.py:195:        if info["success"]:
+evals/simu_env_planning/envs/robocasa.py:196:            logger.info("RoboCasaWrapper: Task success detected in step()")
+evals/simu_env_planning/envs/wall_env/envs/wall.py:88:    def step(self, action: torch.Tensor):
+evals/simu_env_planning/envs/droid_dset_dummy_env.py:49:            "success": 1.0,
+evals/simu_env_planning/envs/droid_dset_dummy_env.py:61:    def step(self, action):
+evals/simu_env_planning/envs/pointmaze_env/waypoint_controller.py:75:        # compute waypoints by performing a rollout in the grid
+evals/simu_env_planning/envs/pointmaze_env/gridcraft/grid_env.py:110:    def step_stateless(self, s, a, verbose=False):
+evals/simu_env_planning/envs/pointmaze_env/gridcraft/grid_env.py:126:    def step(self, a, verbose=False):
+evals/simu_env_planning/envs/pointmaze_env/maze_model.py:211:    def step(self, action):
+evals/simu_env_planning/envs/pointmaze_gym_wrap.py:57:        success = np.linalg.norm(goal_state[:2] - cur_state[:2]) < 0.5
+evals/simu_env_planning/envs/pointmaze_gym_wrap.py:60:            "success": success,
+evals/simu_env_planning/envs/pointmaze_gym_wrap.py:80:    def step(self, action):
+evals/simu_env_planning/envs/wall_gym_wrap.py:61:        success = np.linalg.norm(goal_state[:2] - cur_state[:2]) < 4.5
+evals/simu_env_planning/envs/wall_gym_wrap.py:64:            "success": success,
+evals/simu_env_planning/envs/wall_gym_wrap.py:93:    def step(self, action):
+evals/simu_env_planning/envs/metaworld.py:85:        success = np.linalg.norm(goal_state - cur_state) < 0.3
+evals/simu_env_planning/envs/metaworld.py:88:            "success": success,
+evals/simu_env_planning/envs/metaworld.py:100:    def step(self, action):
+evals/simu_env_planning/envs/pusht_gym_wrap.py:62:        # if position difference is < 20, and angle difference < np.pi/9, then success
+evals/simu_env_planning/envs/pusht_gym_wrap.py:66:        success = pos_diff < 20 and angle_diff < np.pi / 9
+evals/simu_env_planning/envs/pusht_gym_wrap.py:69:            "success": success,
+evals/simu_env_planning/envs/pusht_gym_wrap.py:90:    def step(self, action):
+evals/simu_env_planning/planning/episode_plot_utils.py:33:    frameskip=1,
+evals/simu_env_planning/planning/episode_plot_utils.py:71:            ax.set_title(f"Episode step {step * frameskip * num_act_stepped}")
+evals/simu_env_planning/planning/episode_plot_utils.py:86:    frameskip=1,
+evals/simu_env_planning/planning/episode_plot_utils.py:177:        ax.set_title(f"Episode step {step * frameskip * num_act_stepped}")
+evals/simu_env_planning/planning/planning/planner.py:66:        decode_unroll: Callable = None,
+evals/simu_env_planning/planning/planning/planner.py:81:        self.decode_unroll = decode_unroll
+evals/simu_env_planning/planning/planning/planner.py:194:            if self.decode_each_iteration and self.decode_unroll is not None:
+evals/simu_env_planning/planning/planning/planner.py:195:                pred_frames = self.decode_unroll(predicted_best_encs)
+evals/simu_env_planning/planning/planning/planner.py:229:        decode_unroll: Callable = None,
+evals/simu_env_planning/planning/planning/planner.py:249:        self.decode_unroll = decode_unroll
+evals/simu_env_planning/planning/planning/planner.py:325:            if self.decode_each_iteration and self.decode_unroll is not None:
+evals/simu_env_planning/planning/planning/planner.py:326:                pred_frames = self.decode_unroll(
+evals/simu_env_planning/planning/planning/planner.py:363:        decode_unroll: Callable = None,
+evals/simu_env_planning/planning/planning/planner.py:381:        self.decode_unroll = decode_unroll
+evals/simu_env_planning/planning/planning/planner.py:451:            if self.decode_each_iteration and self.decode_unroll is not None:
+evals/simu_env_planning/planning/planning/planner.py:452:                pred_frames = self.decode_unroll(
+evals/simu_env_planning/planning/planning/planner.py:495:        decode_unroll: Callable = None,
+evals/simu_env_planning/planning/planning/planner.py:516:            decode_unroll: Function to decode latent predictions to frames
+evals/simu_env_planning/planning/planning/planner.py:533:        self.decode_unroll = decode_unroll
+evals/simu_env_planning/planning/planning/planner.py:632:                if self.decode_each_iteration and self.decode_unroll is not None:
+evals/simu_env_planning/planning/planning/planner.py:633:                    pred_frames = self.decode_unroll(predicted_best_encs)
+evals/simu_env_planning/planning/planning/planner.py:671:        decode_unroll: Callable = None,
+evals/simu_env_planning/planning/planning/planner.py:689:            decode_unroll=decode_unroll,
+evals/simu_env_planning/planning/utils.py:289:        combined_results[f"episode_success+{task}"] = 0
+evals/simu_env_planning/planning/utils.py:312:            task_episode_counts[task] == cfg.meta.eval_episodes
+evals/simu_env_planning/planning/utils.py:313:        ), f"Task {task} has {task_episode_counts[task]} episodes, expected {cfg.meta.eval_episodes}"
+evals/simu_env_planning/planning/utils.py:318:            combined_results[key] /= cfg.meta.eval_episodes
+evals/simu_env_planning/planning/utils.py:326:    total_episodes = cfg.meta.eval_episodes * len(cfg.tasks) episodes to perform.
+evals/simu_env_planning/planning/utils.py:334:        total_episodes = cfg.meta.eval_episodes * len(cfg.tasks)
+evals/simu_env_planning/planning/utils.py:350:            task_idx = episode_idx // cfg.meta.eval_episodes
+evals/simu_env_planning/planning/utils.py:351:            episode_num = episode_idx % cfg.meta.eval_episodes
+evals/simu_env_planning/planning/utils.py:370:        episodes_per_task = [list(range(cfg.meta.eval_episodes)) for _ in task_indices]
+evals/simu_env_planning/planning/plan_evaluator.py:110:                steps_left=max((env.steps_left() + 1) // self.cfg.frameskip, 1),
+evals/simu_env_planning/planning/plan_evaluator.py:126:                    "success": infos[-1]["success"],
+evals/simu_env_planning/planning/plan_evaluator.py:161:                plan_steps_left = max((env.steps_left() + 1) * self.agent.model.action_skip // self.cfg.frameskip, 1)
+evals/simu_env_planning/planning/plan_evaluator.py:195:                step_indices = np.arange(self.cfg.frameskip - 1, len(obses), self.cfg.frameskip)
+evals/simu_env_planning/planning/plan_evaluator.py:197:                # frames = [obses[0]] + obses[1:][::self.cfg.frameskip]
+evals/simu_env_planning/planning/plan_evaluator.py:213:            # Evaluate success
+evals/simu_env_planning/planning/plan_evaluator.py:218:                success = infos[-1]["success"]
+evals/simu_env_planning/planning/plan_evaluator.py:225:                success = eval_results["success"]
+evals/simu_env_planning/planning/plan_ev
+
+
+##### FILE evals/simu_env_planning/README.md (5230 chars) #####
+# Simu_env_planning Evaluation
+
+> **See also**: [Main README](../../README.md) for training and general usage.
+
+## Overview
+
+Goal-conditioned trajectory optimization: we optimize over the action space to minimize the planning cost $C$:
+
+$$
+C(a, s_0, s_g) = \sum_{t=0}^H \| E_{\theta}(s_g) - P_{\theta}(\hat{z}_t, a_t) \|_2,
+$$
+
+where
+
+$$
+\hat{z}_0 = E_{\theta}(s_0)
+$$
+
+$$
+\hat{z}_{t+1} = P_{\theta}(\hat{z}_t, a_t), \quad t=0, \dots, H-1.
+$$
+
+An **evaluation episode** is a pair $(s_0, s_g)$ (task definition) with the agent's plan, resulting in **Success** or **Failure**.
+
+## Quick Start
+
+**Interactive (single GPU)**:
+```bash
+python -m evals.main --fname configs/dump_online_evals/vjepa_wm/dset_ng_L2.yaml --debug
+```
+
+**Distributed (from login node)**:
+```bash
+python -m evals.main_distributed --fname configs/dump_online_evals/vjepa_wm/dset_ng_L2.yaml --account <account> --qos lowest --time 120
+```
+
+## Goal Sources
+
+| Source | Description | Environments |
+|--------|-------------|--------------|
+| `dset` | Initial/goal states sampled from validation set | Push-T, RoboCasa, DROID |
+| `expert` | Expert policy provides goal trajectory | Metaworld |
+| `random_state` | 2D positions sampled via simulator | Maze, Wall |
+
+The `random_actions` variant steps Gaussian-sampled actions from the initial state.
+
+## Episode Metrics
+
+| Metric | Description |
+|--------|-------------|
+| **Success Rate** | % success across `cfg.meta.eval_episodes` episodes |
+| `ep_end_dist` | Distance to goal at episode end |
+| `reward` | Average cumulative reward (Metaworld, Maze, Push-T, Wall) |
+| `success_dist` | Arm reached target location (Metaworld only) |
+| `total_emb_l2` | L2 distance between agent/expert visual embeddings |
+| `total_lpips` | LPIPS between agent/expert visual decodings |
+
+**DROID offline only**: `end_distance_xyz`, `end_distance_orientation`, `end_distance_closure`
+
+## Optional Episode Plots
+
+Enable with `cfg.logging.optional_plots`. Generated via `evals/simu_env_planning/planning/episode_plot_utils.py`.
+
+### Basic Plots
+
+| State | Expert video | Agent success video |
+|-------|--------------|---------------------|
+| <img src="assets/rcasa_state.png" width="320" /> | <img src="assets/expert_video.gif" width="180" /> | <img src="assets/video_agent_goal_succ.gif" width="180" /> |
+
+- `state.pdf`: Initial and goal images $(s_0, s_g)$
+- `video_agent_goal_{success}.gif`: Episode GIF after stepping planned actions
+- `expert_video.gif`: Expert trajectory GIF (if `goal_source ∈ [dset, expert]`)
+
+### Analysis Plots
+
+| Planning costs | Actions comparison |
+|----------------|-------------------|
+| <img src="assets/rcasa_losses.png" width="450" /> | <img src="assets/droid_action_comp.png" width="400" /> |
+
+- `losses.pdf`: Planning cost $C$ throughout optimizer iterations per timestep
+- `action_comparison.pdf`: Agent vs expert action values per dimension
+
+| | Expert | Agent |
+|---|--------|-------|
+| Cartesian Distance | <img src="assets/rcasa_expert_distances.png" width="300" /> | <img src="assets/rcasa_agent_distances.png" width="300" /> |
+| Representation Distance | <img src="assets/rcasa_expert_repdist_vis.png" width="300" /> | <img src="assets/rcasa_agent_repdist_vis.png" width="300" /> |
+
+### Decoding Plots (if `cfg.planner.decode_each_iteration`)
+
+<table>
+<tr>
+<th>step0.gif</th>
+<th>step0_last_frames</th>
+<th>step0_gt</th>
+</tr>
+<tr>
+<td><img src="assets/step0.gif" width="200" /></td>
+<td><img src="assets/rcasa_step0_lastframes.png" width="250" /></td>
+<td><img src="assets/rcasa_step0_gt.png" width="250" /></td>
+</tr>
+<tr>
+<td></td>
+<td colspan="2">Stepping of only the first action out of the H=3 actions planned, both in the env and in the world model's "imagination".</td>
+</tr>
+</table>
+
+## Architecture
+
+### Distributed Episodes
+
+Episodes are parallelized across GPUs via `main_distributed_episodes_eval()` in `evals/simu_env_planning/eval.py`.
+
+### Planning Components
+
+| Component | Location |
+|-----------|----------|
+| Planners (CEM, NeverGrad) | `evals/simu_env_planning/planning/planner.py` |
+| Planning objectives | `evals/simu_env_planning/planning/objectives.py` |
+| Goal sources | `evals/simu_env_planning/planning/plan_evaluator.py:set_episode()` |
+
+### Model Wrapper
+
+Default wrapper: `app.vjepa_wm.modelcustom.simu_env_planning.vit_enc_preds.EncPredWM`
+
+Initializes the **world model** (encoder, predictor, optional modules).
+
+Required by `evals/simu_env_planning/eval.py`:
+- **data_preprocessor**: Normalizes/denormalizes actions and proprioception
+- **validation set**: Provides action/proprio dimensions, normalization stats, and task definition data (if `goal_source == dset`)
+
+## Eval Configs
+
+| Type | Location |
+|------|----------|
+| Full example configs | `configs/evals/simu_env_planning/` |
+| Config templates | `evals/simu_env_planning/base_configs/` |
+
+## Grid Evaluation
+
+Run evaluations across multiple hyperparameters:
+
+```bash
+python -m evals.simu_env_planning.run_eval_grid \
+    --env metaworld \
+    --config configs/dump_online_evals/vjepa_wm/dset_ng_L2.yaml
+```
+
+Generates configs for all combinations of variants, planners (`ng`/`cem`), objectives (`L1`/`L2`), and epochs.
+
+**Visualization notebook**: `app/plan_common/plot/logs_planning_joint.ipynb`
+
+
+
+##### FILE app/vjepa_wm/modelcustom/simu_env_planning/vit_enc_preds.py (20214 chars) #####
+# Copyright (c) Facebook, Inc. and its affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+#
+
+import logging
+import sys
+from pathlib import Path
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from einops import rearrange
+from tensordict.tensordict import TensorDict
+
+from app.plan_common.datasets.droid_dset import compute_new_pose
+from app.plan_common.models.wm_heads import WorldModelPoseReadoutHead, WorldModelViTImageHead
+from app.vjepa_wm.utils import (
+    clean_state_dict,
+    fetch_checkpoint,
+    init_video_model,
+    load_checkpoint_state_dict,
+)
+from app.vjepa_wm.video_wm import VideoWM
+
+logging.basicConfig(stream=sys.stdout, level=logging.INFO)
+logger = logging.getLogger()
+
+
+def init_module(
+    folder,
+    checkpoint,
+    model_kwargs,
+    device,
+    action_dim,
+    proprio_dim,
+    preprocessor,
+    cfgs_data=None,
+    wrapper_kwargs=None,
+    **kwargs,
+):
+    """Initialize EncPredWM model with pretrained weights and decoders.
+    Args:
+        folder (str or Path): Directory containing checkpoint file (only used for local paths).
+        checkpoint (str): Checkpoint source - can be either:
+            - A filename to load from folder (e.g., "jepa-latest.pth.tar")
+            - A full URL to download from (e.g., "https://dl.fbaipublicfiles.com/jepa-wms/...")
+        model_kwargs (dict): Model configuration with encoder, predictor, heads, and data configs.
+        device (torch.device): Device to load model on.
+        action_dim (int): Action dimension from the dataset.
+        proprio_dim (int): Proprioception dimension from the dataset.
+        preprocessor: Preprocessor with transform, inverse_transform, normalize methods.
+        cfgs_data (dict): Data configuration with img_size, custom settings, etc.
+        wrapper_kwargs (dict): Additional kwargs for EncPredWM wrapper.
+        **kwargs: Additional arguments (unused).
+    Returns:
+        EncPredWM: Wrapped VideoWM model ready for encoding and prediction.
+    """
+    img_size = cfgs_data.get("img_size", 256)
+    frameskip = cfgs_data.get("custom").get("frameskip", 1)
+    action_skip = cfgs_data.get("custom").get("action_skip", 1)
+    state_skip = cfgs_data.get("custom").get("state_skip", 1)
+
+    # Extract nested configs
+    cfgs_heads = model_kwargs.get("heads_cfg", {})
+    heads_architectures = cfgs_heads.get("architectures", {})
+    pretrain_dec_path = cfgs_heads.get("pretrain_dec_path", None)
+    new_path_heads = cfgs_heads.get("new_path_heads", {})
+
+    cfgs_wm_encoding = model_kwargs.get("wm_encoding", {})
+
+    # Compute derived values
+    action_tokens = model_kwargs.get("action_encoder", {}).get("action_tokens", 1)
+    proprio_tokens = model_kwargs.get("proprio_encoder", {}).get("proprio_tokens", 1)
+    action_emb_dim = model_kwargs.get("action_encoder", {}).get("action_emb_dim", 0)
+    proprio_emb_dim = model_kwargs.get("proprio_encoder", {}).get("proprio_emb_dim", 0)
+    use_proprio = proprio_tokens > 0 or proprio_emb_dim > 0
+    use_action = action_tokens > 0 or action_emb_dim > 0
+    tubelet_size_enc = model_kwargs.get("tubelet_size_enc", 2)
+
+    # Compute model dimensions
+    if use_action:
+        model_action_dim = action_dim * tubelet_size_enc * frameskip // action_skip
+    else:
+        model_action_dim = None
+    if use_proprio:
+        model_proprio_dim = proprio_dim * tubelet_size_enc // state_skip
+    else:
+        model_proprio_dim = None
+
+    # Prepare model kwargs by flattening nested configs and filtering out non-init_video_model fields
+    excluded_keys = [
+        "rollout_cfg",
+        "heads_cfg",
+        "pretrained_path",
+        "visual_encoder",
+        "action_encoder",
+        "proprio_encoder",
+        "predictor",
+        "wm_encoding",
+        "attn",
+        "data",
+        "data_aug",
+    ]
+    init_model_kwargs = {k: v for k, v in model_kwargs.items() if k not in excluded_keys}
+    if "visual_encoder" in model_kwargs:
+        init_model_kwargs.update(model_kwargs["visual_encoder"])
+    if "action_encoder" in model_kwargs:
+        init_model_kwargs.update(model_kwargs["action_encoder"])
+    if "proprio_encoder" in model_kwargs:
+        init_model_kwargs.update(model_kwargs["proprio_encoder"])
+    if "predictor" in model_kwargs:
+        init_model_kwargs.update(model_kwargs["predictor"])
+    init_model_kwargs.update(
+        {
+            "device": device,
+            "img_size": img_size,
+            "action_dim": model_action_dim,
+            "proprio_dim": model_proprio_dim,
+            "cfgs_attn_pattern": model_kwargs.get("attn", None),
+            "use_proprio": use_proprio,
+            "use_action": use_action,
+            "use_activation_checkpointing": False,
+        }
+    )
+
+    predictor, encoder, action_encoder, proprio_encoder = init_video_model(**init_model_kwargs)
+
+    heads = {}
+    if pretrain_dec_path:
+        if "image_head" in heads_architectures:
+            image_head_type = heads_architectures["image_head"]["kind"]
+            if image_head_type is not None and image_head_type.lower() != "none":
+                if image_head_type == "vit":
+                    decoder = WorldModelViTImageHead(
+                        head_config=dict(heads_architectures["image_head"]["config"]),
+                        inverse_transform=preprocessor.inverse_transform,
+                        device=device,
+                    )
+                heads["image_head"] = decoder
+        if "state_head" in heads_architectures:
+            state_decoder = WorldModelPoseReadoutHead(
+                head_config=dict(heads_architectures["state_head"]["config"]), device=device
+            )
+            heads["state_head"] = state_decoder
+
+    is_url = isinstance(checkpoint, str) and checkpoint.startswith(("http://", "https://"))
+    if is_url:
+        checkpoint_source = checkpoint
+    else:
+        checkpoint_source = Path(folder) / checkpoint
+
+    checkpoint_data = fetch_checkpoint(checkpoint_source, device="cpu")
+
+    (
+        predictor,
+        action_encoder,
+        proprio_encoder,
+        _,
+        _,
+        _,
+    ) = load_checkpoint_state_dict(
+        checkpoint=checkpoint_data,
+        predictor=predictor,
+        action_encoder=action_encoder,
+        proprio_encoder=proprio_encoder,
+    )
+    del checkpoint_data
+
+    # Load heads from pretrain_dec_path (separate head checkpoint files or URLs)
+    if pretrain_dec_path:
+        for name, head in heads.items():
+            head_source = pretrain_dec_path.get(name)
+            if head_source is None:
+                continue
+
+            is_url = isinstance(head_source, str) and head_source.startswith(("http://", "https://"))
+            if new_path_heads.get(name, True):
+                if is_url:
+                    # For URLs, use the path directly (no suffix manipulation needed)
+                    head_path = head_source
+                else:
+                    # For local paths, construct the head-specific path
+                    head_path = head_source.removesuffix(".pth.tar") + "_" + name + ".pth.tar"
+                head.load_checkpoint(head_path)
+                logger.info(f"loaded pretrained head named {name}")
+            else:
+                head_checkpoint = torch.load(head_source, map_location=torch.device("cpu"))
+                epoch = head_checkpoint["epoch"]
+                pretrained_dict = clean_state_dict(head_checkpoint[name])
+                msg = head.model.load_state_dict(pretrained_dict, strict=False)
+                logger.info(f"loaded pretrained head named {name} from epoch {epoch} with msg: {msg}")
+                del head_checkpoint
+
+    if wrapper_kwargs is None:
+        wrapper_kwargs = {}
+    proprio_mode = wrapper_kwargs.get("proprio_mode", "predict_proprio")
+    proprio_loss = proprio_mode == "predict_proprio"
+
+    # Prepare VideoWM kwargs from config
+    wm_kwargs = {
+        "device": device,
+        # Model components
+        "encoder": encoder,
+        "predictor": predictor,
+        "action_encoder": action_encoder,
+        "proprio_encoder": proprio_encoder,
+        # Computed dimensions
+        "action_dim": model_action_dim,
+        "proprio_dim": model_proprio_dim,
+        "use_proprio": use_proprio,
+        "use_action": use_action,
+        # From model_kwargs (pass directly from config)
+        "action_tokens": action_tokens,
+        "proprio_tokens": proprio_tokens,
+        "grid_size": model_kwargs.get("grid_size", 14),
+        "tubelet_size_enc": tubelet_size_enc,
+        "action_conditioning": model_kwargs.get("action_conditioning", "token"),
+        "proprio_encoding": model_kwargs.get("proprio_encoding", "feature"),
+        "enc_type": model_kwargs.get("visual_encoder", {}).get("enc_type", "vjepa"),
+        "pred_type": model_kwargs.get("predictor", {}).get("pred_type", "dino_wm"),
+        "action_encoder_inpred": model_kwargs.get("action_encoder", {}).get("action_encoder_inpred", False),
+        "proprio_encoder_inpred": model_kwargs.get("proprio_encoder", {}).get("proprio_encoder_inpred", False),
+        **cfgs_wm_encoding,
+        # From cfgs_data
+        "action_skip": action_skip,
+        "frameskip": frameskip,
+        "img_size": img_size,
+        # Heads
+        "heads": heads,
+        # Loss config (proprio_loss derived from wrapper_kwargs.proprio_mode)
+        "cfgs_loss": {
+            "proprio_loss": proprio_loss,
+            "cos_loss_weight": 0.0,
+            "l1_loss_weight": 0.0,
+            "l2_loss_weight": 1.0,
+            "smooth_l1_loss_weight": 0.0,
+        },
+    }
+    model = VideoWM(**wm_kwargs)
+    model.eval()
+    model = EncPredWM(
+        model,
+        action_dim=model_action_dim,
+        preprocessor=preprocessor,
+        **wrapper_kwargs,
+    )
+    return model
+
+
+class EncPredWM(nn.Module):
+    """Wrapper around VideoWM for encoding, prediction unrolling, and decoding.
+    Provides interfaces for encoding raw observations into latent space, unrolling
+    predictions conditioned on actions, and decoding predictions back to visual/state space.
+    """
+
+    def __init__(
+        self,
+        model,
+        action_dim,
+        preprocessor,
+        ctxt_window=2,
+        proprio_mode="predict_proprio",
+    ):
+        """Args:
+        proprio_mode (str): Mode for proprio handling. Options:
+        - "predict_proprio": Use predictor to predict proprio features (default)
+        - "compute_new_pose": Use compute_new_pose() to compute proprio from actions
+        """
+        super().__init__()
+        self.model = model
+        self.heads = model.heads
+        self.device = self.model.device
+        self.action_dim = action_dim
+        self.tubelet_size_enc = self.model.tubelet_size_enc
+        self.encode_proprio = self.model.encode_proprio
+        self.encode_obs = self.model.encode_obs
+        self.preprocessor = preprocessor
+        self.grid_size = self.model.grid_size
+        self.action_skip = self.model.action_skip
+        self.normalize_reps = self.model.normalize_reps
+        self.enc_type = self.model.enc_type
+        # wrapper_kwargs
+        self.ctxt_window = ctxt_window
+        self.proprio_mode = proprio_mode
+
+    def unroll(self, z_ctxt, act_suffix=None, debug=False):
+        """Autoregressively predict latent features forward in time using actions.
+
+        Starts from context features and iteratively predicts next timestep using
+        action conditioning. Maintains a sliding window of ctxt_window frames for prediction.
+
+        Args:
+            z_ctxt (TensorDict or Tensor): Context latent features.
+                If TensorDict: keys "visual" [B, tau, V, H, W, D] and "proprio" [B, tau, proprio_tokens, D].
+                If Tensor: visual features only [B, tau, V, H, W, D].
+            act_suffix (Tensor): Action sequence [T, B, A] where A matches predictor's expected action dim.
+            debug (bool): Enable debug mode in forward_pred.
+
+        Returns:
+            TensorDict or Tensor: Predicted latent features [T+tau, B, V, H, W, D].
+                Returns same type as z_ctxt input.
+        """
+        T, B, A = act_suffix.shape
+        if isinstance(z_ctxt, TensorDict) or isinstance(z_ctxt, dict):
+            vid_feats_prefix = z_ctxt["visual"].expand(act_suffix.shape[1], *z_ctxt["visual"].shape[1:])
+            prop_feats_prefix = z_ctxt["proprio"].expand(act_suffix.shape[1], *z_ctxt["proprio"].shape[1:])
+        elif isinstance(z_ctxt, torch.Tensor):
+            vid_feats_prefix = z_ctxt.expand(act_suffix.shape[1], *z_ctxt.shape[1:])
+            prop_feats_prefix = None
+        vid_feats = vid_feats_prefix
+        prop_feats = prop_feats_prefix
+        # CAUSE OF THE BUG: act_suffix = rearrange(act_suffix, "t b (act_suffix tube) -> b (t tube) act_suffix", tube=self.tubelet_size_enc)
+        act_suffix = rearrange(act_suffix, "t b ... -> b t ...")
+        act_feats_suffix = self.model.encode_act(act_suffix)  # (b t a) or (b t 1 d) if action_encoder_inpred=False
+        for h in range(T):
+            new_act_feats = act_feats_suffix[:, h : h + 1]
+            if h == 0:
+                act_feats = new_act_feats
+            else:
+                act_feats = torch.cat([act_feats, new_act_feats], dim=1)
+            pred_video_features, _, pred_proprio_features = self.model.forward_pred(
+                vid_feats[:, -self.ctxt_window :],
+                act_feats[:, -self.ctxt_window :],
+                prop_feats[:, -self.ctxt_window :] if prop_feats is not None else None,
+                debug=debug,
+            )
+            next_vid_feat = pred_video_features[:, -1:]
+            # self.normalize_reps already done in self.model.forward_pred()
+            if prop_feats is not None:
+                if self.proprio_mode == "compute_new_pose":
+                    # Use compute_new_pose to compute proprio from actions
+                    # act_suffix ha
