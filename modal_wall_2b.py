@@ -26,11 +26,16 @@ app = modal.App("wcp-wall-2b")
 
 image = (
     modal.Image.debian_slim(python_version="3.10")
-    .apt_install("git", "ffmpeg", "build-essential", "libgl1", "libglib2.0-0", "libegl1", "libosmesa6-dev")
+    .apt_install("git", "curl", "ffmpeg", "build-essential", "libgl1", "libglib2.0-0", "libegl1", "libosmesa6-dev")
     .run_commands(
         "git clone --depth 1 https://github.com/facebookresearch/jepa-wms /opt/jepa-wms",
         "cd /opt/jepa-wms && pip install -q -e . 2>&1 | tail -3",
-        "pip install -q pandas pyyaml 2>&1 | tail -1",
+        "pip install -q pandas pyyaml scipy 2>&1 | tail -1",
+        # Bake the DINOv2 torch.hub repo + weights into the image (GitHub rate-limits parallel containers, HTTP 503).
+        "for i in 1 2 3 4 5 6; do python -c \"import torch; torch.hub.load('facebookresearch/dinov2','dinov2_vits14',trust_repo=True)\" && break || sleep 30; done",
+        # Bake the two released Wall checkpoints (3.4 GB each) so shards do not each re-download them.
+        "mkdir -p /opt/ckpt && curl -L --retry 8 --retry-delay 10 -o /opt/ckpt/wall_jepa-wm.pth.tar https://dl.fbaipublicfiles.com/jepa-wms/wall_jepa-wm.pth.tar",
+        "curl -L --retry 8 --retry-delay 10 -o /opt/ckpt/wall_dino-wm.pth.tar https://dl.fbaipublicfiles.com/jepa-wms/wall_dino-wm.pth.tar",
     )
 )
 vol = modal.Volume.from_name("wcp-results", create_if_missing=True)
@@ -66,6 +71,17 @@ def shard(cfgd: dict) -> dict:
     from evals.simu_env_planning.planning.gc_agent import GC_Agent
     from evals.simu_env_planning.planning.utils import make_td
 
+    # Never ask github.com for the default branch at run time (that call is what returned HTTP 503): use the baked cache.
+    import torch.hub as _th
+    _orig_parse = _th._parse_repo_info
+
+    def _parse_no_net(github, *a, **k):
+        if ":" in github:
+            return _orig_parse(github, *a, **k)
+        owner, name = github.split("/")
+        return owner, name, "main"
+    _th._parse_repo_info = _parse_no_net
+
     smoke = cfgd["smoke"]
     Ns = cfgd["Ns"]
     iters = int(cfgd["iters"])
@@ -84,7 +100,7 @@ def shard(cfgd: dict) -> dict:
         cfg0["tag"] = "w2b"
         cfg0["meta"]["eval_episodes"] = 1
         cfg0["logging"]["optional_plots"] = False
-        cfg0["model_kwargs"]["checkpoint"] = URLS[key]
+        cfg0["model_kwargs"]["checkpoint"] = os.path.basename(URLS[key])   # local file baked into the image
         cfg0["model_kwargs"]["pretrain_kwargs"]["heads_cfg"]["pretrain_dec_path"] = None   # decoders not needed
         cfg0["planner"]["decode_each_iteration"] = False
         args = expand_env_vars(cfg0)
@@ -94,7 +110,7 @@ def shard(cfgd: dict) -> dict:
         args["frameskip"] = cd["custom"]["frameskip"]
         os.makedirs(f"{LOGS}/w2b/{key}", exist_ok=True)
         args["work_dir"] = f"{LOGS}/w2b/{key}"
-        model = init_module(folder=args["folder"], checkpoint=mk["checkpoint"], module_name=mk["module_name"],
+        model = init_module(folder="/opt/ckpt", checkpoint=mk["checkpoint"], module_name=mk["module_name"],
                             model_kwargs=mk["pretrain_kwargs"], wrapper_kwargs=mk.get("wrapper_kwargs", {}),
                             cfgs_data=cd, device=dev, action_dim=dset.action_dim, proprio_dim=dset.proprio_dim,
                             preprocessor=pre)
