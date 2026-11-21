@@ -8,48 +8,49 @@ dataset dir check:
 wall data already extracted:
 /results/jepawm_dset/wall/wall_single/states.pth
 
+dataset_paths -> {'Wall': '/results/jepawm_dset/wall_single', 'wall': None}
 
-===== jepa N=300 episodes=96 rc=1 secs=16 =====
-[rank0]: Traceback (most recent call last):
-[rank0]: FileNotFoundError: [Errno 2] No such file or directory: '/results/jepawm_dset/wall_single/states.pth'
+
+===== jepa N=300 episodes=96 rc=-9 secs=11054 =====
+
 --- tail ---
-[INFO    ][2026-11-20 23:13:46][Eval runner scaffold][main                     ] Running evaluation: simu_env_planning
-Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
-Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
-See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
-[INFO    ][2026-11-20 23:13:55][matplotlib.font_manager][_load_fontmanager        ] generated new fontManager
-[INFO    ][2026-11-20 23:13:57][root                ][main                     ] 📁 Saved args_eval to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/args_eval.yaml
-[INFO    ][2026-11-20 23:13:57][root                ][main                     ] 🚀 Initialized (rank/world-size) 0/1
-[INFO    ][2026-11-20 23:13:57][evals.utils         ][make_datasets            ] inverse_transform.std=tensor([0.2290, 0.2240, 0.2250]), inverse_transform.mean=tensor([0.4850, 0.4560, 0.4060])
-[INFO    ][2026-11-20 23:13:57][Datasets utils      ][get_dataset_paths        ] Datapaths ['/results/jepawm_dset/wall_single']
-[INFO    ][2026-11-20 23:13:57][root                ][init_data                ] 📂 Data paths: ['/results/jepawm_dset/wall_single']
-[INFO    ][2026-11-20 23:13:57][app.plan_common.datasets.wall_dset][__init__                 ] 📂 Loading Wall dataset...
-[rank0]: Traceback (most recent call last):
-[rank0]:   File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
-[rank0]:     return _run_code(code, main_globals, None,
-[rank0]:   File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
-[rank0]:     exec(code, run_globals)
-[rank0]:   File "/opt/jepa-wms/evals/main.py", line 110, in <module>
-[rank0]:     process_main(args=args, rank=0, fname=args.fname, world_size=1, devices=["cuda:0"])
-[rank0]:   File "/opt/jepa-wms/evals/main.py", line 93, in process_main
-[rank0]:     eval_main(params["eval_name"], args_eval=params)
-[rank0]:   File "/opt/jepa-wms/evals/scaffold.py", line 21, in main
-[rank0]:     return importlib.import_module(import_path).main(args_eval=args_eval, resume_preempt=resume_preempt)
-[rank0]:   File "/opt/jepa-wms/evals/simu_env_planning/eval.py", line 101, in main
-[rank0]:     dset, preprocessor = make_datasets(cfgs_data, cfgs_data_aug, world_size, rank)
-[rank0]:   File "/opt/jepa-wms/evals/utils.py", line 119, in make_datasets
-[rank0]:     ) = init_data(**data_kwargs)
-[rank0]:   File "/opt/jepa-wms/app/plan_common/datasets/utils.py", line 185, in init_data
-[rank0]:     datasets, traj_dsets = load_wall_slice_train_val(
-[rank0]:   File "/opt/jepa-wms/app/plan_common/datasets/wall_dset.py", line 139, in load_wall_slice_train_val
-[rank0]:     dset = WallDataset(
-[rank0]:   File "/opt/jepa-wms/app/plan_common/datasets/wall_dset.py", line 37, in __init__
-[rank0]:     states = torch.load(self.data_path / f"states.pth")
-[rank0]:   File "/usr/local/lib/python3.10/site-packages/torch/serialization.py", line 1479, in load
-[rank0]:     with _open_file_like(f, "rb") as opened_file:
-[rank0]:   File "/usr/local/lib/python3.10/site-packages/torch/serialization.py", line 759, in _open_file_like
-[rank0]:     return _open_file(name_or_buffer, mode)
-[rank0]:   File "/usr/local/lib/python3.10/site-packages/torch/serialization.py", line 740, in __init__
-[rank0]:     super().__init__(open(name, mode))
-[rank0]: FileNotFoundError: [Errno 2] No such file or directory: '/results/jepawm_dset/wall_single/states.pth'
-[rank0]:[W1120 23:13:58.062420107 ProcessGroupNCCL.cpp:1476] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[INFO    ][2026-11-21 12:43:06][evals.simu_env_planning.planning.utils][make_video_mp4           ] 🎬 Video saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_19/visualisation/video_agent_goal_succ.mp4
+[INFO    ][2026-11-21 12:43:06][evals.simu_env_planning.planning.utils][make_video_gif           ] 🎞️  GIF saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_19/visualisation/video_agent_goal_succ.gif
+[INFO    ][2026-11-21 12:43:06][evals.simu_env_planning.planning.utils][make_video_pdf           ] 📄 PDF saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_19/visualisation/video_agent_goal_succ.pdf
+[INFO    ][2026-11-21 12:43:06][root                ][main_distributed_episodes_eval] 🎯 Evaluating task wall-base, episode (21/96)
+[INFO    ][2026-11-21 12:49:41][evals.simu_env_planning.planning.plan_evaluator][unroll_agent             ] Action optim at step 0 took 394.71 seconds
+[INFO    ][2026-11-21 12:49:41][evals.simu_env_planning.planning.utils][make_video_mp4           ] 🎬 Video saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_20/visualisation/video_agent_goal_fail.mp4
+[INFO    ][2026-11-21 12:49:41][evals.simu_env_planning.planning.utils][make_video_gif           ] 🎞️  GIF saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_20/visualisation/video_agent_goal_fail.gif
+[INFO    ][2026-11-21 12:49:41][evals.simu_env_planning.planning.utils][make_video_pdf           ] 📄 PDF saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_20/visualisation/video_agent_goal_fail.pdf
+[INFO    ][2026-11-21 12:49:41][root                ][main_distributed_episodes_eval] 🎯 Evaluating task wall-base, episode (22/96)
+[INFO    ][2026-11-21 12:56:10][evals.simu_env_planning.planning.plan_evaluator][unroll_agent             ] Action optim at step 0 took 388.87 seconds
+[INFO    ][2026-11-21 12:56:11][evals.simu_env_planning.planning.utils][make_video_mp4           ] 🎬 Video saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_21/visualisation/video_agent_goal_succ.mp4
+[INFO    ][2026-11-21 12:56:11][evals.simu_env_planning.planning.utils][make_video_gif           ] 🎞️  GIF saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_21/visualisation/video_agent_goal_succ.gif
+[INFO    ][2026-11-21 12:56:11][evals.simu_env_planning.planning.utils][make_video_pdf           ] 📄 PDF saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_21/visualisation/video_agent_goal_succ.pdf
+[INFO    ][2026-11-21 12:56:11][root                ][main_distributed_episodes_eval] 🎯 Evaluating task wall-base, episode (23/96)
+[INFO    ][2026-11-21 13:02:44][evals.simu_env_planning.planning.plan_evaluator][unroll_agent             ] Action optim at step 0 took 393.50 seconds
+[INFO    ][2026-11-21 13:02:45][evals.simu_env_planning.planning.utils][make_video_mp4           ] 🎬 Video saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_22/visualisation/video_agent_goal_succ.mp4
+[INFO    ][2026-11-21 13:02:45][evals.simu_env_planning.planning.utils][make_video_gif           ] 🎞️  GIF saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_22/visualisation/video_agent_goal_succ.gif
+[INFO    ][2026-11-21 13:02:45][evals.simu_env_planning.planning.utils][make_video_pdf           ] 📄 PDF saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_22/visualisation/video_agent_goal_succ.pdf
+[INFO    ][2026-11-21 13:02:45][root                ][main_distributed_episodes_eval] 🎯 Evaluating task wall-base, episode (24/96)
+[INFO    ][2026-11-21 13:09:21][evals.simu_env_planning.planning.plan_evaluator][unroll_agent             ] Action optim at step 0 took 395.75 seconds
+[INFO    ][2026-11-21 13:09:21][evals.simu_env_planning.planning.utils][make_video_mp4           ] 🎬 Video saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_23/visualisation/video_agent_goal_succ.mp4
+[INFO    ][2026-11-21 13:09:21][evals.simu_env_planning.planning.utils][make_video_gif           ] 🎞️  GIF saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_23/visualisation/video_agent_goal_succ.gif
+[INFO    ][2026-11-21 13:09:21][evals.simu_env_planning.planning.utils][make_video_pdf           ] 📄 PDF saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_23/visualisation/video_agent_goal_succ.pdf
+[INFO    ][2026-11-21 13:09:21][root                ][main_distributed_episodes_eval] 🎯 Evaluating task wall-base, episode (25/96)
+[INFO    ][2026-11-21 13:15:55][evals.simu_env_planning.planning.plan_evaluator][unroll_agent             ] Action optim at step 0 took 393.49 seconds
+[INFO    ][2026-11-21 13:15:55][evals.simu_env_planning.planning.utils][make_video_mp4           ] 🎬 Video saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_24/visualisation/video_agent_goal_succ.mp4
+[INFO    ][2026-11-21 13:15:55][evals.simu_env_planning.planning.utils][make_video_gif           ] 🎞️  GIF saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_24/visualisation/video_agent_goal_succ.gif
+[INFO    ][2026-11-21 13:15:55][evals.simu_env_planning.planning.utils][make_video_pdf           ] 📄 PDF saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_24/visualisation/video_agent_goal_succ.pdf
+[INFO    ][2026-11-21 13:15:55][root                ][main_distributed_episodes_eval] 🎯 Evaluating task wall-base, episode (26/96)
+[INFO    ][2026-11-21 13:22:31][evals.simu_env_planning.planning.plan_evaluator][unroll_agent             ] Action optim at step 0 took 396.15 seconds
+[INFO    ][2026-11-21 13:22:32][evals.simu_env_planning.planning.utils][make_video_mp4           ] 🎬 Video saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_25/visualisation/video_agent_goal_succ.mp4
+[INFO    ][2026-11-21 13:22:32][evals.simu_env_planning.planning.utils][make_video_gif           ] 🎞️  GIF saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_25/visualisation/video_agent_goal_succ.gif
+[INFO    ][2026-11-21 13:22:32][evals.simu_env_planning.planning.utils][make_video_pdf           ] 📄 PDF saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_25/visualisation/video_agent_goal_succ.pdf
+[INFO    ][2026-11-21 13:22:32][root                ][main_distributed_episodes_eval] 🎯 Evaluating task wall-base, episode (27/96)
+[INFO    ][2026-11-21 13:29:08][evals.simu_env_planning.planning.plan_evaluator][unroll_agent             ] Action optim at step 0 took 395.63 seconds
+[INFO    ][2026-11-21 13:29:08][evals.simu_env_planning.planning.utils][make_video_mp4           ] 🎬 Video saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_26/visualisation/video_agent_goal_succ.mp4
+[INFO    ][2026-11-21 13:29:08][evals.simu_env_planning.planning.utils][make_video_gif           ] 🎞️  GIF saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_26/visualisation/video_agent_goal_succ.gif
+[INFO    ][2026-11-21 13:29:08][evals.simu_env_planning.planning.utils][make_video_pdf           ] 📄 PDF saved to /results/jepawm_logs/wall_runs/jepa/simu_env_planning/repro_N300/wall-base/ep_26/visualisation/video_agent_goal_succ.pdf
+[INFO    ][2026-11-21 13:29:08][root                ][main_distributed_episodes_eval] 🎯 Evaluating task wall-base, episode (28/96)
+[INFO    ][2026-11-21 13:35:41][evals.simu_env_planning.planning.plan_evaluator][unroll_agent             ] Action optim at step 0 took 393.17 seconds
