@@ -57,7 +57,8 @@ CFGS = {
 def shard(cfgd: dict) -> dict:
     import contextlib, math, os, sys, time, traceback, zlib
     os.environ.update(JEPAWM_DSET=DSET, JEPAWM_LOGS=LOGS, JEPAWM_HOME="/opt", JEPAWM_CKPT=LOGS,
-                      JEPAWM_OSSCKPT=LOGS, PYTHONUNBUFFERED="1")
+                      JEPAWM_OSSCKPT=LOGS, PYTHONUNBUFFERED="1",
+                      PYTORCH_CUDA_ALLOC_CONF="expandable_segments:True")
     sys.path.insert(0, ROOT)
     os.chdir(ROOT)
     import numpy as np, pandas as pd, torch, yaml
@@ -150,11 +151,13 @@ def shard(cfgd: dict) -> dict:
     ctx = (lambda: torch.autocast("cuda", dtype=torch.bfloat16)) if amp else contextlib.nullcontext
 
     @torch.no_grad()
-    def costs(a, z, A, chunk=512):
+    def costs(a, z, A, chunk=96):
         out = []
         for i in range(0, A.shape[1], chunk):
             with ctx():
                 out.append(a.planner.cost_function(A[:, i:i + chunk], z).float())
+            if i and i % (chunk * 8) == 0:
+                torch.cuda.empty_cache()
         return torch.nan_to_num(torch.cat(out), nan=1e6, posinf=1e6, neginf=-1e6)
 
     @torch.no_grad()
