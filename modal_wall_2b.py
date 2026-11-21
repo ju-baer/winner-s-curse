@@ -14,7 +14,7 @@ episode in this config (H=6, 6 actions stepped), so the simulator result is the 
 Support: distance of the goal to the nearest training-set positions (wall_single/states.pth).
 
 Run (smoke first; prints shapes, timing and an fp32-vs-bf16 sanity check):
-    python -m modal run modal_wall_2b.py --smoke
+    python -m modal run modal_wall_2b.py --smoke --iters 8
     python -m modal run --detach modal_wall_2b.py --pairs 48 --shards 4
 Fetch if detached:   python -m modal volume get wcp-results out/ results/out/ --force
 
@@ -68,7 +68,7 @@ def shard(cfgd: dict) -> dict:
 
     smoke = cfgd["smoke"]
     Ns = cfgd["Ns"]
-    iters = 3
+    iters = int(cfgd["iters"])
     amp = cfgd["amp"]
     dev = torch.device("cuda:0")
     torch.cuda.set_device(dev)
@@ -218,7 +218,9 @@ def shard(cfgd: dict) -> dict:
                     dist, ok = oracle(seed, init_s, state_g, Z[:, idx])
                     rows.append(dict(seed=seed, pair=si, proposer=prop, method=meth, N=N, evals=ev,
                                      pred_prop=float(c[idx]), pred_single=float(c[i_single]), pred_other_single=po_single,
-                                     dist=dist, success=int(ok), support_d=sd, goal_x=float(goal_s[0]), goal_y=float(goal_s[1]),
+                                     dist=dist, success=int(ok), support_d=sd,
+                                     plan_rms=float(Z[:, idx].pow(2).mean().sqrt()), plan_absmax=float(Z[:, idx].abs().max()),
+                                     iters=iters, goal_x=float(goal_s[0]), goal_y=float(goal_s[1]),
                                      shard=cfgd["shard"]))
         log(f"pair {si+1}/{len(seeds)} seed={seed} support_d={sd:.1f} took {time.time()-tp:.0f}s")
         if si % 3 == 2:
@@ -235,13 +237,13 @@ def shard(cfgd: dict) -> dict:
 
 @app.local_entrypoint()
 def main(smoke: bool = False, pairs: int = 48, shards: int = 4, amp: bool = True,
-         ns: str = "16,64,256,1024", base_seed: int = 777, tag: str = "run"):
+         ns: str = "16,64,256,1024", base_seed: int = 777, tag: str = "run", iters: int = 8):
     import os
     os.makedirs("results", exist_ok=True)
     Ns = [int(x) for x in ns.split(",")]
     if smoke:
         Ns, shards, tag = [16, 64], 1, "smoke"
-    cfgs = [dict(shard=i, shards=shards, pairs=pairs, smoke=smoke, Ns=Ns, amp=amp, base_seed=base_seed, tag=tag)
+    cfgs = [dict(shard=i, shards=shards, pairs=pairs, smoke=smoke, Ns=Ns, amp=amp, base_seed=base_seed, tag=tag, iters=iters)
             for i in range(shards)]
     outs = list(shard.map(cfgs))
     import io, pandas as pd
@@ -252,5 +254,5 @@ def main(smoke: bool = False, pairs: int = 48, shards: int = 4, amp: bool = True
     print(f"saved {path}: {len(df)} rows | total GPU seconds {secs:.0f} ~ ${secs*0.000222:.2f} (L4, compute only)")
     if not df.empty:
         g = df.groupby(["proposer", "method", "N"]).agg(success=("success", "mean"), dist=("dist", "mean"),
-                                                        n=("success", "size")).round(3)
+                                                        plan_rms=("plan_rms", "mean"), n=("success", "size")).round(3)
         print(g.to_string())
